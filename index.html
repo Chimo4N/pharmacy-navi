@@ -160,6 +160,73 @@
   .meta-row .v{font-family:'JetBrains Mono', monospace;font-size:.72rem;font-weight:500;letter-spacing:-.01em;}
   .meta-row.buy .v{font-family:inherit;font-weight:500;}
 
+  /* Product photo slot */
+  .prod-photo{
+    width:100%;height:140px;border-radius:9px;overflow:hidden;
+    background:var(--bg-tab);margin-bottom:12px;
+    display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .prod-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .prod-photo-placeholder{
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    color:var(--track);
+  }
+  .prod-photo-placeholder svg{width:32px;height:32px;stroke:var(--track);fill:none;stroke-width:1.8;}
+  .prod-photo-placeholder span{font-size:.65rem;color:var(--track);}
+
+  /* Pick card photo */
+  .pick-photo{
+    width:100%;height:110px;border-radius:8px;overflow:hidden;
+    background:var(--bg-tab);margin-bottom:10px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .pick-photo img{width:100%;height:100%;object-fit:cover;}
+  .pick-photo-placeholder{color:var(--track);}
+  .pick-photo-placeholder svg{width:28px;height:28px;stroke:var(--track);fill:none;stroke-width:1.8;}
+
+  /* Quiz */
+  .quiz-section{
+    background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 24px;margin:26px 0;
+  }
+  .quiz-title{font-size:1.15rem;font-weight:900;margin:0 0 4px;}
+  .quiz-subtitle{color:var(--ink-soft);font-size:.85rem;margin:0 0 18px;}
+  .quiz-step-label{font-size:.72rem;color:var(--accent);font-weight:700;margin:0 0 12px;letter-spacing:.03em;text-transform:uppercase;}
+  .quiz-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+  .quiz-opt{
+    border:1.5px solid var(--line);background:#fff;border-radius:10px;
+    padding:14px 12px;cursor:pointer;font-family:inherit;font-size:.86rem;font-weight:500;
+    color:var(--ink);text-align:left;transition:border-color .15s, background .15s;
+    display:flex;align-items:center;gap:8px;
+  }
+  .quiz-opt:hover{border-color:var(--accent);background:var(--accent-soft);}
+  .quiz-opt svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none;}
+  .quiz-back{background:none;border:none;color:var(--ink-soft);font-size:.78rem;cursor:pointer;padding:0;margin:0 0 14px;font-family:inherit;text-decoration:underline;}
+  .quiz-result-badge{display:inline-block;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:12px;}
+  .quiz-reason{font-size:.84rem;color:var(--ink);background:var(--accent-soft);border-radius:10px;padding:10px 12px;margin-bottom:14px;}
+  .quiz-restart{margin-top:14px;background:var(--ink);color:#fff;border:none;padding:10px 18px;border-radius:999px;font-size:.82rem;font-weight:500;cursor:pointer;font-family:inherit;}
+
+  /* Product format badge */
+  .prod-format{
+    display:inline-flex;align-items:center;gap:4px;font-size:.68rem;color:var(--ink-soft);
+    background:var(--bg-tab);padding:3px 8px;border-radius:999px;margin-bottom:8px;font-weight:500;
+  }
+  .prod-format svg{width:12px;height:12px;stroke:var(--ink-soft);fill:none;stroke-width:2.2;}
+
+  /* Editor's picks */
+  .picks{margin:40px 0 0;}
+  .picks h2{font-size:1.2rem;margin:0 0 4px;}
+  .picks .lead{color:var(--ink-soft);font-size:.85rem;margin:0 0 16px;}
+  .picks-row{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;}
+  .pick-card{
+    flex:none;width:240px;background:var(--bg-card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:16px;
+  }
+  .pick-badge{font-size:.66rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.03em;margin:0 0 8px;}
+  .pick-symptom{font-size:.7rem;color:var(--ink-soft);margin:0 0 2px;}
+  .pick-name{font-weight:700;font-size:.95rem;margin:0 0 8px;}
+  .pick-comment{font-size:.82rem;color:var(--ink-soft);font-style:italic;margin:0;}
+
   /* Disclaimer */
   .disclaimer{
     margin:34px 0 0;
@@ -183,8 +250,11 @@
   footer{
     margin:44px 0 30px;padding-top:18px;border-top:1px solid var(--line);
     font-size:.76rem;color:var(--ink-soft);
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;
   }
+  .footer-nav{display:flex;gap:16px;flex-wrap:wrap;order:3;width:100%;}
+  .footer-nav a{color:var(--ink-soft);text-decoration:underline;font-size:.76rem;}
+  .footer-nav a:hover{color:var(--accent);}
 
   @media (max-width:560px){
     .header-row{flex-direction:column;}
@@ -210,6 +280,12 @@
 
   <div class="hero">
     <p id="heroLead"></p>
+  </div>
+
+  <div class="quiz-section" id="quizSection">
+    <h2 class="quiz-title" id="quizTitle"></h2>
+    <p class="quiz-subtitle" id="quizSubtitle"></p>
+    <div id="quizBody"></div>
   </div>
 
   <div class="ad-slot" id="adSlot1"></div>
@@ -243,8 +319,19 @@
     </table>
   </div>
 
+  <div class="picks">
+    <h2 id="picksTitle"></h2>
+    <p class="lead" id="picksIntro"></p>
+    <div class="picks-row" id="picksRow"></div>
+  </div>
+
   <footer>
     <span id="footerCredit"></span>
+    <nav class="footer-nav">
+      <a href="about.html" id="navAbout"></a>
+      <a href="privacy.html" id="navPrivacy"></a>
+      <a href="contact.html" id="navContact"></a>
+    </nav>
     <span>&copy; 2026 Kusuri Navi TOKYO — Prototype</span>
   </footer>
 </div>
@@ -256,7 +343,7 @@ const translations = {
     siteName:"くすりナビ TOKYO",
     tagline:"外国人旅行者のための市販薬ガイド",
     heroLead:"日本の薬局・ドラッグストアで買える市販薬を、症状別にわかりやすく紹介します。処方箋がなくても、自分に合った薬を選べるように。",
-    pharmacistNote:"監修：管理薬剤師　石鍋　卓望",
+    pharmacistNote:"監修：都内薬局 登録薬剤師",
     tabsLabel:"症状を選ぶ",
     ingredientLabel:"主な成分",
     strengthLabel:"効き目の強さ",
@@ -267,16 +354,37 @@ const translations = {
     buyLabel:"買える場所",
     adPlaceholder:"広告スペース（Google AdSense）",
     disclaimerTitle:"ご利用にあたって",
-    disclaimerBody:"本サイトは一般的な情報提供および教育を目的としており、医師や薬剤師による診断・治療・処方に代わるものではありません。掲載している用法・用量や製品情報は目安であり、最新の改定内容と異なる場合があります。医療品のご購入・ご使用前には、必ず薬剤師や登録販売者にご相談いただくか、商品パッケージの店舗文書を必ずご確認ください。特に持病のある方、妊娠・授乳中の方、他の薬を服用中の方はご注意ください。",
+    disclaimerBody:"このサイトは一般的な情報提供を目的としており、診断や治療を行うものではありません。掲載の用法・用量は目安です。実際の使用前には、必ず薬剤師・登録販売者にご相談いただくか、商品パッケージの添付文書をご確認ください。持病がある方、妊娠・授乳中の方、他の薬を服用中の方は特にご注意ください。",
     summaryTitle:"日本で買えるおすすめ商品 一覧",
     summaryIntro:"上記でご紹介した商品を、症状別に一覧でまとめました。",
     tableSymptom:"症状", tableProduct:"商品名", tableBuy:"買える場所",
+    footerCredit:"企画・監修：◯◯薬局",
+    quizTitle:"3つの質問でおすすめを探す",
+    quizSubtitle:"症状と好みに合わせて、ぴったりの1つを提案します。",
+    quizStep1:"1／3　症状を選んでください",
+    quizStep2:"2／3　眠くなっても大丈夫ですか？",
+    quizStep3:"3／3　効き目のタイプは？",
+    quizAvoidDrowsy:"眠くなりたくない",
+    quizOkDrowsy:"気にしない",
+    quizGentle:"胃にやさしい方がいい",
+    quizStrong:"効き目重視で強めがいい",
+    quizBack:"← 前の質問に戻る",
+    quizResultBadge:"あなたへのおすすめ",
+    quizRestart:"もう一度質問する",
+    reasonAvoidGentle:"眠くなりにくく、胃にもやさしいタイプを選びました。",
+    reasonAvoidStrong:"眠くなりにくいタイプの中で、いちばん効き目が強いものを選びました。",
+    reasonOkGentle:"眠気は気にしないとのことなので、胃にやさしいタイプを選びました。",
+    reasonOkStrong:"眠気は気にせず、いちばん効き目が強いタイプを選びました。",
+    formatTablet:"錠剤", formatPatch:"貼り薬", formatDrink:"ドリンク", formatPowder:"粉末",
+    picksTitle:"薬剤師イチオシ！このお店で買えるおすすめ商品",
+    picksIntro:"このサイトを監修した薬局のスタッフが、実際によく勧めている商品です。",
+    navAbout:"このサイトについて", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
   },
   en:{
     siteName:"Kusuri Navi TOKYO",
     tagline:"An OTC medicine guide for visitors to Japan",
     heroLead:"A simple, symptom-by-symptom guide to over-the-counter medicines available at pharmacies and drugstores in Japan — so you can choose what's right for you without a prescription.",
-    pharmacistNote:"Supervised by licensed Pharmacist, Takumi Ishinabe",
+    pharmacistNote:"Supervised by a registered pharmacist, Tokyo",
     tabsLabel:"Choose a symptom",
     ingredientLabel:"Main ingredient",
     strengthLabel:"Effect strength",
@@ -287,17 +395,37 @@ const translations = {
     buyLabel:"Where to buy",
     adPlaceholder:"Ad space (Google AdSense)",
     disclaimerTitle:"Before you use this site",
-    disclaimerBody:"This site is for general information only and is not a diagnosis or treatment. Dosage information shown is a general guide and may not reflect recent updates. Always consult a pharmacist or check the package insert before use — especially if you have a medical condition, are pregnant or breastfeeding, or are taking other medication.",
+    disclaimerBody:"This site is for general information only and is not a diagnosis or treatment. Dosage information shown is a general guide. Always consult a pharmacist or check the package insert before use — especially if you have a medical condition, are pregnant or breastfeeding, or are taking other medication.",
     summaryTitle:"Recommended products available in Japan",
     summaryIntro:"All the products introduced above, summarized by symptom.",
     tableSymptom:"Symptom", tableProduct:"Product", tableBuy:"Where to buy",
-    footerCredit:"Planned & supervised by [Pharmacy Name]"
+    footerCredit:"Planned & supervised by [Pharmacy Name]",
+    quizTitle:"Find your medicine in 3 questions",
+    quizSubtitle:"Answer a few questions and we'll suggest the one that fits you best.",
+    quizStep1:"1/3　Choose your symptom",
+    quizStep2:"2/3　Is it okay if it makes you drowsy?",
+    quizStep3:"3/3　What kind of effect do you want?",
+    quizAvoidDrowsy:"I don't want to feel drowsy",
+    quizOkDrowsy:"Drowsiness is fine",
+    quizGentle:"Something gentle on the stomach",
+    quizStrong:"Something strong and fast-acting",
+    quizBack:"← Back to previous question",
+    quizResultBadge:"Recommended for you",
+    quizRestart:"Start over",
+    reasonAvoidGentle:"We picked one that's unlikely to cause drowsiness and is gentle on the stomach.",
+    reasonAvoidStrong:"Among the options unlikely to cause drowsiness, we picked the strongest one.",
+    reasonOkGentle:"Since drowsiness isn't a concern for you, we picked a gentle, stomach-friendly option.",
+    reasonOkStrong:"Since drowsiness isn't a concern for you, we picked the strongest, fastest-acting option.",
+    formatTablet:"Tablet", formatPatch:"Patch", formatDrink:"Drink", formatPowder:"Powder",
+    picksTitle:"Pharmacist's picks — available at this store",
+    picksIntro:"Products that the pharmacy staff behind this site actually recommend most often.",
+    navAbout:"About Us", navPrivacy:"Privacy Policy", navContact:"Contact"
   },
   zh:{
     siteName:"藥品導覽 TOKYO",
     tagline:"給訪日旅客的成藥指南",
     heroLead:"依症狀分類，簡單易懂地介紹在日本藥局、藥妝店可購買的成藥，讓您不需要處方箋也能選到適合自己的藥品。",
-    pharmacistNote:"監修： 石鍋　卓望／藥劑師",
+    pharmacistNote:"監修：東京都內藥局 登錄販賣者／藥劑師",
     tabsLabel:"選擇症狀",
     ingredientLabel:"主要成分",
     strengthLabel:"藥效強度",
@@ -308,17 +436,37 @@ const translations = {
     buyLabel:"購買地點",
     adPlaceholder:"廣告空間（Google AdSense）",
     disclaimerTitle:"使用本網站前請注意",
-    disclaimerBody:"本網站僅提供一般資訊與衛教內容，並非醫療診斷或治療。所刊載之用法用量與產品資訊僅供參考，可能與最新修訂內容有所出入。使用前請務必諮詢藥師或登錄販賣者，並確認商品包裝上的說明書。若有慢性病（宿疾）、懷孕、哺乳中或正在服用其他藥物，請特別留意。如症狀嚴重或有緊急醫療需求，請勿僅依賴本網站資訊，請立即就医或撥打日本急救電話（119）。",
+    disclaimerBody:"本網站僅提供一般資訊，並非診斷或治療。所刊載之用法用量僅供參考。使用前請務必諮詢藥劑師或登錄販賣者，並確認商品包裝上的說明書。若有宿疾、懷孕、哺乳中或正在服用其他藥物，請特別留意。",
     summaryTitle:"日本可購買推薦商品一覽",
     summaryIntro:"將以上介紹的商品依症狀整理成一覽表。",
     tableSymptom:"症狀", tableProduct:"商品名稱", tableBuy:"購買地點",
-    footerCredit:"企劃・監修：○○藥局"
+    footerCredit:"企劃・監修：○○藥局",
+    quizTitle:"3個問題找到適合您的藥",
+    quizSubtitle:"回答幾個問題，我們就會依您的症狀與喜好推薦最合適的一款。",
+    quizStep1:"1／3　請選擇症狀",
+    quizStep2:"2／3　可以接受有點嗜睡嗎？",
+    quizStep3:"3／3　您希望的藥效類型？",
+    quizAvoidDrowsy:"不想感到嗜睡",
+    quizOkDrowsy:"不在意嗜睡",
+    quizGentle:"希望對腸胃溫和一些",
+    quizStrong:"希望藥效強、見效快",
+    quizBack:"← 返回上一題",
+    quizResultBadge:"為您推薦",
+    quizRestart:"重新回答問題",
+    reasonAvoidGentle:"我們選擇了較不易造成嗜睡、且對腸胃溫和的類型。",
+    reasonAvoidStrong:"在不易造成嗜睡的選項中，我們選擇了藥效最強的一款。",
+    reasonOkGentle:"由於您不在意嗜睡，我們選擇了對腸胃溫和的類型。",
+    reasonOkStrong:"由於您不在意嗜睡，我們選擇了藥效最強、見效最快的類型。",
+    formatTablet:"錠劑", formatPatch:"貼布", formatDrink:"飲品", formatPowder:"粉末",
+    picksTitle:"藥劑師嚴選！本店可購買的推薦商品",
+    picksIntro:"這是監修本網站的藥局人員實際上最常推薦的商品。",
+    navAbout:"關於本站", navPrivacy:"隱私權政策", navContact:"聯絡我們"
   },
   es:{
     siteName:"Kusuri Navi TOKYO",
     tagline:"Guía de medicamentos de venta libre para visitantes en Japón",
     heroLead:"Una guía sencilla, organizada por síntoma, de los medicamentos de venta libre disponibles en farmacias y droguerías de Japón, para que puedas elegir el adecuado sin necesidad de receta.",
-    pharmacistNote:"Supervisor : Takumi Ishinabe",
+    pharmacistNote:"Supervisado por un farmacéutico registrado en Tokio",
     tabsLabel:"Elige un síntoma",
     ingredientLabel:"Ingrediente principal",
     strengthLabel:"Intensidad del efecto",
@@ -329,11 +477,31 @@ const translations = {
     buyLabel:"Dónde comprarlo",
     adPlaceholder:"Espacio publicitario (Google AdSense)",
     disclaimerTitle:"Antes de usar este sitio",
-    disclaimerBody:"Este sitio web se proporciona únicamente con fines informativos y educativos generales, y no constituye un diagnóstico ni un tratamiento médico. La información sobre posología y uso es solo una guía general y puede no reflejar las actualizaciones más recientes.Antes de usar cualquier producto, consulte siempre a un farmacéutico o vendedor registrado (Dōroku Hanbaisha), y lea atentamente el prospecto del paquete. Tenga especial precaución si padece alguna enfermedad crónica, está embarazada, en periodo de lactancia o si está tomando otros medicamentos.En caso de síntomas graves o emergencia médica, no dependa de este sitio web: acuda inmediatamente a un centro médico o llame al servicio de emergencias (119 en Japón).",
+    disclaimerBody:"Este sitio ofrece solo información general y no constituye un diagnóstico ni un tratamiento. La información de dosis es orientativa. Consulte siempre con un farmacéutico o revise el prospecto del envase antes de usar el producto, especialmente si tiene alguna condición médica, está embarazada o en periodo de lactancia, o toma otros medicamentos.",
     summaryTitle:"Productos recomendados disponibles en Japón",
     summaryIntro:"Todos los productos presentados arriba, resumidos por síntoma.",
     tableSymptom:"Síntoma", tableProduct:"Producto", tableBuy:"Dónde comprarlo",
-    footerCredit:"Planificado y supervisado por [Nombre de la farmacia]"
+    footerCredit:"Planificado y supervisado por [Nombre de la farmacia]",
+    quizTitle:"Encuentra tu medicamento en 3 preguntas",
+    quizSubtitle:"Responde algunas preguntas y te sugeriremos la opción que mejor te queda.",
+    quizStep1:"1/3　Elige tu síntoma",
+    quizStep2:"2/3　¿Te parece bien si te da sueño?",
+    quizStep3:"3/3　¿Qué tipo de efecto prefieres?",
+    quizAvoidDrowsy:"No quiero sentir sueño",
+    quizOkDrowsy:"No me importa el sueño",
+    quizGentle:"Algo suave para el estómago",
+    quizStrong:"Algo fuerte y de acción rápida",
+    quizBack:"← Volver a la pregunta anterior",
+    quizResultBadge:"Recomendado para ti",
+    quizRestart:"Empezar de nuevo",
+    reasonAvoidGentle:"Elegimos una opción con poca probabilidad de causar sueño y suave para el estómago.",
+    reasonAvoidStrong:"Entre las opciones con poca probabilidad de causar sueño, elegimos la más potente.",
+    reasonOkGentle:"Como el sueño no te preocupa, elegimos una opción suave para el estómago.",
+    reasonOkStrong:"Como el sueño no te preocupa, elegimos la opción más potente y de acción más rápida.",
+    formatTablet:"Comprimido", formatPatch:"Parche", formatDrink:"Bebida", formatPowder:"Polvo",
+    picksTitle:"Selección del farmacéutico — disponible en esta tienda",
+    picksIntro:"Productos que el personal de la farmacia detrás de este sitio recomienda con más frecuencia.",
+    navAbout:"Sobre nosotros", navPrivacy:"Política de privacidad", navContact:"Contacto"
   }
 };
 const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
@@ -350,6 +518,22 @@ const icons = {
   nausea:'<circle cx="12" cy="9" r="5"/><path d="M4 15c1.4 0 1.4 2 2.8 2s1.4-2 2.8-2 1.4 2 2.8 2 1.4-2 2.8-2 1.4 2 2.8 2"/><path d="M4 20c1.4 0 1.4 2 2.8 2s1.4-2 2.8-2 1.4 2 2.8 2 1.4-2 2.8-2 1.4 2 2.8 2"/>',
   muscle:'<path d="M4 17c2-1 3-3 3-6 0-2.5 1.6-4.5 4-5 .3 1.6 1.6 2.6 3 2.6 2.2 0 4 1.8 4 4v2c0 2.8-2.2 5-5 5H8"/><path d="M8 17v3"/><path d="M17 12l3-2"/>',
   malaise:'<circle cx="12" cy="12" r="8.5"/><path d="M8.5 10.5h.01M15.5 10.5h.01"/><path d="M8.5 16c1.2-1.3 2.4-2 3.5-2s2.3.7 3.5 2"/>'
+};
+
+const formatIcons = {
+  tablet:'<circle cx="12" cy="12" r="7.5"/><path d="M12 4.5v15"/>',
+  patch:'<rect x="4" y="4" width="16" height="16" rx="6"/><circle cx="9" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r=".7" fill="currentColor" stroke="none"/>',
+  drink:'<path d="M10 3h4v3l2 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-2z"/><path d="M9 12.5h6"/>',
+  powder:'<path d="M4 8l8-4 8 4v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l8 5 8-5"/>'
+};
+const formatLabelKeys = {tablet:"formatTablet", patch:"formatPatch", drink:"formatDrink", powder:"formatPowder"};
+
+const productFormats = {
+  "EVE A錠":"tablet", "ロキソニンS":"tablet", "タイレノールA":"tablet",
+  "正露丸":"tablet", "ストッパ下痢止めEX":"tablet", "ブスコパンA錠":"tablet",
+  "センパア トラベル1":"tablet", "太田胃散":"powder", "トラベルミン":"tablet",
+  "サロンパスAe":"patch", "バンテリンコーワパップS":"patch", "ロキソニンSテープ":"patch",
+  "ウコンの力":"drink", "大正漢方胃腸薬":"powder", "パンシロン01プラス":"tablet"
 };
 
 const symptoms = [
@@ -370,7 +554,7 @@ const symptoms = [
         strength:4, drowsy:2,
         caution:{ja:"アスピリン喘息の既往がある方は使用不可", en:"Not for those with a history of aspirin-induced asthma", zh:"曾有阿斯匹靈氣喘病史者不可使用", es:"No usar si tiene antecedentes de asma inducida por aspirina"},
         dosage:{ja:"成人1回1錠、1日2回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 2×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多2次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 2 veces/día, con ≥4 h de diferencia"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← 撮影後に "images/eve-a.jpg" のように変更 */
       },
       {
         name:"ロキソニンS",
@@ -379,7 +563,7 @@ const symptoms = [
         strength:5, drowsy:1,
         caution:{ja:"胃腸が弱い方は注意、15歳未満は使用不可", en:"Use with caution if your stomach is sensitive; not for under 15", zh:"腸胃較弱者慎用，15歲以下不可使用", es:"Precaución si tiene el estómago sensible; no apto para menores de 15 años"},
         dosage:{ja:"成人1回1錠、1日3回まで、空腹時を避けて", en:"Adults: 1 tablet per dose, up to 3×/day, avoid on empty stomach", zh:"成人一次1錠，一日至多3次，避免空腹服用", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, evitar en ayunas"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← 撮影後に "images/loxonin-s.jpg" のように変更 */
       },
       {
         name:"タイレノールA",
@@ -388,7 +572,7 @@ const symptoms = [
         strength:3, drowsy:1,
         caution:{ja:"重い肝臓病のある方は使用不可", en:"Not for those with severe liver disease", zh:"嚴重肝臟疾病患者不可使用", es:"No usar si tiene enfermedad hepática grave"},
         dosage:{ja:"成人1回1〜2錠、1日3回まで、4時間以上あけて", en:"Adults: 1–2 tablets per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1〜2錠，一日至多3次，間隔4小時以上", es:"Adultos: 1–2 comprimidos por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← 撮影後に "images/tylenol-a.jpg" のように変更 */
       }
     ]
   },
@@ -409,7 +593,7 @@ const symptoms = [
         strength:3, drowsy:1,
         caution:{ja:"妊娠中の方は使用前に相談", en:"Consult before use if pregnant", zh:"懷孕中者使用前請先諮詢", es:"Consultar antes de usar si está embarazada"},
         dosage:{ja:"成人1回2〜10粒、1日3回まで", en:"Adults: 2–10 pills per dose, up to 3×/day", zh:"成人一次2〜10粒，一日至多3次", es:"Adultos: 2–10 píldoras por toma, hasta 3 veces/día"},
-        buy:"drugstoreConbini"
+        buy:"drugstoreConbini", photo:null  /* ← "images/seirogan.jpg" */
       },
       {
         name:"ストッパ下痢止めEX",
@@ -418,7 +602,7 @@ const symptoms = [
         strength:4, drowsy:1,
         caution:{ja:"発熱を伴う下痢、血便がある場合は使用不可", en:"Not for diarrhea with fever or blood in stool", zh:"伴隨發燒或血便的腹瀉不可使用", es:"No usar si la diarrea viene con fiebre o sangre en las heces"},
         dosage:{ja:"成人1回1錠、1日2回まで、15歳未満は使用不可", en:"Adults: 1 tablet per dose, up to 2×/day; not for under 15", zh:"成人一次1錠，一日至多2次，15歲以下不可使用", es:"Adultos: 1 comprimido por toma, hasta 2 veces/día; no apto para menores de 15 años"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← "images/stoppa.jpg" */
       },
       {
         name:"ブスコパンA錠",
@@ -427,7 +611,7 @@ const symptoms = [
         strength:3, drowsy:1,
         caution:{ja:"緑内障、前立腺肥大のある方は使用不可", en:"Not for those with glaucoma or an enlarged prostate", zh:"青光眼或攝護腺肥大患者不可使用", es:"No usar si tiene glaucoma o próstata agrandada"},
         dosage:{ja:"成人1回1錠、1日3回まで", en:"Adults: 1 tablet per dose, up to 3×/day", zh:"成人一次1錠，一日至多3次", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← "images/buscopan.jpg" */
       }
     ]
   },
@@ -448,7 +632,7 @@ const symptoms = [
         strength:4, drowsy:4,
         caution:{ja:"服用後の運転・機械操作は避ける", en:"Avoid driving or operating machinery after taking", zh:"服用後請避免開車或操作機械", es:"Evitar conducir u operar maquinaria después de tomarlo"},
         dosage:{ja:"成人1回1錠、乗車前30分に、1日2回まで", en:"Adults: 1 tablet, 30 min before travel, up to 2×/day", zh:"成人一次1錠，搭乘前30分鐘服用，一日至多2次", es:"Adultos: 1 comprimido, 30 min antes de viajar, hasta 2 veces/día"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← "images/sempaa.jpg" */
       },
       {
         name:"太田胃散",
@@ -457,7 +641,7 @@ const symptoms = [
         strength:2, drowsy:1,
         caution:null,
         dosage:{ja:"成人1回1.3g、1日3回まで、食後又は食間に", en:"Adults: 1.3g per dose, up to 3×/day, after or between meals", zh:"成人一次1.3公克，一日至多3次，飯後或餐間服用", es:"Adultos: 1.3 g por toma, hasta 3 veces/día, después de las comidas o entre comidas"},
-        buy:"drugstoreConbini"
+        buy:"drugstoreConbini", photo:null  /* ← "images/ohta-isan.jpg" */
       },
       {
         name:"トラベルミン",
@@ -466,7 +650,7 @@ const symptoms = [
         strength:4, drowsy:5,
         caution:{ja:"15歳未満は使用不可、服用後の運転は避ける", en:"Not for under 15; avoid driving after taking", zh:"15歲以下不可使用，服用後避免開車", es:"No apto para menores de 15 años; evitar conducir después de tomarlo"},
         dosage:{ja:"成人1回1錠、乗車前30分に", en:"Adults: 1 tablet, 30 min before travel", zh:"成人一次1錠，搭乘前30分鐘服用", es:"Adultos: 1 comprimido, 30 min antes de viajar"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null  /* ← "images/travelmin.jpg" */
       }
     ]
   },
@@ -487,7 +671,7 @@ const symptoms = [
         strength:2, drowsy:1,
         caution:{ja:"サリチル酸にアレルギーのある方は使用不可、貼付部位を日光に当てない", en:"Not for those allergic to salicylates; avoid sun exposure on the applied area", zh:"對水楊酸過敏者不可使用，貼藥部位請避免曬太陽", es:"No usar si es alérgico a los salicilatos; evitar exponer la zona al sol"},
         dosage:{ja:"1日数回、患部に貼付", en:"Apply to the affected area several times a day", zh:"一日數次，貼於患部", es:"Aplicar en la zona afectada varias veces al día"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null
       },
       {
         name:"バンテリンコーワパップS",
@@ -496,7 +680,7 @@ const symptoms = [
         strength:3, drowsy:1,
         caution:{ja:"喘息のある方は使用前に相談", en:"Consult before use if you have asthma", zh:"有氣喘者使用前請先諮詢", es:"Consultar antes de usar si tiene asma"},
         dosage:{ja:"1日1〜2回、患部に貼付", en:"Apply to the affected area 1–2 times a day", zh:"一日1〜2次，貼於患部", es:"Aplicar en la zona afectada 1–2 veces al día"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null
       },
       {
         name:"ロキソニンSテープ",
@@ -505,7 +689,7 @@ const symptoms = [
         strength:4, drowsy:1,
         caution:{ja:"喘息の既往がある方は使用不可", en:"Not for those with a history of asthma", zh:"曾有氣喘病史者不可使用", es:"No usar si tiene antecedentes de asma"},
         dosage:{ja:"1日1回、患部に貼付", en:"Apply to the affected area once a day", zh:"一日1次，貼於患部", es:"Aplicar en la zona afectada una vez al día"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null
       }
     ]
   },
@@ -526,7 +710,7 @@ const symptoms = [
         strength:2, drowsy:1,
         caution:null,
         dosage:{ja:"1回1本を目安に飲用", en:"Drink about 1 bottle per serving", zh:"每次飲用約1瓶", es:"Beber aproximadamente 1 botella por toma"},
-        buy:"drugstoreConbini"
+        buy:"drugstoreConbini", photo:null
       },
       {
         name:"大正漢方胃腸薬",
@@ -535,7 +719,7 @@ const symptoms = [
         strength:2, drowsy:1,
         caution:null,
         dosage:{ja:"成人1回1包、1日3回まで、食前又は食間に", en:"Adults: 1 packet per dose, up to 3×/day, before or between meals", zh:"成人一次1包，一日至多3次，飯前或餐間服用", es:"Adultos: 1 sobre por toma, hasta 3 veces/día, antes de las comidas o entre comidas"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null
       },
       {
         name:"パンシロン01プラス",
@@ -544,15 +728,30 @@ const symptoms = [
         strength:2, drowsy:1,
         caution:null,
         dosage:{ja:"成人1回2錠、1日3回まで、食後に", en:"Adults: 2 tablets per dose, up to 3×/day, after meals", zh:"成人一次2錠，一日至多3次，飯後服用", es:"Adultos: 2 comprimidos por toma, hasta 3 veces/día, después de las comidas"},
-        buy:"drugstore"
+        buy:"drugstore", photo:null
       }
     ]
   }
 ];
 
+const editorsPicks = [
+  { symptomId:"headache", productName:"ロキソニンS", photo:null,  /* ← "images/loxonin-s.jpg" */
+    comment:{ja:"旅行者の方に一番よく聞かれる頭痛薬です。迷ったらまずこれ。", en:"The headache medicine we get asked about most by visitors. When in doubt, start here.", zh:"是旅客最常詢問的頭痛藥。猶豫的話先選這個就對了。", es:"El medicamento para el dolor de cabeza que más nos preguntan los visitantes. Si dudas, empieza por aquí."} },
+  { symptomId:"stomach", productName:"ブスコパンA錠", photo:null,  /* ← "images/buscopan.jpg" */
+    comment:{ja:"食あたりっぽい差し込む痛みには、下痢止めよりこちらが向くことが多いです。", en:"For a sharp, cramping stomach pain, this often works better than a diarrhea remedy.", zh:"對於像食物中毒那種絞痛，這個往往比止瀉藥更合適。", es:"Para un dolor de estómago agudo tipo cólico, esta opción suele funcionar mejor que un antidiarreico."} },
+  { symptomId:"nausea", productName:"センパア トラベル1", photo:null,  /* ← "images/sempaa.jpg" */
+    comment:{ja:"新幹線やバスでの長距離移動が多い方に、一番おすすめしています。", en:"Our top pick for anyone doing long trips by shinkansen or bus.", zh:"最推薦給常搭新幹線或巴士長途移動的旅客。", es:"Nuestra recomendación principal para quienes hacen viajes largos en shinkansen o autobús."} },
+  { symptomId:"muscle", productName:"バンテリンコーワパップS", photo:null,  /* ← "images/vantelin.jpg" */
+    comment:{ja:"歩き疲れによる足や肩の痛みに、貼るだけで手軽に使えます。", en:"Easy relief for tired legs or shoulders from a long day of walking — just apply and go.", zh:"針對走太多路導致的腳部或肩膀痠痛，貼上就很方便。", es:"Alivio fácil para piernas u hombros cansados tras un día de caminata — solo hay que aplicarlo."} },
+  { symptomId:"malaise", productName:"ウコンの力", photo:null,  /* ← "images/ukon.jpg" */
+    comment:{ja:"居酒屋巡りの予定がある日は、飲む前に1本どうぞ。", en:"Planning a night of izakaya-hopping? Have one before you start drinking.", zh:"如果當天要跑很多居酒屋，開喝前先喝一瓶吧。", es:"¿Planeas una noche de bares izakaya? Toma una antes de empezar a beber."} }
+];
+
 /* ---------- State ---------- */
 let currentLang = "ja";
+try{ const saved = localStorage.getItem("kn_lang"); if(saved && translations[saved]) currentLang = saved; }catch(e){}
 let currentSymptom = symptoms[0].id;
+let quizState = { step:0, symptomId:null, avoidDrowsy:null, wantStrong:null };
 
 function t(key){ return translations[currentLang][key]; }
 
@@ -579,8 +778,15 @@ function productCard(p){
       <svg viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
       <span>${p.caution[currentLang]}</span>
     </div>` : "";
+  const fmt = productFormats[p.name] || "tablet";
+  const formatHtml = `<span class="prod-format"><svg viewBox="0 0 24 24">${formatIcons[fmt]}</svg>${t(formatLabelKeys[fmt])}</span>`;
+  const photoHtml = p.photo
+    ? `<div class="prod-photo"><img src="${p.photo}" alt="${p.name}" loading="lazy"></div>`
+    : `<div class="prod-photo"><div class="prod-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>${p.name}</span></div></div>`;
   return `
     <div class="card">
+      ${photoHtml}
+      ${formatHtml}
       <p class="prod-name">${p.name}</p>
       <p class="prod-ingredient">${t("ingredientLabel")}：${p.ingredient[currentLang]}</p>
       <p class="prod-desc">${p.desc[currentLang]}</p>
@@ -640,6 +846,106 @@ function renderSummary(){
   body.innerHTML = rows;
 }
 
+function computeRecommendation(symptomId, avoidDrowsy, wantStrong){
+  const s = symptoms.find(x=>x.id===symptomId);
+  let candidates = s.products.slice();
+  const lowDrowsy = candidates.filter(p=>p.drowsy<=2);
+  if(avoidDrowsy && lowDrowsy.length) candidates = lowDrowsy;
+  candidates.sort((a,b)=> wantStrong ? b.strength-a.strength : a.strength-b.strength);
+  return candidates[0];
+}
+
+function quizOption(label, iconPath, onClickAttr){
+  return `<button class="quiz-opt" ${onClickAttr}><svg viewBox="0 0 24 24">${iconPath}</svg>${label}</button>`;
+}
+
+function renderQuiz(){
+  const body = document.getElementById("quizBody");
+  document.getElementById("quizTitle").textContent = t("quizTitle");
+  document.getElementById("quizSubtitle").textContent = t("quizSubtitle");
+
+  if(quizState.step === 0){
+    body.innerHTML = `
+      <p class="quiz-step-label">${t("quizStep1")}</p>
+      <div class="quiz-options">
+        ${symptoms.map(s=>`<button class="quiz-opt" data-sym="${s.id}"><svg viewBox="0 0 24 24">${icons[s.id]}</svg>${s.title[currentLang]}</button>`).join("")}
+      </div>`;
+    body.querySelectorAll("[data-sym]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.symptomId = btn.dataset.sym;
+        quizState.step = 1;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 1){
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <p class="quiz-step-label">${t("quizStep2")}</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" data-val="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 10h.01M15.5 10h.01M8 15c1.3-1 2.7-1.5 4-1.5s2.7.5 4 1.5"/></svg>${t("quizAvoidDrowsy")}</button>
+        <button class="quiz-opt" data-val="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 10h.01M15.5 10h.01M8 14c1.3 1 2.7 1.5 4 1.5s2.7-.5 4-1.5"/></svg>${t("quizOkDrowsy")}</button>
+      </div>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 0; renderQuiz(); });
+    body.querySelectorAll("[data-val]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.avoidDrowsy = btn.dataset.val === "true";
+        quizState.step = 2;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 2){
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <p class="quiz-step-label">${t("quizStep3")}</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" data-val="false"><svg viewBox="0 0 24 24"><path d="M8 3h8v4l3 4v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8l3-4z"/><path d="M9 13c1 1.3 2 2 3 2s2-.7 3-2"/></svg>${t("quizGentle")}</button>
+        <button class="quiz-opt" data-val="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>${t("quizStrong")}</button>
+      </div>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 1; renderQuiz(); });
+    body.querySelectorAll("[data-val]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.wantStrong = btn.dataset.val === "true";
+        quizState.step = 3;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 3){
+    const rec = computeRecommendation(quizState.symptomId, quizState.avoidDrowsy, quizState.wantStrong);
+    const reasonKey = (quizState.avoidDrowsy ? "reasonAvoid" : "reasonOk") + (quizState.wantStrong ? "Strong" : "Gentle");
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <span class="quiz-result-badge">${t("quizResultBadge")}</span>
+      <p class="quiz-reason">${t(reasonKey)}</p>
+      <div class="grid">${productCard(rec)}</div>
+      <button class="quiz-restart" id="quizRestartBtn">${t("quizRestart")}</button>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 2; renderQuiz(); });
+    document.getElementById("quizRestartBtn").addEventListener("click", ()=>{
+      quizState = { step:0, symptomId:null, avoidDrowsy:null, wantStrong:null };
+      renderQuiz();
+    });
+  }
+}
+
+function renderPicks(){
+  document.getElementById("picksTitle").textContent = t("picksTitle");
+  document.getElementById("picksIntro").textContent = t("picksIntro");
+  const row = document.getElementById("picksRow");
+  row.innerHTML = editorsPicks.map(pick=>{
+    const s = symptoms.find(x=>x.id===pick.symptomId);
+    const photoHtml = pick.photo
+      ? `<div class="pick-photo"><img src="${pick.photo}" alt="${pick.productName}" loading="lazy"></div>`
+      : `<div class="pick-photo"><div class="pick-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div>`;
+    return `
+      <div class="pick-card">
+        ${photoHtml}
+        <p class="pick-badge">★ Pick</p>
+        <p class="pick-symptom">${s.title[currentLang]}</p>
+        <p class="pick-name">${pick.productName}</p>
+        <p class="pick-comment">${pick.comment[currentLang]}</p>
+      </div>`;
+  }).join("");
+}
+
 function renderLangSwitch(){
   const el = document.getElementById("langSwitch");
   el.innerHTML = Object.keys(langNames).map(l=>`
@@ -649,6 +955,7 @@ function renderLangSwitch(){
     btn.addEventListener("click", ()=>{
       if(btn.dataset.lang === currentLang) return;
       currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
       renderAll();
     });
   });
@@ -671,11 +978,16 @@ function renderAll(){
   document.getElementById("thProduct").textContent = t("tableProduct");
   document.getElementById("thBuy").textContent = t("tableBuy");
   document.getElementById("footerCredit").textContent = t("footerCredit");
+  document.getElementById("navAbout").textContent = t("navAbout");
+  document.getElementById("navPrivacy").textContent = t("navPrivacy");
+  document.getElementById("navContact").textContent = t("navContact");
 
   renderLangSwitch();
   renderTabs();
   renderPanel(false);
   renderSummary();
+  renderQuiz();
+  renderPicks();
 }
 
 renderAll();
