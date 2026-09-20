@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>このサイトについて | くすりナビ TOKYO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7F3; --bg-card:#FFFFFF; --bg-tab:#E4ECE4; --ink:#22303A; --ink-soft:#5B6B70;
+    --accent:#2A6F77; --accent-soft:#DCEBEA; --line:#D8E1D6; --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Sans','Noto Sans TC',sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px;}
+  a{color:var(--accent);}
+  header{padding:28px 0 18px;border-bottom:1px solid var(--line);}
+  .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .mark{width:40px;height:40px;flex:none;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;}
+  .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;}
+  .site-name{font-weight:900;font-size:1.1rem;margin:0;}
+  .back-link{font-size:.82rem;color:var(--ink-soft);text-decoration:none;display:inline-block;margin-top:2px;}
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--line);background:#fff;color:var(--ink-soft);padding:7px 13px;border-radius:999px;font-size:.82rem;font-weight:500;cursor:pointer;font-family:inherit;}
+  .lang-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  main{padding:32px 0 10px;}
+  h1{font-size:1.6rem;font-weight:900;margin:0 0 6px;}
+  .updated{font-size:.78rem;color:var(--ink-soft);margin:0 0 28px;}
+  section{margin-bottom:26px;}
+  h2{font-size:1.05rem;font-weight:700;margin:0 0 8px;}
+  p{font-size:.92rem;margin:0 0 10px;}
+  .info-box{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;font-size:.88rem;}
+  .info-box .row{display:flex;gap:8px;margin-bottom:6px;}
+  .info-box .k{color:var(--ink-soft);flex:none;width:110px;}
+  .note{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:.82rem;}
+  footer{margin:44px 0 30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:10px;}
+  .footer-nav{display:flex;gap:16px;flex-wrap:wrap;}
+  .footer-nav a{color:var(--ink-soft);text-decoration:underline;font-size:.76rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-row">
+      <div class="brand">
+        <div class="mark"><svg viewBox="0 0 24 24"><path d="M6 12c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6"/><path d="M6 12c0 3.3 2.7 6 6 6"/><path d="M12 6v12" stroke-dasharray="1 3"/></svg></div>
+        <div>
+          <p class="site-name" id="siteName"></p>
+          <a class="back-link" href="index.html" id="backLink"></a>
+        </div>
+      </div>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 id="pageTitle"></h1>
+    <p class="updated" id="updated"></p>
+
+    <section>
+      <p id="intro1"></p>
+      <p id="intro2"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Mission"></h2>
+      <p id="pMission"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Accuracy"></h2>
+      <p id="pAccuracy"></p>
+      <div class="note" id="noteAccuracy"></div>
+    </section>
+
+    <section>
+      <h2 id="h2Operator"></h2>
+      <div class="info-box">
+        <div class="row"><span class="k" id="kName"></span><span>[店舗名を入力 / Store name]</span></div>
+        <div class="row"><span class="k" id="kAddress"></span><span>[住所を入力 / Address]</span></div>
+        <div class="row"><span class="k" id="kLicense"></span><span>[登録販売者・薬剤師登録情報 / License info]</span></div>
+        <div class="row"><span class="k" id="kEmail"></span><span>[連絡先メール / Contact email]</span></div>
+      </div>
+    </section>
+
+    <section>
+      <p id="contactPrompt"></p>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footerCredit"></span>
+    <nav class="footer-nav">
+      <a href="index.html" id="navHome"></a>
+      <a href="privacy.html" id="navPrivacy"></a>
+      <a href="contact.html" id="navContact"></a>
+    </nav>
+    <span>&copy; 2026 Kusuri Navi TOKYO — Prototype</span>
+  </footer>
+</div>
+
+<script>
+const translations = {
+  ja:{
+    siteName:"くすりナビ TOKYO", backLink:"← トップページに戻る",
+    pageTitle:"このサイトについて", updated:"最終更新日：[YYYY年MM月DD日]",
+    intro1:"「くすりナビ TOKYO」は、日本を訪れる外国人旅行者の方が、言葉の壁があっても自分に合った市販薬（OTC医薬品）を選べるように作られた情報サイトです。",
+    intro2:"処方箋なしで購入できる薬局・ドラッグストアの商品を、頭痛・腹痛・吐き気・筋肉痛・気持ち悪いといった症状別に紹介し、眠気の出やすさやアレルギーに関する注意点も、写真ではなく分かりやすい図で表示しています。",
+    h2Mission:"サイトの目的",
+    pMission:"日本の薬局では、成分名や注意事項がほとんど日本語でしか書かれておらず、外国人旅行者にとって自分に合う薬を選ぶのは簡単ではありません。当サイトは、実際に薬局で働く薬剤師の知見をもとに、必要な情報を英語・繁體中文・スペイン語でも分かりやすく届けることを目指しています。",
+    h2Accuracy:"情報の正確性について",
+    pAccuracy:"掲載内容は登録薬剤師が監修していますが、あくまで一般的な情報提供を目的としたものであり、個別の診断や治療の代わりになるものではありません。",
+    noteAccuracy:"持病がある方、妊娠・授乳中の方、他の薬を服用中の方は、購入前に必ず薬局のスタッフにご相談ください。",
+    h2Operator:"運営者情報",
+    kName:"運営者", kAddress:"所在地", kLicense:"資格情報", kEmail:"連絡先",
+    contactPrompt:"サイトの内容についてご質問がある場合は、お問い合わせページからご連絡ください。",
+    footerCredit:"企画・監修：◯◯薬局", navHome:"トップページ", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
+  },
+  en:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Back to home",
+    pageTitle:"About Us", updated:"Last updated: [YYYY-MM-DD]",
+    intro1:"Kusuri Navi TOKYO is an information site built to help foreign visitors to Japan choose the right over-the-counter (OTC) medicine, even across a language barrier.",
+    intro2:"We introduce prescription-free products available at pharmacies and drugstores, organized by symptom — headache, stomach ache, nausea, muscle pain, and general malaise — with clear diagrams (instead of photos) showing drowsiness risk and allergy notes.",
+    h2Mission:"Our mission",
+    pMission:"In Japanese pharmacies, ingredient names and precautions are almost always written only in Japanese, making it hard for visitors to choose the right medicine. This site draws on the knowledge of pharmacists working in real pharmacies to make that information accessible in English, Traditional Chinese, and Spanish as well.",
+    h2Accuracy:"About the accuracy of this information",
+    pAccuracy:"The content here is reviewed by a registered pharmacist, but it is intended for general informational purposes only and is not a substitute for individual diagnosis or treatment.",
+    noteAccuracy:"If you have a medical condition, are pregnant or breastfeeding, or are taking other medication, please consult pharmacy staff before purchasing.",
+    h2Operator:"Operator information",
+    kName:"Operated by", kAddress:"Address", kLicense:"License", kEmail:"Contact",
+    contactPrompt:"If you have any questions about this site, please reach out via the contact page.",
+    footerCredit:"Planned & supervised by [Pharmacy Name]", navHome:"Home", navPrivacy:"Privacy Policy", navContact:"Contact"
+  },
+  zh:{
+    siteName:"藥品導覽 TOKYO", backLink:"← 返回首頁",
+    pageTitle:"關於本站", updated:"最後更新日：[YYYY年MM月DD日]",
+    intro1:"「藥品導覽 TOKYO」是為了讓訪日外國旅客即使有語言隔閡，也能選擇適合自己的成藥（OTC醫藥品）而製作的資訊網站。",
+    intro2:"我們依症狀（頭痛、腹痛、噁心、肌肉痠痛、不舒服）分類介紹無需處方箋即可購買的藥局・藥妝店商品，並以清楚易懂的圖表（而非照片）標示嗜睡傾向與過敏注意事項。",
+    h2Mission:"網站宗旨",
+    pMission:"在日本的藥局，成分名稱與注意事項幾乎都只以日文標示，外國旅客要選到適合自己的藥品並不容易。本網站以實際在藥局工作的藥劑師知識為基礎，致力於以英文、繁體中文、西班牙文也能清楚理解的方式傳達必要資訊。",
+    h2Accuracy:"關於資訊的正確性",
+    pAccuracy:"網站內容雖經登錄藥劑師監修，但僅供一般資訊參考之用，並非個別診斷或治療的替代方案。",
+    noteAccuracy:"若有宿疾、懷孕、哺乳中或正在服用其他藥物，購買前請務必諮詢藥局工作人員。",
+    h2Operator:"營運者資訊",
+    kName:"營運者", kAddress:"所在地", kLicense:"資格資訊", kEmail:"聯絡方式",
+    contactPrompt:"若對網站內容有任何疑問，請透過聯絡我們頁面與我們聯繫。",
+    footerCredit:"企劃・監修：○○藥局", navHome:"首頁", navPrivacy:"隱私權政策", navContact:"聯絡我們"
+  },
+  es:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Volver al inicio",
+    pageTitle:"Sobre nosotros", updated:"Última actualización: [AAAA-MM-DD]",
+    intro1:"Kusuri Navi TOKYO es un sitio informativo creado para ayudar a los visitantes extranjeros en Japón a elegir el medicamento de venta libre (OTC) adecuado, incluso con la barrera del idioma.",
+    intro2:"Presentamos productos disponibles sin receta en farmacias y droguerías, organizados por síntoma — dolor de cabeza, dolor de estómago, náuseas, dolor muscular y malestar general — con diagramas claros (en lugar de fotos) que muestran el riesgo de somnolencia y las precauciones por alergias.",
+    h2Mission:"Nuestra misión",
+    pMission:"En las farmacias japonesas, los nombres de los ingredientes y las precauciones casi siempre están escritos solo en japonés, lo que dificulta que los visitantes elijan el medicamento adecuado. Este sitio se basa en el conocimiento de farmacéuticos que trabajan en farmacias reales para hacer esa información accesible también en inglés, chino tradicional y español.",
+    h2Accuracy:"Sobre la precisión de esta información",
+    pAccuracy:"El contenido aquí presentado es revisado por un farmacéutico registrado, pero tiene fines meramente informativos generales y no sustituye un diagnóstico o tratamiento individual.",
+    noteAccuracy:"Si tiene alguna condición médica, está embarazada o en periodo de lactancia, o toma otros medicamentos, consulte con el personal de la farmacia antes de comprar.",
+    h2Operator:"Información del operador",
+    kName:"Operado por", kAddress:"Dirección", kLicense:"Licencia", kEmail:"Contacto",
+    contactPrompt:"Si tiene alguna pregunta sobre este sitio, contáctenos a través de la página de contacto.",
+    footerCredit:"Planificado y supervisado por [Nombre de la farmacia]", navHome:"Inicio", navPrivacy:"Política de privacidad", navContact:"Contacto"
+  }
+};
+const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
+let currentLang = "ja";
+try{ const saved = localStorage.getItem("kn_lang"); if(saved && translations[saved]) currentLang = saved; }catch(e){}
+
+function t(key){ return translations[currentLang][key]; }
+
+function renderLangSwitch(){
+  const el = document.getElementById("langSwitch");
+  el.innerHTML = Object.keys(langNames).map(l=>`<button class="lang-btn${l===currentLang?" active":""}" data-lang="${l}">${langNames[l]}</button>`).join("");
+  el.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.lang === currentLang) return;
+      currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
+      renderAll();
+    });
+  });
+}
+
+function renderAll(){
+  document.documentElement.lang = currentLang;
+  document.title = t("pageTitle") + " | " + t("siteName");
+  [
+    "siteName","backLink","pageTitle","updated","intro1","intro2",
+    "h2Mission","pMission","h2Accuracy","pAccuracy","noteAccuracy",
+    "h2Operator","kName","kAddress","kLicense","kEmail","contactPrompt",
+    "footerCredit","navHome","navPrivacy","navContact"
+  ].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = t(id);
+  });
+  renderLangSwitch();
+}
+renderAll();
+</script>
+</body>
+</html>

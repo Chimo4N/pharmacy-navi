@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | くすりナビ TOKYO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7F3; --bg-card:#FFFFFF; --bg-tab:#E4ECE4; --ink:#22303A; --ink-soft:#5B6B70;
+    --accent:#2A6F77; --accent-soft:#DCEBEA; --warn-soft:#F7E4DC; --line:#D8E1D6; --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Sans','Noto Sans TC',sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px;}
+  a{color:var(--accent);}
+  header{padding:28px 0 18px;border-bottom:1px solid var(--line);}
+  .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .mark{width:40px;height:40px;flex:none;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;}
+  .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;}
+  .site-name{font-weight:900;font-size:1.1rem;margin:0;}
+  .back-link{font-size:.82rem;color:var(--ink-soft);text-decoration:none;display:inline-block;margin-top:2px;}
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--line);background:#fff;color:var(--ink-soft);padding:7px 13px;border-radius:999px;font-size:.82rem;font-weight:500;cursor:pointer;font-family:inherit;}
+  .lang-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  main{padding:32px 0 10px;}
+  h1{font-size:1.6rem;font-weight:900;margin:0 0 6px;}
+  .updated{font-size:.78rem;color:var(--ink-soft);margin:0 0 20px;}
+  .dev-note{background:var(--warn-soft);border-radius:10px;padding:12px 14px;font-size:.8rem;margin-bottom:28px;color:#8A3B22;}
+  section{margin-bottom:24px;}
+  h2{font-size:1.02rem;font-weight:700;margin:0 0 8px;}
+  p{font-size:.9rem;margin:0 0 10px;}
+  ul{margin:0 0 10px;padding-left:1.2em;font-size:.9rem;}
+  li{margin-bottom:4px;}
+  .info-box{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;font-size:.88rem;}
+  footer{margin:44px 0 30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:10px;}
+  .footer-nav{display:flex;gap:16px;flex-wrap:wrap;}
+  .footer-nav a{color:var(--ink-soft);text-decoration:underline;font-size:.76rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-row">
+      <div class="brand">
+        <div class="mark"><svg viewBox="0 0 24 24"><path d="M6 12c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6"/><path d="M6 12c0 3.3 2.7 6 6 6"/><path d="M12 6v12" stroke-dasharray="1 3"/></svg></div>
+        <div>
+          <p class="site-name" id="siteName"></p>
+          <a class="back-link" href="index.html" id="backLink"></a>
+        </div>
+      </div>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main>
+    <h1 id="pageTitle"></h1>
+    <p class="updated" id="updated"></p>
+    <div class="dev-note" id="devNote"></div>
+
+    <section>
+      <h2 id="h2Basic"></h2>
+      <p id="pBasic"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Collect"></h2>
+      <ul>
+        <li id="liCollect1"></li>
+        <li id="liCollect2"></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="h2Ads"></h2>
+      <p id="pAds1"></p>
+      <p id="pAds2"></p>
+      <p id="pAds3"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Analytics"></h2>
+      <p id="pAnalytics"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Purpose"></h2>
+      <p id="pPurpose"></p>
+    </section>
+
+    <section>
+      <h2 id="h2ThirdParty"></h2>
+      <p id="pThirdParty"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Rights"></h2>
+      <p id="pRights"></p>
+    </section>
+
+    <section>
+      <h2 id="h2Changes"></h2>
+      <p id="pChanges"></p>
+    </section>
+
+    <section>
+      <h2 id="h2ContactHead"></h2>
+      <div class="info-box" id="pContact"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footerCredit"></span>
+    <nav class="footer-nav">
+      <a href="index.html" id="navHome"></a>
+      <a href="about.html" id="navAbout"></a>
+      <a href="contact.html" id="navContact"></a>
+    </nav>
+    <span>&copy; 2026 Kusuri Navi TOKYO — Prototype</span>
+  </footer>
+</div>
+
+<script>
+const translations = {
+  ja:{
+    siteName:"くすりナビ TOKYO", backLink:"← トップページに戻る",
+    pageTitle:"プライバシーポリシー", updated:"最終更新日：[YYYY年MM月DD日]",
+    devNote:"※このページはプロトタイプ用のひな形です。実際に公開する前に、内容が事業内容や利用する広告・解析ツールに合っているか、専門家（弁護士など）に確認することをおすすめします。",
+    h2Basic:"基本方針",
+    pBasic:"くすりナビ TOKYO（以下「当サイト」）は、個人情報の重要性を認識し、個人情報の保護に関する法律その他関係法令を遵守し、適切に取り扱います。",
+    h2Collect:"取得する情報",
+    liCollect1:"お問い合わせフォームにご入力いただいたお名前・メールアドレス・お問い合わせ内容",
+    liCollect2:"Cookie（クッキー）等により自動的に取得されるアクセス情報（閲覧ページ、滞在時間、ブラウザの種類、おおよその地域など）",
+    h2Ads:"Cookieと広告について",
+    pAds1:"当サイトでは、第三者配信の広告サービス（Google AdSenseなど）を利用する予定です。これらの広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。",
+    pAds2:"Cookieを利用することで当サイトはユーザーのコンピュータを識別できますが、ユーザー個人を特定するものではありません。",
+    pAds3:"Googleが広告配信に使用するCookieを無効にしたい場合は、Googleの広告設定ページ（https://adssettings.google.com）から行うことができます。",
+    h2Analytics:"アクセス解析ツールについて",
+    pAnalytics:"当サイトでは、サイト改善のためGoogleアナリティクス等のアクセス解析ツールを利用する場合があります。これらのツールはCookieを使用してトラフィックデータを収集しますが、個人を特定する情報は含まれません。この機能はCookieを無効にすることで収集を拒否できます。",
+    h2Purpose:"個人情報の利用目的",
+    pPurpose:"お問い合わせフォームで取得した情報は、お問い合わせへの回答のためにのみ利用し、それ以外の目的では利用しません。",
+    h2ThirdParty:"個人情報の第三者提供",
+    pThirdParty:"当サイトは、法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。",
+    h2Rights:"個人情報の開示・訂正・削除について",
+    pRights:"ご自身の個人情報の開示、訂正、削除をご希望される場合は、お問い合わせページよりご連絡ください。確認のうえ、合理的な期間内に対応いたします。",
+    h2Changes:"プライバシーポリシーの変更",
+    pChanges:"当サイトは、必要に応じて本ポリシーの内容を変更することがあります。変更後の内容は、当ページに掲載した時点で効力を生じるものとします。",
+    h2ContactHead:"お問い合わせ窓口",
+    pContact:"本ポリシーに関するお問い合わせは、お問い合わせページよりご連絡ください。",
+    footerCredit:"企画・監修：◯◯薬局", navHome:"トップページ", navAbout:"このサイトについて", navContact:"お問い合わせ"
+  },
+  en:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Back to home",
+    pageTitle:"Privacy Policy", updated:"Last updated: [YYYY-MM-DD]",
+    devNote:"Note: this page is a prototype template. Before publishing, please have the content reviewed by a professional (e.g. a lawyer) to make sure it matches your actual business and the ad/analytics tools you use.",
+    h2Basic:"Basic policy",
+    pBasic:"Kusuri Navi TOKYO (\"this site\") recognizes the importance of personal information and handles it appropriately in compliance with Japan's Act on the Protection of Personal Information and other applicable laws.",
+    h2Collect:"Information we collect",
+    liCollect1:"Name, email address, and message content you enter into the contact form",
+    liCollect2:"Access data collected automatically via cookies (pages viewed, time on site, browser type, approximate region, etc.)",
+    h2Ads:"Cookies and advertising",
+    pAds1:"This site plans to use third-party advertising services (such as Google AdSense). These advertising vendors may use cookies to serve ads based on a user's interests.",
+    pAds2:"Cookies allow this site to recognize a user's computer, but they do not identify the individual user.",
+    pAds3:"You can opt out of Google's use of cookies for ad personalization by visiting Google's Ads Settings page (https://adssettings.google.com).",
+    h2Analytics:"Analytics tools",
+    pAnalytics:"This site may use analytics tools such as Google Analytics to help improve the site. These tools use cookies to collect traffic data, but this data does not identify you personally. You can decline this data collection by disabling cookies.",
+    h2Purpose:"Purpose of use",
+    pPurpose:"Information collected through the contact form is used solely to respond to your inquiry and for no other purpose.",
+    h2ThirdParty:"Disclosure to third parties",
+    pThirdParty:"This site will not disclose personal information to third parties without your consent, except where required by law.",
+    h2Rights:"Disclosure, correction, and deletion",
+    pRights:"If you would like to request disclosure, correction, or deletion of your personal information, please contact us via the contact page. We will respond within a reasonable time after verification.",
+    h2Changes:"Changes to this policy",
+    pChanges:"This site may revise this policy as needed. Any revised policy takes effect as soon as it is posted on this page.",
+    h2ContactHead:"Contact for privacy inquiries",
+    pContact:"For questions about this policy, please contact us via the contact page.",
+    footerCredit:"Planned & supervised by [Pharmacy Name]", navHome:"Home", navAbout:"About Us", navContact:"Contact"
+  },
+  zh:{
+    siteName:"藥品導覽 TOKYO", backLink:"← 返回首頁",
+    pageTitle:"隱私權政策", updated:"最後更新日：[YYYY年MM月DD日]",
+    devNote:"※本頁為原型範本。正式公開前，建議請專業人士（如律師）確認內容是否符合您實際的營運內容與所使用的廣告／分析工具。",
+    h2Basic:"基本方針",
+    pBasic:"藥品導覽 TOKYO（以下稱「本網站」）認知個人資訊的重要性，並遵守日本個人資訊保護法及其他相關法令，妥善處理個人資訊。",
+    h2Collect:"蒐集之資訊",
+    liCollect1:"您於聯絡表單輸入的姓名、電子郵件地址與詢問內容",
+    liCollect2:"透過Cookie等自動蒐集的存取資訊（瀏覽頁面、停留時間、瀏覽器類型、大致地區等）",
+    h2Ads:"關於Cookie與廣告",
+    pAds1:"本網站預計使用第三方廣告服務（如Google AdSense）。這些廣告業者可能會使用Cookie，依使用者興趣顯示廣告。",
+    pAds2:"Cookie可讓本網站識別使用者的電腦，但無法識別使用者個人身分。",
+    pAds3:"若您希望停用Google用於廣告個人化的Cookie，可透過Google廣告設定頁面（https://adssettings.google.com）進行設定。",
+    h2Analytics:"關於流量分析工具",
+    pAnalytics:"本網站可能為改善網站而使用Google Analytics等流量分析工具。這些工具會透過Cookie蒐集流量資料，但不包含可識別個人的資訊。您可透過停用Cookie拒絕此類資料蒐集。",
+    h2Purpose:"個人資訊之使用目的",
+    pPurpose:"透過聯絡表單取得之資訊，僅用於回覆您的詢問，不作其他用途使用。",
+    h2ThirdParty:"個人資訊之第三方提供",
+    pThirdParty:"除法令另有規定外，本網站不會在未經本人同意之情況下，將個人資訊提供予第三方。",
+    h2Rights:"個人資訊之揭露、更正與刪除",
+    pRights:"若您希望申請揭露、更正或刪除您的個人資訊，請透過聯絡我們頁面與我們聯繫。經確認後，我們將於合理期間內回覆處理。",
+    h2Changes:"隱私權政策之變更",
+    pChanges:"本網站得視需要變更本政策之內容。變更後之內容自公布於本頁面時起生效。",
+    h2ContactHead:"隱私權相關詢問窗口",
+    pContact:"若對本政策有任何疑問，請透過聯絡我們頁面與我們聯繫。",
+    footerCredit:"企劃・監修：○○藥局", navHome:"首頁", navAbout:"關於本站", navContact:"聯絡我們"
+  },
+  es:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Volver al inicio",
+    pageTitle:"Política de privacidad", updated:"Última actualización: [AAAA-MM-DD]",
+    devNote:"Nota: esta página es una plantilla de prototipo. Antes de publicarla, se recomienda que un profesional (por ejemplo, un abogado) revise el contenido para asegurarse de que coincide con su actividad real y con las herramientas de publicidad/analítica que utilice.",
+    h2Basic:"Política básica",
+    pBasic:"Kusuri Navi TOKYO (\"este sitio\") reconoce la importancia de la información personal y la gestiona adecuadamente conforme a la Ley de Protección de Información Personal de Japón y otras leyes aplicables.",
+    h2Collect:"Información que recopilamos",
+    liCollect1:"Nombre, dirección de correo electrónico y contenido del mensaje que ingrese en el formulario de contacto",
+    liCollect2:"Datos de acceso recopilados automáticamente mediante cookies (páginas visitadas, tiempo en el sitio, tipo de navegador, región aproximada, etc.)",
+    h2Ads:"Cookies y publicidad",
+    pAds1:"Este sitio planea utilizar servicios de publicidad de terceros (como Google AdSense). Estos proveedores publicitarios pueden usar cookies para mostrar anuncios según los intereses del usuario.",
+    pAds2:"Las cookies permiten que este sitio reconozca la computadora del usuario, pero no identifican al usuario individualmente.",
+    pAds3:"Puede optar por no recibir anuncios personalizados de Google visitando la página de Configuración de anuncios de Google (https://adssettings.google.com).",
+    h2Analytics:"Herramientas de análisis",
+    pAnalytics:"Este sitio puede utilizar herramientas de análisis como Google Analytics para mejorar el sitio. Estas herramientas usan cookies para recopilar datos de tráfico, pero estos datos no lo identifican personalmente. Puede rechazar esta recopilación desactivando las cookies.",
+    h2Purpose:"Finalidad del uso",
+    pPurpose:"La información recopilada a través del formulario de contacto se utiliza únicamente para responder a su consulta y para ningún otro fin.",
+    h2ThirdParty:"Divulgación a terceros",
+    pThirdParty:"Este sitio no divulgará información personal a terceros sin su consentimiento, salvo que la ley lo exija.",
+    h2Rights:"Divulgación, corrección y eliminación",
+    pRights:"Si desea solicitar la divulgación, corrección o eliminación de su información personal, contáctenos a través de la página de contacto. Responderemos dentro de un plazo razonable tras la verificación.",
+    h2Changes:"Cambios a esta política",
+    pChanges:"Este sitio puede revisar esta política según sea necesario. La política revisada entra en vigor en cuanto se publica en esta página.",
+    h2ContactHead:"Contacto para consultas de privacidad",
+    pContact:"Para preguntas sobre esta política, contáctenos a través de la página de contacto.",
+    footerCredit:"Planificado y supervisado por [Nombre de la farmacia]", navHome:"Inicio", navAbout:"Sobre nosotros", navContact:"Contacto"
+  }
+};
+const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
+let currentLang = "ja";
+try{ const saved = localStorage.getItem("kn_lang"); if(saved && translations[saved]) currentLang = saved; }catch(e){}
+
+function t(key){ return translations[currentLang][key]; }
+
+function renderLangSwitch(){
+  const el = document.getElementById("langSwitch");
+  el.innerHTML = Object.keys(langNames).map(l=>`<button class="lang-btn${l===currentLang?" active":""}" data-lang="${l}">${langNames[l]}</button>`).join("");
+  el.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.lang === currentLang) return;
+      currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
+      renderAll();
+    });
+  });
+}
+
+function renderAll(){
+  document.documentElement.lang = currentLang;
+  document.title = t("pageTitle") + " | " + t("siteName");
+  [
+    "siteName","backLink","pageTitle","updated","devNote",
+    "h2Basic","pBasic","h2Collect","liCollect1","liCollect2",
+    "h2Ads","pAds1","pAds2","pAds3","h2Analytics","pAnalytics",
+    "h2Purpose","pPurpose","h2ThirdParty","pThirdParty",
+    "h2Rights","pRights","h2Changes","pChanges","h2ContactHead","pContact",
+    "footerCredit","navHome","navAbout","navContact"
+  ].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = t(id);
+  });
+  renderLangSwitch();
+}
+renderAll();
+</script>
+</body>
+</html>
