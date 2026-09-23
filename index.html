@@ -350,6 +350,7 @@ const translations = {
     drowsyLabel:"眠気の出やすさ",
     weakEnd:"弱い", strongEnd:"強い",
     drowsyLessEnd:"少ない", drowsyMoreEnd:"出やすい",
+    cautionGeneral:"治療中の疾患・使用中のお薬がある方、副作用歴などアレルギーのある方、お子様やご妊娠中の方などは、販売店の薬剤師、登録販売者にご相談ください",
     dosageLabel:"用法・用量の目安",
     buyLabel:"買える場所",
     adPlaceholder:"広告スペース（Google AdSense）",
@@ -391,6 +392,7 @@ const translations = {
     drowsyLabel:"Drowsiness risk",
     weakEnd:"Mild", strongEnd:"Strong",
     drowsyLessEnd:"Low", drowsyMoreEnd:"High",
+    cautionGeneral:"If you have a condition under treatment, are taking other medication, have a history of allergies or side effects, or are a child or pregnant, please consult the pharmacist or registered seller at the store.",
     dosageLabel:"Typical dosage",
     buyLabel:"Where to buy",
     adPlaceholder:"Ad space (Google AdSense)",
@@ -432,6 +434,7 @@ const translations = {
     drowsyLabel:"嗜睡傾向",
     weakEnd:"較弱", strongEnd:"較強",
     drowsyLessEnd:"較少", drowsyMoreEnd:"較容易",
+    cautionGeneral:"若您正在治療其他疾病、正在服用其他藥物、曾有過敏或副作用病史，或為兒童、懷孕中，請洽詢該店的藥劑師或登錄販賣者。",
     dosageLabel:"用法用量參考",
     buyLabel:"購買地點",
     adPlaceholder:"廣告空間（Google AdSense）",
@@ -473,6 +476,7 @@ const translations = {
     drowsyLabel:"Riesgo de somnolencia",
     weakEnd:"Leve", strongEnd:"Fuerte",
     drowsyLessEnd:"Bajo", drowsyMoreEnd:"Alto",
+    cautionGeneral:"Si tiene alguna enfermedad en tratamiento, está tomando otros medicamentos, tiene antecedentes de alergias o efectos secundarios, o es un niño o está embarazada, consulte con el farmacéutico o el vendedor registrado de la tienda.",
     dosageLabel:"Dosis habitual",
     buyLabel:"Dónde comprarlo",
     adPlaceholder:"Espacio publicitario (Google AdSense)",
@@ -904,11 +908,11 @@ function renderGauge(level, lowLabel, highLabel, title){
 }
 
 function productCard(p){
-  const cautionHtml = p.caution ? `
+  const cautionHtml = `
     <div class="caution">
       <svg viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
-      <span>${p.caution[currentLang]}</span>
-    </div>` : "";
+      <span>${t("cautionGeneral")}</span>
+    </div>`;
   const fmt = productFormats[p.name] || "tablet";
   const formatHtml = `<span class="prod-format"><svg viewBox="0 0 24 24">${formatIcons[fmt]}</svg>${t(formatLabelKeys[fmt])}</span>`;
   const photoHtml = p.photo
