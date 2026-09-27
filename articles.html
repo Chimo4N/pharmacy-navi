@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お役立ち記事 | くすりナビ TOKYO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7F3; --bg-card:#FFFFFF; --bg-tab:#E4ECE4; --ink:#22303A; --ink-soft:#5B6B70;
+    --accent:#2A6F77; --accent-soft:#DCEBEA; --line:#D8E1D6; --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',-apple-system,'Hiragino Sans','Noto Sans TC',sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px;}
+  a{color:var(--accent);}
+  header{padding:28px 0 18px;border-bottom:1px solid var(--line);}
+  .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .mark{width:40px;height:40px;flex:none;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;}
+  .mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;}
+  .site-name{font-weight:900;font-size:1.1rem;margin:0;}
+  .back-link{font-size:.82rem;color:var(--ink-soft);text-decoration:none;display:inline-block;margin-top:2px;}
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--line);background:#fff;color:var(--ink-soft);padding:7px 13px;border-radius:999px;font-size:.82rem;font-weight:500;cursor:pointer;font-family:inherit;}
+  .lang-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  main{padding:32px 0 10px;}
+  h1{font-size:1.6rem;font-weight:900;margin:0 0 6px;}
+  .lead{font-size:.9rem;color:var(--ink-soft);margin:0 0 26px;}
+
+  .article-grid{display:flex;flex-direction:column;gap:14px;}
+  .article-card{
+    background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 20px;cursor:pointer;transition:border-color .15s;
+  }
+  .article-card:hover{border-color:var(--accent);}
+  .article-date{font-size:.72rem;color:var(--ink-soft);margin:0 0 6px;font-weight:500;}
+  .article-title{font-size:1.05rem;font-weight:700;margin:0 0 8px;}
+  .article-excerpt{font-size:.86rem;color:var(--ink-soft);margin:0 0 10px;}
+  .article-readmore{font-size:.8rem;font-weight:700;color:var(--accent);}
+
+  .detail-back{background:none;border:none;color:var(--ink-soft);font-size:.82rem;cursor:pointer;padding:0;margin:0 0 18px;font-family:inherit;text-decoration:underline;}
+  .detail-date{font-size:.76rem;color:var(--ink-soft);margin:0 0 4px;font-weight:500;}
+  .detail-title{font-size:1.4rem;font-weight:900;margin:0 0 20px;line-height:1.4;}
+  .detail-body p{font-size:.92rem;margin:0 0 16px;}
+  .detail-back-bottom{margin-top:8px;}
+
+  footer{margin:44px 0 30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:10px;}
+  .footer-nav{display:flex;gap:16px;flex-wrap:wrap;}
+  .footer-nav a{color:var(--ink-soft);text-decoration:underline;font-size:.76rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-row">
+      <div class="brand">
+        <div class="mark"><svg viewBox="0 0 24 24"><path d="M6 12c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6"/><path d="M6 12c0 3.3 2.7 6 6 6"/><path d="M12 6v12" stroke-dasharray="1 3"/></svg></div>
+        <div>
+          <p class="site-name" id="siteName"></p>
+          <a class="back-link" href="index.html" id="backLink"></a>
+        </div>
+      </div>
+      <div class="lang-switch" id="langSwitch"></div>
+    </div>
+  </header>
+
+  <main id="main"></main>
+
+  <footer>
+    <span id="footerCredit"></span>
+    <nav class="footer-nav">
+      <a href="index.html" id="navHome"></a>
+      <a href="about.html" id="navAbout"></a>
+      <a href="privacy.html" id="navPrivacy"></a>
+      <a href="contact.html" id="navContact"></a>
+    </nav>
+    <span>&copy; 2026 Kusuri Navi TOKYO — Prototype</span>
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   記事を追加するには、下の articles 配列に同じ形のオブジェクトを
+   1つ追加するだけでOKです（コピーして書き換えてください）。
+   body は段落ごとに文字列を1つずつ配列に入れます（HTMLタグ不要）。
+   ============================================================ */
+const articles = [
+  {
+    id:"pharmacy-basics",
+    date:"2026-01-15",
+    title:{
+      ja:"はじめての日本の薬局：基本の使い方ガイド",
+      en:"First Time at a Japanese Pharmacy: A Basic Guide",
+      zh:"第一次到日本藥局：基本使用指南",
+      es:"Su primera vez en una farmacia japonesa: guía básica"
+    },
+    excerpt:{
+      ja:"処方箋なしで買える市販薬がたくさんある日本の薬局。選び方のコツと、薬剤師への伝え方を紹介します。",
+      en:"Japanese pharmacies carry many OTC medicines you can buy without a prescription. Here's how to choose, and how to talk to the pharmacist.",
+      zh:"日本藥局有許多不需處方箋即可購買的成藥。介紹挑選技巧，以及如何與藥劑師溝通。",
+      es:"Las farmacias japonesas ofrecen muchos medicamentos de venta libre. Aquí le contamos cómo elegir y cómo hablar con el farmacéutico."
+    },
+    body:{
+      ja:[
+        "日本の薬局やドラッグストアには、処方箋がなくても買える「OTC医薬品」がたくさん並んでいます。ただし成分名や注意書きはほとんどが日本語のみで、外国人旅行者にとっては選ぶだけでもひと苦労です。",
+        "まず知っておきたいのは、日本の薬は「錠剤」「粉末」「貼り薬」「ドリンク」など剤形の種類が豊富なこと。同じ症状でも、飲みやすさや眠気の出やすさが商品によって大きく異なります。",
+        "レジ横やカウンターに薬剤師や登録販売者がいる場合、アレルギーや持病があるかどうかを聞かれることがあります。簡単な英単語（allergy, pregnant, medicineなど）を伝えるだけでも、より適した商品を提案してもらえます。",
+        "このサイトでは、症状別に商品を比較できるほか、「3つの質問でおすすめを探す」機能を使えば、眠気の好みや効き目のタイプに合わせて1つを提案します。購入前の参考にしてください。",
+        "体調がすぐれない場合は、無理をせず、症状が重いときや長引くときは医療機関を受診することをおすすめします。"
+      ],
+      en:[
+        "Japanese pharmacies and drugstores carry a wide range of over-the-counter (OTC) medicines you can buy without a prescription. However, ingredient names and precautions are almost always written only in Japanese, which can make choosing the right one a challenge for visitors.",
+        "One thing worth knowing: Japanese medicines come in many forms — tablets, powders, patches, drinks — and how easy they are to take, and how likely they are to cause drowsiness, can vary a lot even for the same symptom.",
+        "If there's a pharmacist or registered seller at the counter, they may ask whether you have any allergies or existing conditions. Even a few simple words like \"allergy,\" \"pregnant,\" or \"medicine\" can help them suggest something more suitable.",
+        "On this site, you can compare products by symptom, or use the \"Find your medicine in 3 questions\" tool, which suggests one option based on how you feel about drowsiness and effect strength. Use it as a reference before you buy.",
+        "If you're not feeling well, don't push through it — if symptoms are severe or last a long time, we recommend seeing a doctor."
+      ],
+      zh:[
+        "日本的藥局與藥妝店裡陳列著許多不需處方箋即可購買的「成藥（OTC）」。不過成分名稱與注意事項幾乎都只以日文標示，對外國旅客來說，光是挑選就相當不容易。",
+        "首先要知道的是，日本的藥品劑型相當多元，有錠劑、粉末、貼布、飲品等。即使是同樣的症狀，不同商品在服用難易度與嗜睡程度上也可能有很大差異。",
+        "若櫃檯有藥劑師或登錄販賣者，有時會詢問您是否有過敏或宿疾。只要說出「allergy」「pregnant」「medicine」等簡單英文單字，就能獲得更合適的建議。",
+        "本網站可依症狀比較商品，也可使用「3個問題找到適合您的藥」功能，依您對嗜睡與藥效強度的偏好推薦一款商品，購買前可作為參考。",
+        "若身體不適，請不要勉強，若症狀嚴重或持續較久，建議就醫。"
+      ],
+      es:[
+        "Las farmacias y droguerías de Japón ofrecen una amplia variedad de medicamentos de venta libre (OTC) que se pueden comprar sin receta. Sin embargo, los nombres de los ingredientes y las precauciones casi siempre están escritos solo en japonés, lo que puede hacer que elegir el correcto sea todo un reto para los visitantes.",
+        "Algo que vale la pena saber: los medicamentos japoneses vienen en muchas formas — comprimidos, polvos, parches, bebidas — y tanto la facilidad para tomarlos como la probabilidad de causar somnolencia pueden variar mucho incluso para el mismo síntoma.",
+        "Si hay un farmacéutico o vendedor registrado en el mostrador, puede que le pregunten si tiene alergias o alguna condición médica. Incluso unas pocas palabras simples como \"allergy\" (alergia), \"pregnant\" (embarazada) o \"medicine\" (medicamento) pueden ayudarles a sugerirle algo más adecuado.",
+        "En este sitio puede comparar productos por síntoma, o usar la herramienta \"Encuentra tu medicamento en 3 preguntas\", que sugiere una opción según sus preferencias sobre la somnolencia y la intensidad del efecto. Úsela como referencia antes de comprar.",
+        "Si no se siente bien, no continúe forzándose — si los síntomas son intensos o duran mucho tiempo, le recomendamos consultar a un médico."
+      ]
+    }
+  },
+  {
+    id:"hayfever-season",
+    date:"2026-02-01",
+    title:{
+      ja:"春の花粉症シーズンを日本で乗り切る方法",
+      en:"Getting Through Hay Fever Season in Japan",
+      zh:"如何在日本度過春季花粉症季節",
+      es:"Cómo sobrellevar la temporada de alergias en Japón"
+    },
+    excerpt:{
+      ja:"2〜4月は花粉症のピークシーズン。旅行者が知っておきたい対策と、薬の選び方をまとめました。",
+      en:"February to April is peak hay fever season in Japan. Here's what visitors should know, and how to choose a medicine.",
+      zh:"2月至4月是花粉症的高峰季節，整理了旅客應該知道的因應方式與選藥要點。",
+      es:"De febrero a abril es la temporada alta de alergias en Japón. Esto es lo que los visitantes deben saber, y cómo elegir un medicamento."
+    },
+    body:{
+      ja:[
+        "日本では2月〜4月ごろにスギ花粉、その後ヒノキ花粉が飛散し、多くの人が鼻水やくしゃみ、目のかゆみに悩まされます。この時期に日本を訪れる方は、思ったより症状がつらく感じることも少なくありません。",
+        "花粉症用の薬は、大きく分けて「眠くなりにくいタイプ」と「効果は強いが眠くなりやすいタイプ」があります。観光やお仕事の予定がある日は、眠くなりにくいタイプを選ぶのがおすすめです。",
+        "目のかゆみが強い場合は、鼻炎薬に加えて、点眼薬を併用する人も多いです。マスクやメガネ（サングラス）も、花粉を物理的に防ぐ手段として広く使われています。",
+        "このサイトの「花粉症・鼻炎」のページでは、成分の違いや眠気の強さを比較できます。症状が重い場合は、我慢せず薬局のスタッフに相談してください。",
+        "花粉情報はテレビの天気予報やスマートフォンアプリでも毎日発表されているので、飛散量が多い日は外出を控えめにするのも一つの方法です。"
+      ],
+      en:[
+        "In Japan, cedar pollen spreads roughly from February to April, followed by cypress pollen, leaving many people with a runny nose, sneezing, and itchy eyes. If you're visiting during this season, the symptoms can catch you off guard.",
+        "Hay fever medicines broadly fall into two types: ones less likely to cause drowsiness, and stronger ones that are more likely to make you sleepy. On days with sightseeing plans or work, a low-drowsiness option is usually the better choice.",
+        "For strong eye itching, many people combine a nasal allergy medicine with eye drops. Masks and glasses (or sunglasses) are also widely used as a physical barrier against pollen.",
+        "On this site's \"Hay Fever & Rhinitis\" page, you can compare ingredients and drowsiness levels. If your symptoms are severe, don't tough it out — ask the pharmacy staff for advice.",
+        "Daily pollen forecasts are broadcast on TV weather reports and available through smartphone apps, so limiting time outdoors on high-pollen days is another option worth considering."
+      ],
+      zh:[
+        "在日本，杉樹花粉大約於2月至4月飄散，接著是檜木花粉，讓許多人飽受流鼻水、打噴嚏、眼睛癢之苦。若在這段期間訪日，症狀有時會比預期更難受。",
+        "花粉症用藥大致分為「較不易嗜睡的類型」與「藥效強但較容易嗜睡的類型」。若當天有觀光或工作行程，建議選擇較不易嗜睡的類型。",
+        "若眼睛癢感嚴重，不少人會併用鼻炎藥與點眼藥。口罩與眼鏡（太陽眼鏡）也是廣泛使用的物理性花粉防護方式。",
+        "本網站的「花粉症・鼻炎」頁面可比較成分差異與嗜睡程度。若症狀嚴重，請不要忍耐，可洽詢藥局工作人員。",
+        "花粉資訊每天都會透過電視氣象預報或手機應用程式公布，飛散量高的日子減少外出，也是一種應對方式。"
+      ],
+      es:[
+        "En Japón, el polen de cedro se dispersa aproximadamente de febrero a abril, seguido del polen de ciprés, dejando a muchas personas con rinorrea, estornudos y picazón de ojos. Si visita el país durante esta temporada, los síntomas pueden sorprenderle.",
+        "Los medicamentos para la fiebre del heno se dividen en general en dos tipos: los que tienen menos probabilidad de causar somnolencia y los más fuertes, con mayor probabilidad de dar sueño. En días con planes de turismo o trabajo, suele ser mejor elegir una opción de baja somnolencia.",
+        "Para una picazón de ojos intensa, muchas personas combinan un medicamento nasal con gotas oculares. Las mascarillas y las gafas (o gafas de sol) también se usan ampliamente como barrera física contra el polen.",
+        "En la página \"Fiebre del heno y rinitis\" de este sitio puede comparar ingredientes y niveles de somnolencia. Si sus síntomas son intensos, no los aguante — pida consejo al personal de la farmacia.",
+        "Los pronósticos diarios de polen se transmiten en el informe del clima de la televisión y están disponibles en aplicaciones para smartphone, así que limitar el tiempo al aire libre en los días de alta dispersión es otra opción a considerar."
+      ]
+    }
+  }
+  /* ↓ 新しい記事を追加する時は、ここに同じ形でオブジェクトを追加してください
+  ,{
+    id:"unique-id-here",
+    date:"2026-04-01",
+    title:{ja:"...", en:"...", zh:"...", es:"..."},
+    excerpt:{ja:"...", en:"...", zh:"...", es:"..."},
+    body:{
+      ja:["段落1","段落2"],
+      en:["Paragraph 1","Paragraph 2"],
+      zh:["段落1","段落2"],
+      es:["Párrafo 1","Párrafo 2"]
+    }
+  }
+  */
+];
+
+const translations = {
+  ja:{
+    siteName:"くすりナビ TOKYO", backLink:"← トップページに戻る",
+    listTitle:"お役立ち記事", listLead:"日本の市販薬や薬局の使い方について、旅行者向けに役立つ情報をまとめています。",
+    readMore:"続きを読む →", backToList:"← 記事一覧に戻る",
+    footerCredit:"企画：yuto.h／監修：石鍋卓望", navHome:"トップページ", navAbout:"このサイトについて", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
+  },
+  en:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Back to home",
+    listTitle:"Articles", listLead:"Helpful information for visitors about Japanese OTC medicine and how to use pharmacies here.",
+    readMore:"Read more →", backToList:"← Back to articles",
+    footerCredit:"Planning: yuto.h / Supervision: 石鍋卓望", navHome:"Home", navAbout:"About Us", navPrivacy:"Privacy Policy", navContact:"Contact"
+  },
+  zh:{
+    siteName:"藥品導覽 TOKYO", backLink:"← 返回首頁",
+    listTitle:"實用文章", listLead:"整理了關於日本成藥與藥局使用方式，對旅客有幫助的資訊。",
+    readMore:"閱讀更多 →", backToList:"← 返回文章列表",
+    footerCredit:"企劃：yuto.h／監修：石鍋卓望", navHome:"首頁", navAbout:"關於本站", navPrivacy:"隱私權政策", navContact:"聯絡我們"
+  },
+  es:{
+    siteName:"Kusuri Navi TOKYO", backLink:"← Volver al inicio",
+    listTitle:"Artículos", listLead:"Información útil para visitantes sobre los medicamentos de venta libre en Japón y cómo usar las farmacias.",
+    readMore:"Leer más →", backToList:"← Volver a los artículos",
+    footerCredit:"Planificación: yuto.h / Supervisión: 石鍋卓望", navHome:"Inicio", navAbout:"Sobre nosotros", navPrivacy:"Política de privacidad", navContact:"Contacto"
+  }
+};
+const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
+const dateLocale = {ja:"ja-JP", en:"en-US", zh:"zh-TW", es:"es-ES"};
+
+let currentLang = "ja";
+try{ const saved = localStorage.getItem("kn_lang"); if(saved && translations[saved]) currentLang = saved; }catch(e){}
+
+function t(key){ return translations[currentLang][key]; }
+function formatDate(iso){
+  const d = new Date(iso + "T00:00:00");
+  return d.toLocaleDateString(dateLocale[currentLang], { year:"numeric", month:"long", day:"numeric" });
+}
+
+function getHashId(){
+  const h = location.hash;
+  if(h.startsWith("#a/")) return h.slice(3);
+  return null;
+}
+
+function renderList(){
+  const main = document.getElementById("main");
+  main.innerHTML = `
+    <h1>${t("listTitle")}</h1>
+    <p class="lead">${t("listLead")}</p>
+    <div class="article-grid" id="articleGrid"></div>`;
+  const grid = document.getElementById("articleGrid");
+  grid.innerHTML = articles.slice().reverse().map(a => `
+    <div class="article-card" data-id="${a.id}">
+      <p class="article-date">${formatDate(a.date)}</p>
+      <p class="article-title">${a.title[currentLang]}</p>
+      <p class="article-excerpt">${a.excerpt[currentLang]}</p>
+      <span class="article-readmore">${t("readMore")}</span>
+    </div>`).join("");
+  grid.querySelectorAll(".article-card").forEach(card=>{
+    card.addEventListener("click", ()=>{ location.hash = "a/" + card.dataset.id; });
+  });
+}
+
+function renderDetail(id){
+  const a = articles.find(x=>x.id===id);
+  if(!a){ renderList(); return; }
+  const main = document.getElementById("main");
+  main.innerHTML = `
+    <button class="detail-back" id="backBtn1">${t("backToList")}</button>
+    <p class="detail-date">${formatDate(a.date)}</p>
+    <h1 class="detail-title">${a.title[currentLang]}</h1>
+    <div class="detail-body">${a.body[currentLang].map(p=>`<p>${p}</p>`).join("")}</div>
+    <button class="detail-back detail-back-bottom" id="backBtn2">${t("backToList")}</button>`;
+  const goBack = ()=>{ location.hash = ""; };
+  document.getElementById("backBtn1").addEventListener("click", goBack);
+  document.getElementById("backBtn2").addEventListener("click", goBack);
+}
+
+function renderMain(){
+  const id = getHashId();
+  if(id) renderDetail(id); else renderList();
+}
+
+function renderLangSwitch(){
+  const el = document.getElementById("langSwitch");
+  el.innerHTML = Object.keys(langNames).map(l=>`<button class="lang-btn${l===currentLang?" active":""}" data-lang="${l}">${langNames[l]}</button>`).join("");
+  el.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.lang === currentLang) return;
+      currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
+      renderAll();
+    });
+  });
+}
+
+function renderAll(){
+  document.documentElement.lang = currentLang;
+  document.title = t("listTitle") + " | " + t("siteName");
+  document.getElementById("siteName").textContent = t("siteName");
+  document.getElementById("backLink").textContent = t("backLink");
+  document.getElementById("footerCredit").textContent = t("footerCredit");
+  document.getElementById("navHome").textContent = t("navHome");
+  document.getElementById("navAbout").textContent = t("navAbout");
+  document.getElementById("navPrivacy").textContent = t("navPrivacy");
+  document.getElementById("navContact").textContent = t("navContact");
+  renderLangSwitch();
+  renderMain();
+}
+
+window.addEventListener("hashchange", renderMain);
+renderAll();
+</script>
+</body>
+</html>
