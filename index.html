@@ -329,6 +329,7 @@
     <span id="footerCredit"></span>
     <nav class="footer-nav">
       <a href="about.html" id="navAbout"></a>
+      <a href="articles.html" id="navArticles"></a>
       <a href="privacy.html" id="navPrivacy"></a>
       <a href="contact.html" id="navContact"></a>
     </nav>
@@ -376,10 +377,10 @@ const translations = {
     reasonAvoidStrong:"眠くなりにくいタイプの中で、いちばん効き目が強いものを選びました。",
     reasonOkGentle:"眠気は気にしないとのことなので、胃にやさしいタイプを選びました。",
     reasonOkStrong:"眠気は気にせず、いちばん効き目が強いタイプを選びました。",
-    formatTablet:"錠剤", formatPatch:"貼り薬", formatDrink:"ドリンク", formatPowder:"粉末", formatCream:"塗り薬", formatLiquid:"液体",
+    formatTablet:"錠剤", formatPatch:"貼り薬", formatDrink:"ドリンク", formatPowder:"粉末", formatCream:"塗り薬", formatLiquid:"液体", formatGranule:"顆粒",
     picksTitle:"薬剤師イチオシ！このお店で買えるおすすめ商品",
     picksIntro:"このサイトを監修した薬局のスタッフが、実際によく勧めている商品です。",
-    navAbout:"このサイトについて", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
+    navAbout:"このサイトについて", navArticles:"お役立ち記事", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
   },
   en:{
     siteName:"Kusuri Navi TOKYO",
@@ -418,10 +419,10 @@ const translations = {
     reasonAvoidStrong:"Among the options unlikely to cause drowsiness, we picked the strongest one.",
     reasonOkGentle:"Since drowsiness isn't a concern for you, we picked a gentle, stomach-friendly option.",
     reasonOkStrong:"Since drowsiness isn't a concern for you, we picked the strongest, fastest-acting option.",
-    formatTablet:"Tablet", formatPatch:"Patch", formatDrink:"Drink", formatPowder:"Powder", formatCream:"Cream", formatLiquid:"Liquid",
+    formatTablet:"Tablet", formatPatch:"Patch", formatDrink:"Drink", formatPowder:"Powder", formatCream:"Cream", formatLiquid:"Liquid", formatGranule:"Granules",
     picksTitle:"Pharmacist's picks — available at this store",
     picksIntro:"Products that the pharmacy staff behind this site actually recommend most often.",
-    navAbout:"About Us", navPrivacy:"Privacy Policy", navContact:"Contact"
+    navAbout:"About Us", navArticles:"Articles", navPrivacy:"Privacy Policy", navContact:"Contact"
   },
   zh:{
     siteName:"藥品導覽 TOKYO",
@@ -460,10 +461,10 @@ const translations = {
     reasonAvoidStrong:"在不易造成嗜睡的選項中，我們選擇了藥效最強的一款。",
     reasonOkGentle:"由於您不在意嗜睡，我們選擇了對腸胃溫和的類型。",
     reasonOkStrong:"由於您不在意嗜睡，我們選擇了藥效最強、見效最快的類型。",
-    formatTablet:"錠劑", formatPatch:"貼布", formatDrink:"飲品", formatPowder:"粉末", formatCream:"藥膏", formatLiquid:"液狀",
+    formatTablet:"錠劑", formatPatch:"貼布", formatDrink:"飲品", formatPowder:"粉末", formatCream:"藥膏", formatLiquid:"液狀", formatGranule:"顆粒",
     picksTitle:"藥劑師嚴選！本店可購買的推薦商品",
     picksIntro:"這是監修本網站的藥局人員實際上最常推薦的商品。",
-    navAbout:"關於本站", navPrivacy:"隱私權政策", navContact:"聯絡我們"
+    navAbout:"關於本站", navArticles:"實用文章", navPrivacy:"隱私權政策", navContact:"聯絡我們"
   },
   es:{
     siteName:"Kusuri Navi TOKYO",
@@ -502,10 +503,10 @@ const translations = {
     reasonAvoidStrong:"Entre las opciones con poca probabilidad de causar sueño, elegimos la más potente.",
     reasonOkGentle:"Como el sueño no te preocupa, elegimos una opción suave para el estómago.",
     reasonOkStrong:"Como el sueño no te preocupa, elegimos la opción más potente y de acción más rápida.",
-    formatTablet:"Comprimido", formatPatch:"Parche", formatDrink:"Bebida", formatPowder:"Polvo", formatCream:"Crema", formatLiquid:"Líquido",
+    formatTablet:"Comprimido", formatPatch:"Parche", formatDrink:"Bebida", formatPowder:"Polvo", formatCream:"Crema", formatLiquid:"Líquido", formatGranule:"Gránulos",
     picksTitle:"Selección del farmacéutico — disponible en esta tienda",
     picksIntro:"Productos que el personal de la farmacia detrás de este sitio recomienda con más frecuencia.",
-    navAbout:"Sobre nosotros", navPrivacy:"Política de privacidad", navContact:"Contacto"
+    navAbout:"Sobre nosotros", navArticles:"Artículos", navPrivacy:"Política de privacidad", navContact:"Contacto"
   }
 };
 const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
@@ -533,17 +534,18 @@ const formatIcons = {
   drink:'<path d="M10 3h4v3l2 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-2z"/><path d="M9 12.5h6"/>',
   powder:'<path d="M4 8l8-4 8 4v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l8 5 8-5"/>',
   cream:'<path d="M9 2.5h6l.7 3H8.3z"/><path d="M8 5.5h8l-.8 14.2a2 2 0 0 1-2 1.8h-2.4a2 2 0 0 1-2-1.8z"/><path d="M9.3 10h5.4"/>',
-  liquid:'<path d="M12 3s6 7.2 6 11.2a6 6 0 0 1-12 0C6 10.2 12 3 12 3z"/><path d="M9.5 14.2a2.5 2.5 0 0 0 2.5 2.5"/>'
+  liquid:'<path d="M12 3s6 7.2 6 11.2a6 6 0 0 1-12 0C6 10.2 12 3 12 3z"/><path d="M9.5 14.2a2.5 2.5 0 0 0 2.5 2.5"/>',
+  granule:'<circle cx="7" cy="8.5" r="1.5"/><circle cx="13" cy="6" r="1.3"/><circle cx="17.5" cy="10" r="1.6"/><circle cx="9" cy="14" r="1.4"/><circle cx="15.5" cy="15" r="1.2"/><circle cx="6.5" cy="17" r="1.1"/>'
 };
-const formatLabelKeys = {tablet:"formatTablet", patch:"formatPatch", drink:"formatDrink", powder:"formatPowder", cream:"formatCream", liquid:"formatLiquid"};
+const formatLabelKeys = {tablet:"formatTablet", patch:"formatPatch", drink:"formatDrink", powder:"formatPowder", cream:"formatCream", liquid:"formatLiquid", granule:"formatGranule"};
 
 const productFormats = {
   "EVE A錠":"tablet", "ロキソニンS":"tablet", "タイレノールA":"tablet",
   "正露丸":"tablet", "ストッパ下痢止めEX":"tablet", "ブスコパンA錠":"tablet",
   "センパア トラベル1":"tablet", "太田胃散":"powder", "トラベルミン":"tablet",
-  "サロンパスAe":"patch", "バンテリンコーワパップS":"patch", "ロキソニンSテープ":"patch",
-  "ウコンの力":"drink", "大正漢方胃腸薬":"powder", "パンシロン01プラス":"tablet",
-  "アレグラFX":"tablet", "アレジオン20":"tablet", "新コンタック600鼻炎":"tablet",
+  "サロンパス":"patch", "バンテリンコーワパップS":"patch", "ロキソニンSテープ":"patch",
+  "ウコンの力":"drink", "大正漢方胃腸薬":"powder", "パンシロン01プラス":"granule",
+  "アレグラFX":"tablet", "アレジオン20":"tablet", "新コンタック600プラス":"tablet",
   "ムヒS":"liquid", "ウナコーワクール":"liquid", "レスタミンコーワクリーム":"cream",
   "パブロンゴールドA":"tablet", "新ルルAゴールドs":"tablet", "熱さまシート":"patch"
 };
@@ -561,17 +563,17 @@ const symptoms = [
     products:[
       {
         name:"EVE A錠",
-        ingredient:{ja:"イブプロフェン＋鎮静成分", en:"Ibuprofen + mild sedative component", zh:"布洛芬＋鎮靜成分", es:"Ibuprofeno + componente sedante suave"},
-        desc:{ja:"素早く効く鎮痛成分に加え、痛みで緊張した気持ちを落ち着かせる成分を配合。", en:"Fast-acting pain relief combined with an ingredient that eases pain-related tension.", zh:"含有快速止痛成分，並加入舒緩因疼痛而緊繃情緒的成分。", es:"Alivio rápido del dolor combinado con un ingrediente que calma la tensión causada por el dolor."},
+        ingredient:{ja:"イブプロフェン", en:"Ibuprofen", zh:"布洛芬", es:"Ibuprofeno"},
+        desc:{ja:"素早く効く鎮痛成分配合。", en:"Contains a fast-acting pain-relief ingredient.", zh:"含有快速止痛成分。", es:"Contiene un ingrediente analgésico de acción rápida."},
         strength:4, drowsy:2,
         caution:{ja:"アスピリン喘息の既往がある方は使用不可", en:"Not for those with a history of aspirin-induced asthma", zh:"曾有阿斯匹靈氣喘病史者不可使用", es:"No usar si tiene antecedentes de asma inducida por aspirina"},
-        dosage:{ja:"成人1回1錠、1日2回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 2×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多2次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 2 veces/día, con ≥4 h de diferencia"},
+        dosage:{ja:"成人1回1錠、1日3回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多3次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
         buy:"drugstore", photo:null  /* ← 撮影後に "images/eve-a.jpg" のように変更 */
       },
       {
         name:"ロキソニンS",
         ingredient:{ja:"ロキソプロフェンナトリウム", en:"Loxoprofen sodium", zh:"洛索洛芬鈉", es:"Loxoprofeno sódico"},
-        desc:{ja:"日本で処方薬にも使われる成分のOTC版。効き目が強く、痛みが強い時の定番。", en:"An over-the-counter version of an ingredient also used in prescription medicine in Japan. Strong and fast-acting.", zh:"為日本處方藥也使用的成分之非處方版本，藥效強，是劇痛時的常見選擇。", es:"Versión de venta libre de un ingrediente también usado en medicamentos recetados en Japón. Potente y de acción rápida."},
+        desc:{ja:"日本で処方薬にも使われる成分のOTC版。痛みが強い時の定番。", en:"An over-the-counter version of an ingredient also used in prescription medicine in Japan. A go-to for intense pain.", zh:"為日本處方藥也使用的成分之非處方版本，是劇痛時的常見選擇。", es:"Versión de venta libre de un ingrediente también usado en medicamentos recetados en Japón. Un clásico para el dolor intenso."},
         strength:5, drowsy:1,
         caution:{ja:"胃腸が弱い方は注意、15歳未満は使用不可", en:"Use with caution if your stomach is sensitive; not for under 15", zh:"腸胃較弱者慎用，15歲以下不可使用", es:"Precaución si tiene el estómago sensible; no apto para menores de 15 años"},
         dosage:{ja:"成人1回1錠、1日3回まで、空腹時を避けて", en:"Adults: 1 tablet per dose, up to 3×/day, avoid on empty stomach", zh:"成人一次1錠，一日至多3次，避免空腹服用", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, evitar en ayunas"},
@@ -580,10 +582,10 @@ const symptoms = [
       {
         name:"タイレノールA",
         ingredient:{ja:"アセトアミノフェン", en:"Acetaminophen", zh:"乙醯胺酚（普拿疼成分）", es:"Paracetamol (acetaminofén)"},
-        desc:{ja:"胃への負担が少なく、妊娠中や体力が落ちている時にも選ばれやすい穏やかなタイプ。", en:"Gentle on the stomach; often chosen during pregnancy or when feeling run down.", zh:"對腸胃負擔較小，懷孕期間或體力較弱時也常被選用的溫和類型。", es:"Suave para el estómago; a menudo elegido durante el embarazo o cuando el cuerpo está débil."},
+        desc:{ja:"胃への負担が少なく、体力が落ちている時にも選ばれやすい穏やかなタイプ。", en:"Gentle on the stomach; often chosen when feeling run down.", zh:"對腸胃負擔較小，體力較弱時也常被選用的溫和類型。", es:"Suave para el estómago; a menudo elegido cuando el cuerpo está débil."},
         strength:3, drowsy:1,
         caution:{ja:"重い肝臓病のある方は使用不可", en:"Not for those with severe liver disease", zh:"嚴重肝臟疾病患者不可使用", es:"No usar si tiene enfermedad hepática grave"},
-        dosage:{ja:"成人1回1〜2錠、1日3回まで、4時間以上あけて", en:"Adults: 1–2 tablets per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1〜2錠，一日至多3次，間隔4小時以上", es:"Adultos: 1–2 comprimidos por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
+        dosage:{ja:"成人1回1錠、1日3回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多3次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
         buy:"drugstore", photo:null  /* ← 撮影後に "images/tylenol-a.jpg" のように変更 */
       }
     ]
@@ -601,19 +603,19 @@ const symptoms = [
       {
         name:"正露丸",
         ingredient:{ja:"木クレオソート", en:"Wood creosote", zh:"木餾油（木餾油酚）", es:"Creosota de madera"},
-        desc:{ja:"下痢や軟便を伴う腹痛に。独特のにおいが特徴の伝統的な胃腸薬。", en:"For stomach pain with diarrhea or loose stools. A traditional remedy known for its distinctive smell.", zh:"適用於伴隨腹瀉或軟便的腹痛。氣味獨特，是傳統的腸胃藥。", es:"Para dolor de estómago con diarrea o heces blandas. Un remedio tradicional conocido por su olor característico."},
+        desc:{ja:"下痢や軟便に伴う腹痛に。独特のにおいが特徴の伝統的な胃腸薬。", en:"For stomach pain accompanying diarrhea or loose stools. A traditional remedy known for its distinctive smell.", zh:"適用於伴隨腹瀉或軟便的腹痛。氣味獨特，是傳統的腸胃藥。", es:"Para el dolor de estómago que acompaña a la diarrea o las heces blandas. Un remedio tradicional conocido por su olor característico."},
         strength:3, drowsy:1,
         caution:{ja:"妊娠中の方は使用前に相談", en:"Consult before use if pregnant", zh:"懷孕中者使用前請先諮詢", es:"Consultar antes de usar si está embarazada"},
-        dosage:{ja:"成人1回2〜10粒、1日3回まで", en:"Adults: 2–10 pills per dose, up to 3×/day", zh:"成人一次2〜10粒，一日至多3次", es:"Adultos: 2–10 píldoras por toma, hasta 3 veces/día"},
+        dosage:{ja:"成人1回3粒、1日3回", en:"Adults: 3 pills per dose, 3×/day", zh:"成人一次3粒，一日3次", es:"Adultos: 3 píldoras por toma, 3 veces/día"},
         buy:"drugstoreConbini", photo:null  /* ← "images/seirogan.jpg" */
       },
       {
         name:"ストッパ下痢止めEX",
-        ingredient:{ja:"ロペラミド塩酸塩", en:"Loperamide hydrochloride", zh:"鹽酸洛哌丁胺", es:"Clorhidrato de loperamida"},
+        ingredient:{ja:"ロートエキス、タンニン酸", en:"Belladonna extract, tannic acid", zh:"顛茄浸膏、鞣酸", es:"Extracto de belladona, ácido tánico"},
         desc:{ja:"下痢の回数を抑えることに特化。旅行中の急な下痢に。", en:"Specifically reduces the frequency of diarrhea. Useful for sudden diarrhea while traveling.", zh:"專門用於減少腹瀉次數，適合旅行中突發腹瀉時使用。", es:"Reduce específicamente la frecuencia de la diarrea. Útil para diarrea repentina durante el viaje."},
-        strength:4, drowsy:1,
+        strength:5, drowsy:1,
         caution:{ja:"発熱を伴う下痢、血便がある場合は使用不可", en:"Not for diarrhea with fever or blood in stool", zh:"伴隨發燒或血便的腹瀉不可使用", es:"No usar si la diarrea viene con fiebre o sangre en las heces"},
-        dosage:{ja:"成人1回1錠、1日2回まで、15歳未満は使用不可", en:"Adults: 1 tablet per dose, up to 2×/day; not for under 15", zh:"成人一次1錠，一日至多2次，15歲以下不可使用", es:"Adultos: 1 comprimido por toma, hasta 2 veces/día; no apto para menores de 15 años"},
+        dosage:{ja:"成人1回1錠、1日3回まで", en:"Adults: 1 tablet per dose, up to 3×/day", zh:"成人一次1錠，一日至多3次", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día"},
         buy:"drugstore", photo:null  /* ← "images/stoppa.jpg" */
       },
       {
@@ -622,7 +624,7 @@ const symptoms = [
         desc:{ja:"胃腸のけいれんによる差し込むような痛みをやわらげる。", en:"Eases sharp, cramping pain caused by intestinal spasms.", zh:"緩解因腸胃痙攣引起的絞痛。", es:"Alivia el dolor tipo cólico causado por espasmos intestinales."},
         strength:3, drowsy:1,
         caution:{ja:"緑内障、前立腺肥大のある方は使用不可", en:"Not for those with glaucoma or an enlarged prostate", zh:"青光眼或攝護腺肥大患者不可使用", es:"No usar si tiene glaucoma o próstata agrandada"},
-        dosage:{ja:"成人1回1錠、1日3回まで", en:"Adults: 1 tablet per dose, up to 3×/day", zh:"成人一次1錠，一日至多3次", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día"},
+        dosage:{ja:"成人1回1錠、1日3回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多3次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
         buy:"drugstore", photo:null  /* ← "images/buscopan.jpg" */
       }
     ]
@@ -643,25 +645,25 @@ const symptoms = [
         desc:{ja:"乗り物に乗る30分前に飲む、定番の乗り物酔い止め。", en:"A classic motion sickness remedy taken 30 minutes before travel.", zh:"經典的暈車藥，於搭乘交通工具前30分鐘服用。", es:"Un remedio clásico contra el mareo, se toma 30 minutos antes de viajar."},
         strength:4, drowsy:4,
         caution:{ja:"服用後の運転・機械操作は避ける", en:"Avoid driving or operating machinery after taking", zh:"服用後請避免開車或操作機械", es:"Evitar conducir u operar maquinaria después de tomarlo"},
-        dosage:{ja:"成人1回1錠、乗車前30分に、1日2回まで", en:"Adults: 1 tablet, 30 min before travel, up to 2×/day", zh:"成人一次1錠，搭乘前30分鐘服用，一日至多2次", es:"Adultos: 1 comprimido, 30 min antes de viajar, hasta 2 veces/día"},
+        dosage:{ja:"成人1回1錠、乗車・乗船の30分前に", en:"Adults: 1 tablet, 30 minutes before traveling by car, bus, or boat", zh:"成人一次1錠，搭乘交通工具前30分鐘服用", es:"Adultos: 1 comprimido, 30 minutos antes de viajar en coche, autobús o barco"},
         buy:"drugstore", photo:null  /* ← "images/sempaa.jpg" */
       },
       {
         name:"太田胃散",
-        ingredient:{ja:"制酸生薬配合末", en:"Antacid herbal powder blend", zh:"制酸生藥複方散劑", es:"Polvo antiácido a base de hierbas"},
+        ingredient:{ja:"制酸生薬配合", en:"Antacid herbal blend", zh:"制酸生藥複方", es:"Mezcla antiácida a base de hierbas"},
         desc:{ja:"食べ過ぎ・飲み過ぎからくる胃のむかつきに。粉末タイプ。", en:"For stomach queasiness from overeating or drinking. A powder-form remedy.", zh:"適用於吃太多或喝太多引起的胃部不適感，為粉末劑型。", es:"Para el malestar estomacal por comer o beber en exceso. Presentación en polvo."},
         strength:2, drowsy:1,
         caution:null,
-        dosage:{ja:"成人1回1.3g、1日3回まで、食後又は食間に", en:"Adults: 1.3g per dose, up to 3×/day, after or between meals", zh:"成人一次1.3公克，一日至多3次，飯後或餐間服用", es:"Adultos: 1.3 g por toma, hasta 3 veces/día, después de las comidas o entre comidas"},
+        dosage:{ja:"成人1回1.3g、1日3回、食後又は食間に", en:"Adults: 1.3g per dose, 3×/day, after or between meals", zh:"成人一次1.3公克，一日3次，飯後或餐間服用", es:"Adultos: 1.3 g por toma, 3 veces/día, después de las comidas o entre comidas"},
         buy:"drugstoreConbini", photo:null  /* ← "images/ohta-isan.jpg" */
       },
       {
         name:"トラベルミン",
-        ingredient:{ja:"ジフェンヒドラミン他", en:"Diphenhydramine and others", zh:"苯海拉明等成分", es:"Difenhidramina y otros"},
-        desc:{ja:"吐き気止めの成分に加え、乗り物酔いによるめまいにも配慮した処方。", en:"Combines anti-nausea ingredients with components addressing motion-sickness dizziness.", zh:"除了止吐成分外，也針對暈車引起的頭暈設計配方。", es:"Combina ingredientes contra las náuseas con componentes para el mareo por movimiento."},
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
+        desc:{ja:"吐き気止めの成分に加え、乗り物酔いに配慮した処方。", en:"Combines an anti-nausea ingredient with a formula designed for motion sickness.", zh:"除了止吐成分外，配方也考量了暈車暈船的狀況。", es:"Combina un ingrediente antinauseoso con una fórmula pensada para el mareo por movimiento."},
         strength:4, drowsy:5,
         caution:{ja:"15歳未満は使用不可、服用後の運転は避ける", en:"Not for under 15; avoid driving after taking", zh:"15歲以下不可使用，服用後避免開車", es:"No apto para menores de 15 años; evitar conducir después de tomarlo"},
-        dosage:{ja:"成人1回1錠、乗車前30分に", en:"Adults: 1 tablet, 30 min before travel", zh:"成人一次1錠，搭乘前30分鐘服用", es:"Adultos: 1 comprimido, 30 min antes de viajar"},
+        dosage:{ja:"成人1回1錠、乗車船30分前に", en:"Adults: 1 tablet, 30 minutes before traveling by car, bus, or boat", zh:"成人一次1錠，搭乘交通工具前30分鐘服用", es:"Adultos: 1 comprimido, 30 minutos antes de viajar en coche, autobús o barco"},
         buy:"drugstore", photo:null  /* ← "images/travelmin.jpg" */
       }
     ]
@@ -677,7 +679,7 @@ const symptoms = [
     },
     products:[
       {
-        name:"サロンパスAe",
+        name:"サロンパス",
         ingredient:{ja:"サリチル酸メチル他", en:"Methyl salicylate and others", zh:"水楊酸甲酯等成分", es:"Salicilato de metilo y otros"},
         desc:{ja:"貼るタイプの定番。ひんやり感で広範囲の筋肉痛や肩こりに。", en:"A classic patch with a cooling sensation, good for widespread muscle pain or shoulder stiffness.", zh:"經典貼布，帶有涼感，適合大範圍肌肉痠痛或肩頸僵硬。", es:"Un parche clásico con sensación refrescante, ideal para dolor muscular extendido o rigidez de hombros."},
         strength:2, drowsy:1,
@@ -717,7 +719,7 @@ const symptoms = [
     products:[
       {
         name:"ウコンの力",
-        ingredient:{ja:"ウコン（クルクミン）", en:"Turmeric (curcumin)", zh:"薑黃（薑黃素）", es:"Cúrcuma (curcumina)"},
+        ingredient:{ja:"ウコンエキス", en:"Turmeric extract", zh:"薑黃萃取物", es:"Extracto de cúrcuma"},
         desc:{ja:"飲酒前後に飲むドリンクタイプ。翌日の胃の不快感対策として人気。", en:"A drink taken before or after alcohol; popular for easing next-day stomach discomfort.", zh:"於飲酒前後飲用的飲品型，是應對隔天胃部不適的熱門選擇。", es:"Una bebida que se toma antes o después de consumir alcohol, popular para aliviar el malestar estomacal del día siguiente."},
         strength:2, drowsy:1,
         caution:null,
@@ -726,8 +728,8 @@ const symptoms = [
       },
       {
         name:"大正漢方胃腸薬",
-        ingredient:{ja:"生薬（安中散加茯苓）", en:"Herbal formula (Anchusan plus Bukuryo)", zh:"漢方生藥複方（安中散加茯苓）", es:"Fórmula herbal (Anchusan más Bukuryo)"},
-        desc:{ja:"漢方処方で、みぞおちの不快感や胃もたれにじんわり効く。", en:"A traditional herbal formula that gently eases discomfort and heaviness around the upper stomach.", zh:"漢方配方，能溫和舒緩胃部與胸口悶脹的不適感。", es:"Una fórmula herbal tradicional que alivia suavemente el malestar y la pesadez en la parte superior del estómago."},
+        ingredient:{ja:"生薬（安中散、芍薬甘草湯）", en:"Herbal formula (Anchusan, Shakuyakukanzoto)", zh:"漢方生藥（安中散、芍藥甘草湯）", es:"Fórmula herbal (Anchusan, Shakuyakukanzoto)"},
+        desc:{ja:"漢方処方で、胃の不快感や胃もたれにじんわり効く。", en:"A traditional herbal formula that gently eases stomach discomfort and heaviness.", zh:"漢方配方，能溫和舒緩胃部不適與胃脹感。", es:"Una fórmula herbal tradicional que alivia suavemente el malestar y la pesadez estomacal."},
         strength:2, drowsy:1,
         caution:null,
         dosage:{ja:"成人1回1包、1日3回まで、食前又は食間に", en:"Adults: 1 packet per dose, up to 3×/day, before or between meals", zh:"成人一次1包，一日至多3次，飯前或餐間服用", es:"Adultos: 1 sobre por toma, hasta 3 veces/día, antes de las comidas o entre comidas"},
@@ -735,11 +737,11 @@ const symptoms = [
       },
       {
         name:"パンシロン01プラス",
-        ingredient:{ja:"消化酵素配合", en:"Digestive enzyme blend", zh:"消化酵素複方", es:"Mezcla de enzimas digestivas"},
-        desc:{ja:"食べ過ぎによる胃もたれ・胸やけに、消化を助けるタイプ。", en:"Helps digestion for stomach heaviness or heartburn from overeating.", zh:"針對吃太多引起的胃脹、胸口灼熱，幫助消化的類型。", es:"Ayuda a la digestión para la pesadez estomacal o acidez por comer en exceso."},
+        ingredient:{ja:"漢方成分、制酸剤", en:"Herbal ingredients and an antacid", zh:"漢方成分、制酸劑", es:"Ingredientes herbales y un antiácido"},
+        desc:{ja:"食べ過ぎ・飲み過ぎによる胃もたれ・胸やけに、消化を助けるタイプ。", en:"Helps digestion for stomach heaviness or heartburn from overeating or drinking.", zh:"針對吃太多、喝太多引起的胃脹、胸口灼熱，幫助消化的類型。", es:"Ayuda a la digestión para la pesadez estomacal o acidez por comer o beber en exceso."},
         strength:2, drowsy:1,
         caution:null,
-        dosage:{ja:"成人1回2錠、1日3回まで、食後に", en:"Adults: 2 tablets per dose, up to 3×/day, after meals", zh:"成人一次2錠，一日至多3次，飯後服用", es:"Adultos: 2 comprimidos por toma, hasta 3 veces/día, después de las comidas"},
+        dosage:{ja:"成人1回1包、1日3回、食前又は食間、就寝前", en:"Adults: 1 packet per dose, 3×/day, before or between meals, or before bed", zh:"成人一次1包，一日3次，飯前、餐間或睡前服用", es:"Adultos: 1 sobre por toma, 3 veces/día, antes de las comidas, entre comidas o antes de dormir"},
         buy:"drugstore", photo:null
       }
     ]
@@ -757,10 +759,10 @@ const symptoms = [
       {
         name:"アレグラFX",
         ingredient:{ja:"フェキソフェナジン塩酸塩", en:"Fexofenadine hydrochloride", zh:"鹽酸非索非那定", es:"Clorhidrato de fexofenadina"},
-        desc:{ja:"比較的眠くなりにくいとされる抗ヒスタミン成分。花粉症シーズンの定番。", en:"An antihistamine known for being relatively less likely to cause drowsiness. A go-to during hay fever season.", zh:"屬於較不易造成嗜睡的抗組織胺成分，是花粉症季節的常見選擇。", es:"Un antihistamínico conocido por tener relativamente poca probabilidad de causar somnolencia. Un clásico durante la temporada de alergias."},
-        strength:4, drowsy:1,
+        desc:{ja:"比較的眠くなりにくいとされる成分。花粉症シーズンの定番。", en:"An ingredient known for being relatively less likely to cause drowsiness. A go-to during hay fever season.", zh:"屬於較不易造成嗜睡的成分，是花粉症季節的常見選擇。", es:"Un ingrediente conocido por tener relativamente poca probabilidad de causar somnolencia. Un clásico durante la temporada de alergias."},
+        strength:3, drowsy:1,
         caution:{ja:"15歳未満は使用不可", en:"Not for under 15", zh:"15歲以下不可使用", es:"No apto para menores de 15 años"},
-        dosage:{ja:"成人1回1錠、1日2回まで、12時間以上あけて", en:"Adults: 1 tablet per dose, up to 2×/day, ≥12 hrs apart", zh:"成人一次1錠，一日至多2次，間隔12小時以上", es:"Adultos: 1 comprimido por toma, hasta 2 veces/día, con ≥12 h de diferencia"},
+        dosage:{ja:"成人1回1錠、1日2回　朝夕", en:"Adults: 1 tablet per dose, 2×/day, morning and evening", zh:"成人一次1錠，一日2次，早晚服用", es:"Adultos: 1 comprimido por toma, 2 veces/día, mañana y noche"},
         buy:"drugstore", photo:null
       },
       {
@@ -773,12 +775,12 @@ const symptoms = [
         buy:"drugstore", photo:null
       },
       {
-        name:"新コンタック600鼻炎",
-        ingredient:{ja:"プソイドエフェドリン＋クロルフェニラミン", en:"Pseudoephedrine + chlorpheniramine", zh:"偽麻黃鹼＋氯苯那敏", es:"Pseudoefedrina + clorfeniramina"},
+        name:"新コンタック600プラス",
+        ingredient:{ja:"プソイドエフェドリン+クロルフェニラミン", en:"Pseudoephedrine + chlorpheniramine", zh:"偽麻黃鹼＋氯苯那敏", es:"Pseudoefedrina + clorfeniramina"},
         desc:{ja:"鼻づまりにしっかり効く成分を配合。効果は長く続くが、やや眠くなりやすい。", en:"Contains an ingredient that works well specifically on nasal congestion. Long-lasting, but more likely to cause drowsiness.", zh:"配方中含有對鼻塞特別有效的成分，藥效持久，但較容易嗜睡。", es:"Contiene un ingrediente eficaz específicamente contra la congestión nasal. De efecto duradero, pero con más probabilidad de causar somnolencia."},
         strength:4, drowsy:4,
         caution:{ja:"高血圧・心疾患・緑内障のある方は使用不可", en:"Not for those with high blood pressure, heart disease, or glaucoma", zh:"高血壓、心臟疾病或青光眼患者不可使用", es:"No usar si tiene presión arterial alta, enfermedad cardíaca o glaucoma"},
-        dosage:{ja:"成人1回1カプセル、12時間ごとに1日2回まで", en:"Adults: 1 capsule per dose, every 12 hrs, up to 2×/day", zh:"成人一次1粒，每12小時一次，一日至多2次", es:"Adultos: 1 cápsula por toma, cada 12 h, hasta 2 veces/día"},
+        dosage:{ja:"成人1回2カプセル、1日2回　朝夕", en:"Adults: 2 capsules per dose, 2×/day, morning and evening", zh:"成人一次2粒，一日2次，早晚服用", es:"Adultos: 2 cápsulas por toma, 2 veces/día, mañana y noche"},
         buy:"drugstore", photo:null
       }
     ]
@@ -795,29 +797,29 @@ const symptoms = [
     products:[
       {
         name:"ムヒS",
-        ingredient:{ja:"ジフェンヒドラミン＋局所麻酔成分", en:"Diphenhydramine + local anesthetic", zh:"苯海拉明＋局部麻醉成分", es:"Difenhidramina + anestésico local"},
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
         desc:{ja:"虫刺されや蕁麻疹のかゆみに。塗るとすっとする、日本で昔から定番の液体タイプ。", en:"For itching from insect bites or hives. A cooling liquid that's been a classic in Japan for decades.", zh:"適用於蟲咬或蕁麻疹的癢感，塗抹後有清涼感，是日本長年暢銷的液狀產品。", es:"Para la picazón por picaduras de insectos o urticaria. Un líquido refrescante que ha sido un clásico en Japón durante décadas."},
-        strength:3, drowsy:1,
+        strength:2, drowsy:1,
         caution:{ja:"目や粘膜、傷口には使用不可", en:"Do not apply to eyes, mucous membranes, or open wounds", zh:"請勿用於眼睛、黏膜或傷口", es:"No aplicar en ojos, mucosas o heridas abiertas"},
         dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
         buy:"drugstoreConbini", photo:null
       },
       {
         name:"ウナコーワクール",
-        ingredient:{ja:"ジフェンヒドラミン＋l-メントール", en:"Diphenhydramine + l-menthol", zh:"苯海拉明＋薄荷腦", es:"Difenhidramina + l-mentol"},
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
         desc:{ja:"清涼感がより強めのタイプ。かゆみと一緒にほてりも感じる時に。", en:"A stronger cooling sensation than most. Good when the area feels hot as well as itchy.", zh:"清涼感更為明顯的類型，適合癢感中還伴隨灼熱感時使用。", es:"Una sensación refrescante más intensa que la mayoría. Ideal cuando la zona también se siente caliente además de picar."},
-        strength:3, drowsy:1,
+        strength:2, drowsy:1,
         caution:{ja:"目や粘膜、傷口には使用不可", en:"Do not apply to eyes, mucous membranes, or open wounds", zh:"請勿用於眼睛、黏膜或傷口", es:"No aplicar en ojos, mucosas o heridas abiertas"},
         dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
         buy:"drugstore", photo:null
       },
       {
         name:"レスタミンコーワクリーム",
-        ingredient:{ja:"ジフェンヒドラミン塩酸塩", en:"Diphenhydramine hydrochloride", zh:"鹽酸苯海拉明", es:"Clorhidrato de difenhidramina"},
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
         desc:{ja:"ステロイドを含まないクリームタイプ。顔など皮膚が薄い部分にも使いやすい。", en:"A steroid-free cream, gentle enough for thinner skin such as the face.", zh:"不含類固醇的乳膏類型，臉部等皮膚較薄的部位也適合使用。", es:"Una crema sin esteroides, lo bastante suave para pieles más delicadas como la del rostro."},
         strength:2, drowsy:1,
         caution:{ja:"広範囲・長期間の使用は避ける", en:"Avoid using over a large area or for a long period", zh:"避免大範圍或長期使用", es:"Evitar usar en un área extensa o durante un período prolongado"},
-        dosage:{ja:"1日1〜数回、患部に塗布", en:"Apply to the affected area 1 or more times a day", zh:"一日1次或數次，塗抹於患部", es:"Aplicar en la zona afectada una o varias veces al día"},
+        dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
         buy:"drugstore", photo:null
       }
     ]
@@ -838,16 +840,16 @@ const symptoms = [
         desc:{ja:"熱・のどの痛み・せき・鼻水など、かぜの諸症状に幅広く対応する総合感冒薬。", en:"A multi-symptom cold medicine covering fever, sore throat, cough, and runny nose.", zh:"針對發燒、喉嚨痛、咳嗽、流鼻水等感冒各種症狀的綜合感冒藥。", es:"Un medicamento multisíntoma para el resfriado que cubre fiebre, dolor de garganta, tos y rinorrea."},
         strength:3, drowsy:3,
         caution:{ja:"服用後の運転・機械操作は避ける", en:"Avoid driving or operating machinery after taking", zh:"服用後請避免開車或操作機械", es:"Evitar conducir u operar maquinaria después de tomarlo"},
-        dosage:{ja:"成人1回2錠、1日3回、食後に", en:"Adults: 2 tablets per dose, 3×/day, after meals", zh:"成人一次2錠，一日3次，飯後服用", es:"Adultos: 2 comprimidos por toma, 3 veces/día, después de las comidas"},
+        dosage:{ja:"成人1回3錠、1日3回、食後に", en:"Adults: 3 tablets per dose, 3×/day, after meals", zh:"成人一次3錠，一日3次，飯後服用", es:"Adultos: 3 comprimidos por toma, 3 veces/día, después de las comidas"},
         buy:"drugstore", photo:null
       },
       {
         name:"新ルルAゴールドs",
-        ingredient:{ja:"解熱鎮痛成分＋抗ヒスタミン成分＋去痰成分", en:"Antipyretic/analgesic + antihistamine + expectorant ingredients", zh:"解熱鎮痛成分＋抗組織胺成分＋化痰成分", es:"Ingredientes antipirético/analgésico + antihistamínico + expectorante"},
+        ingredient:{ja:"アセトアミノフェン他 複合成分", en:"Acetaminophen and a combination of other ingredients", zh:"乙醯胺酚等複方成分", es:"Paracetamol y una combinación de otros ingredientes"},
         desc:{ja:"熱とのどの痛みにやや重点を置いた総合感冒薬。", en:"A multi-symptom cold medicine with a bit more focus on fever and sore throat.", zh:"較著重於發燒與喉嚨痛的綜合感冒藥。", es:"Un medicamento multisíntoma para el resfriado con más enfoque en la fiebre y el dolor de garganta."},
         strength:3, drowsy:3,
         caution:{ja:"15歳未満は使用不可", en:"Not for under 15", zh:"15歲以下不可使用", es:"No apto para menores de 15 años"},
-        dosage:{ja:"成人1回2錠、1日3回、食後に", en:"Adults: 2 tablets per dose, 3×/day, after meals", zh:"成人一次2錠，一日3次，飯後服用", es:"Adultos: 2 comprimidos por toma, 3 veces/día, después de las comidas"},
+        dosage:{ja:"成人1回3錠、1日3回、食後に", en:"Adults: 3 tablets per dose, 3×/day, after meals", zh:"成人一次3錠，一日3次，飯後服用", es:"Adultos: 3 comprimidos por toma, 3 veces/día, después de las comidas"},
         buy:"drugstore", photo:null
       },
       {
@@ -1114,6 +1116,7 @@ function renderAll(){
   document.getElementById("thBuy").textContent = t("tableBuy");
   document.getElementById("footerCredit").textContent = t("footerCredit");
   document.getElementById("navAbout").textContent = t("navAbout");
+  document.getElementById("navArticles").textContent = t("navArticles");
   document.getElementById("navPrivacy").textContent = t("navPrivacy");
   document.getElementById("navContact").textContent = t("navContact");
 
