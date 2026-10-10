@@ -922,9 +922,17 @@ function productCard(p){
     </div>`;
   const fmt = productFormats[p.name] || "tablet";
   const formatHtml = `<span class="prod-format"><svg viewBox="0 0 24 24">${formatIcons[fmt]}</svg>${t(formatLabelKeys[fmt])}</span>`;
-  const photoHtml = p.photo
-    ? `<div class="prod-photo"><img src="${p.photo}" alt="${p.name}" loading="lazy"></div>`
-    : `<div class="prod-photo"><div class="prod-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>${p.name}</span></div></div>`;
+  const photoLabels = {
+    ja:{front:"表", back:"裏"}, en:{front:"Front", back:"Back"},
+    zh:{front:"正面", back:"背面"}, es:{front:"Frente", back:"Reverso"}
+  };
+  const photoSlot = (src, side) => {
+    const label = photoLabels[currentLang][side];
+    return src
+      ? `<div class="prod-photo"><img src="${src}" alt="${p.name} (${label})" loading="lazy"><span class="prod-photo-label">${label}</span></div>`
+      : `<div class="prod-photo"><div class="prod-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>${label}</span></div></div>`;
+  };
+  const photoHtml = `<div class="prod-photo-row">${photoSlot(p.photoFront || p.photo, "front")}${photoSlot(p.photoBack, "back")}</div>`;
   return `
     <div class="card">
       ${photoHtml}
