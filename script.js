@@ -1,1 +1,798 @@
 
+    cautionGeneral:"If you have a condition under treatment, are taking other medication, have a history of allergies or side effects, or are a child or pregnant, please consult the pharmacist or registered seller at the store.",
+    dosageLabel:"Typical dosage",
+    buyLabel:"Where to buy",
+    adPlaceholder:"Ad space (Google AdSense)",
+    disclaimerTitle:"Before you use this site",
+    disclaimerBody:"This site is for general information only and is not a diagnosis or treatment. Dosage information shown is a general guide. Always consult a pharmacist or check the package insert before use — especially if you have a medical condition, are pregnant or breastfeeding, or are taking other medication.",
+    summaryTitle:"Recommended products available in Japan",
+    summaryIntro:"All the products introduced above, summarized by symptom.",
+    tableSymptom:"Symptom", tableProduct:"Product", tableBuy:"Where to buy",
+    footerCredit:"Planning: yuto.h / Supervision: 石鍋卓望",
+    quizTitle:"Find your medicine in 3 questions",
+    quizSubtitle:"Answer a few questions and we'll suggest the one that fits you best.",
+    quizStep1:"1/3　Choose your symptom",const translations = {
+  ja:{
+    siteName:"ふぁらまーnavi",
+    tagline:"外国人旅行者のための市販薬ガイド",
+    heroLead:"日本の薬局・ドラッグストアで買える市販薬を、症状別にわかりやすく紹介します。処方箋がなくても、自分に合った薬を選べるように。",
+    pharmacistNote:"監修：石鍋卓望（薬剤師）",
+    tabsLabel:"症状を選ぶ",
+    ingredientLabel:"主な成分",
+    strengthLabel:"効き目の強さ",
+    drowsyLabel:"眠気の出やすさ",
+    weakEnd:"弱い", strongEnd:"強い",
+    drowsyLessEnd:"少ない", drowsyMoreEnd:"出やすい",
+    cautionGeneral:"治療中の疾患・使用中のお薬がある方、副作用歴などアレルギーのある方、お子様やご妊娠中の方などは、販売店の薬剤師、登録販売者にご相談ください",
+    dosageLabel:"用法・用量の目安",
+    buyLabel:"買える場所",
+    adPlaceholder:"広告スペース（Google AdSense）",
+    disclaimerTitle:"ご利用にあたって",
+    disclaimerBody:"このサイトは一般的な情報提供を目的としており、診断や治療を行うものではありません。掲載の用法・用量は目安です。実際の使用前には、必ず薬剤師・登録販売者にご相談いただくか、商品パッケージの添付文書をご確認ください。持病がある方、妊娠・授乳中の方、他の薬を服用中の方は特にご注意ください。",
+    summaryTitle:"日本で買えるおすすめ商品 一覧",
+    summaryIntro:"上記でご紹介した商品を、症状別に一覧でまとめました。",
+    tableSymptom:"症状", tableProduct:"商品名", tableBuy:"買える場所",
+    footerCredit:"企画：yuto.h／監修：石鍋卓望",
+    quizTitle:"3つの質問でおすすめを探す",
+    quizSubtitle:"症状と好みに合わせて、ぴったりの1つを提案します。",
+    quizStep1:"1／3　症状を選んでください",
+    quizStep2:"2／3　眠くなっても大丈夫ですか？",
+    quizStep3:"3／3　効き目のタイプは？",
+    quizAvoidDrowsy:"眠くなりたくない",
+    quizOkDrowsy:"気にしない",
+    quizGentle:"胃にやさしい方がいい",
+    quizStrong:"効き目重視で強めがいい",
+    quizBack:"← 前の質問に戻る",
+    quizResultBadge:"あなたへのおすすめ",
+    quizRestart:"もう一度質問する",
+    reasonAvoidGentle:"眠くなりにくく、胃にもやさしいタイプを選びました。",
+    reasonAvoidStrong:"眠くなりにくいタイプの中で、いちばん効き目が強いものを選びました。",
+    reasonOkGentle:"眠気は気にしないとのことなので、胃にやさしいタイプを選びました。",
+    reasonOkStrong:"眠気は気にせず、いちばん効き目が強いタイプを選びました。",
+    formatTablet:"錠剤", formatPatch:"貼り薬", formatDrink:"ドリンク", formatPowder:"粉末", formatCream:"塗り薬", formatLiquid:"液体", formatGranule:"顆粒",
+    picksTitle:"薬剤師イチオシ！このお店で買えるおすすめ商品",
+    picksIntro:"このサイトを監修した薬局のスタッフが、実際によく勧めている商品です。",
+    navAbout:"このサイトについて", navArticles:"お役立ち記事", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
+  },
+  en:{
+    siteName:"Pharama-Navi",
+    tagline:"An OTC medicine guide for visitors to Japan",
+    heroLead:"A simple, symptom-by-symptom guide to over-the-counter medicines available at pharmacies and drugstores in Japan — so you can choose what's right for you without a prescription.",
+    pharmacistNote:"Supervised by 石鍋卓望,　pharmacist",
+    tabsLabel:"Choose a symptom",
+    ingredientLabel:"Main ingredient",
+    strengthLabel:"Effect strength",
+    drowsyLabel:"Drowsiness risk",
+    weakEnd:"Mild", strongEnd:"Strong",
+    drowsyLessEnd:"Low", drowsyMoreEnd:"High",
+    quizStep2:"2/3　Is it okay if it makes you drowsy?",
+    quizStep3:"3/3　What kind of effect do you want?",
+    quizAvoidDrowsy:"I don't want to feel drowsy",
+    quizOkDrowsy:"Drowsiness is fine",
+    quizGentle:"Something gentle on the stomach",
+    quizStrong:"Something strong and fast-acting",
+    quizBack:"← Back to previous question",
+    quizResultBadge:"Recommended for you",
+    quizRestart:"Start over",
+    reasonAvoidGentle:"We picked one that's unlikely to cause drowsiness and is gentle on the stomach.",
+    reasonAvoidStrong:"Among the options unlikely to cause drowsiness, we picked the strongest one.",
+    reasonOkGentle:"Since drowsiness isn't a concern for you, we picked a gentle, stomach-friendly option.",
+    reasonOkStrong:"Since drowsiness isn't a concern for you, we picked the strongest, fastest-acting option.",
+    formatTablet:"Tablet", formatPatch:"Patch", formatDrink:"Drink", formatPowder:"Powder", formatCream:"Cream", formatLiquid:"Liquid", formatGranule:"Granules",
+    picksTitle:"Pharmacist's picks — available at this store",
+    picksIntro:"Products that the pharmacy staff behind this site actually recommend most often.",
+    navAbout:"About Us", navArticles:"Articles", navPrivacy:"Privacy Policy", navContact:"Contact"
+  },
+  zh:{
+    siteName:"Pharama-Navi",
+    tagline:"給訪日旅客的成藥指南",
+    heroLead:"依症狀分類，簡單易懂地介紹在日本藥局、藥妝店可購買的成藥，讓您不需要處方箋也能選到適合自己的藥品。",
+    pharmacistNote:"監修：石鍋卓望（藥劑師）",
+    tabsLabel:"選擇症狀",
+    ingredientLabel:"主要成分",
+    strengthLabel:"藥效強度",
+    drowsyLabel:"嗜睡傾向",
+    weakEnd:"較弱", strongEnd:"較強",
+    drowsyLessEnd:"較少", drowsyMoreEnd:"較容易",
+    cautionGeneral:"若您正在治療其他疾病、正在服用其他藥物、曾有過敏或副作用病史，或為兒童、懷孕中，請洽詢該店的藥劑師或登錄販賣者。",
+    dosageLabel:"用法用量參考",
+    buyLabel:"購買地點",
+    adPlaceholder:"廣告空間（Google AdSense）",
+    disclaimerTitle:"使用本網站前請注意",
+    disclaimerBody:"本網站僅提供一般資訊，並非診斷或治療。所刊載之用法用量僅供參考。使用前請務必諮詢藥劑師或登錄販賣者，並確認商品包裝上的說明書。若有宿疾、懷孕、哺乳中或正在服用其他藥物，請特別留意。",
+    summaryTitle:"日本可購買推薦商品一覽",
+    summaryIntro:"將以上介紹的商品依症狀整理成一覽表。",
+    tableSymptom:"症狀", tableProduct:"商品名稱", tableBuy:"購買地點",
+    footerCredit:"企劃：yuto.h／監修：石鍋卓望",
+    quizTitle:"3個問題找到適合您的藥",
+    quizSubtitle:"回答幾個問題，我們就會依您的症狀與喜好推薦最合適的一款。",
+    quizStep1:"1／3　請選擇症狀",
+    quizStep2:"2／3　可以接受有點嗜睡嗎？",
+    quizStep3:"3／3　您希望的藥效類型？",
+    quizAvoidDrowsy:"不想感到嗜睡",
+    quizOkDrowsy:"不在意嗜睡",
+    quizGentle:"希望對腸胃溫和一些",
+    quizStrong:"希望藥效強、見效快",
+    quizBack:"← 返回上一題",
+    quizResultBadge:"為您推薦",
+    quizRestart:"重新回答問題",
+    reasonAvoidGentle:"我們選擇了較不易造成嗜睡、且對腸胃溫和的類型。",
+    reasonAvoidStrong:"在不易造成嗜睡的選項中，我們選擇了藥效最強的一款。",
+    reasonOkGentle:"由於您不在意嗜睡，我們選擇了對腸胃溫和的類型。",
+    reasonOkStrong:"由於您不在意嗜睡，我們選擇了藥效最強、見效最快的類型。",
+    formatTablet:"錠劑", formatPatch:"貼布", formatDrink:"飲品", formatPowder:"粉末", formatCream:"藥膏", formatLiquid:"液狀", formatGranule:"顆粒",
+    picksTitle:"藥劑師嚴選！本店可購買的推薦商品",
+    picksIntro:"這是監修本網站的藥局人員實際上最常推薦的商品。",
+    navAbout:"關於本站", navArticles:"實用文章", navPrivacy:"隱私權政策", navContact:"聯絡我們"
+  },
+  es:{
+    siteName:"Pharama-Navi",
+    tagline:"Guía de medicamentos de venta libre para visitantes en Japón",
+    heroLead:"Una guía sencilla, organizada por síntoma, de los medicamentos de venta libre disponibles en farmacias y droguerías de Japón, para que puedas elegir el adecuado sin necesidad de receta.",
+    pharmacistNote:"Supervisado por Takumi Ishinabe, farmacéutico registrado",
+    tabsLabel:"Elige un síntoma",
+    ingredientLabel:"Ingrediente principal",
+    strengthLabel:"Intensidad del efecto",
+    drowsyLabel:"Riesgo de somnolencia",
+    weakEnd:"Leve", strongEnd:"Fuerte",
+    drowsyLessEnd:"Bajo", drowsyMoreEnd:"Alto",
+    cautionGeneral:"Si tiene alguna enfermedad en tratamiento, está tomando otros medicamentos, tiene antecedentes de alergias o efectos secundarios,si es para un niño, consulte con el farmacéutico o el vendedor registrado de la tienda.",
+    dosageLabel:"Dosis habitual",
+    buyLabel:"Dónde comprarlo",
+    adPlaceholder:"Espacio publicitario (Google AdSense)",
+    disclaimerTitle:"Antes de usar este sitio",
+    disclaimerBody:"Este sitio ofrece solo información general y no constituye un diagnóstico ni un tratamiento. La información de dosis es orientativa. Consulte siempre con un farmacéutico o revise el prospecto del envase antes de usar el producto, especialmente si tiene alguna condición médica, está embarazada o en periodo de lactancia, o toma otros medicamentos.",
+    summaryTitle:"Productos recomendados disponibles en Japón",
+    summaryIntro:"Todos los productos presentados arriba, resumidos por síntoma.",
+    tableSymptom:"Síntoma", tableProduct:"Producto", tableBuy:"Dónde comprarlo",
+    footerCredit:"Planificación: yuto.h / Supervisión: 石鍋卓望",
+    quizTitle:"Encuentra tu medicamento en 3 preguntas",
+    quizSubtitle:"Responde algunas preguntas y te sugeriremos la opción que mejor te queda.",
+    quizStep1:"1/3　Elige tu síntoma",
+    quizStep2:"2/3　¿Te parece bien si te da sueño?",
+    quizStep3:"3/3　¿Qué tipo de efecto prefieres?",
+    quizAvoidDrowsy:"No quiero sentir sueño",
+    quizOkDrowsy:"Puede dar sueño",
+    quizGentle:"Algo suave para el estómago",
+    quizStrong:"Algo fuerte y de acción rápida",
+    quizBack:"← Volver a la pregunta anterior",
+    quizResultBadge:"Recomendado para ti",
+    quizRestart:"Empezar de nuevo",
+    reasonAvoidGentle:"Hemos seleccionado una opción suave para el estómago y con menor probabilidad de causar somnolencia.",
+    reasonAvoidStrong:"Entre las opciones con poca probabilidad de causar sueño, elegimos la más potente.",
+    reasonOkGentle:"Como el sueño no te preocupa, elegimos una opción suave para el estómago.",
+    reasonOkStrong:"Como el sueño no te preocupa, elegimos la opción más potente y de acción más rápida.",
+    formatTablet:"Comprimido", formatPatch:"Parche", formatDrink:"Bebida", formatPowder:"Polvo", formatCream:"Crema", formatLiquid:"Líquido", formatGranule:"Gránulos",
+    picksTitle:"Selección del farmacéutico — disponible en esta tienda",
+    picksIntro:"Productos que el personal de la farmacia detrás de este sitio recomienda con más frecuencia.",
+    navAbout:"Sobre nosotros", navArticles:"Artículos", navPrivacy:"Política de privacidad", navContact:"Contacto"
+  }
+};
+const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
+
+const buyLabels = {
+  drugstore:{ja:"ドラッグストア・薬局", en:"Drugstores & pharmacies", zh:"藥妝店・藥局", es:"Droguerías y farmacias"},
+  drugstoreConbini:{ja:"ドラッグストア・薬局（一部コンビニ）", en:"Drugstores & pharmacies (also some convenience stores)", zh:"藥妝店・藥局（部分超商也有）", es:"Droguerías y farmacias (también en algunas tiendas de conveniencia)"}
+};
+
+/* ---------- Symptom & product data ---------- */
+const icons = {
+  headache:'<path d="M6 13c0-4.4 3.6-8 8-8s8 3.6 8 8c0 2.6-1 4.3-2 6l.6 3h-3.4l-.5-2.2a10 10 0 0 1-5.4 0L10.8 22H7.4L8 19c-1-1.7-2-3.4-2-6z"/><path d="M9 12l2 3-2.4 1.4L11 20"/>',
+  stomach:'<path d="M8 5c0 3-2 4-2 8a8 8 0 0 0 16 0c0-2.5-1.2-4-3-4.6-1.4-.5-2-1.6-2-3.4"/><path d="M9 13c1 1.4 2.6 2 4 2s3-.6 4-2"/>',
+  nausea:'<circle cx="12" cy="9" r="5"/><path d="M4 15c1.4 0 1.4 2 2.8 2s1.4-2 2.8-2 1.4 2 2.8 2 1.4-2 2.8-2 1.4 2 2.8 2"/><path d="M4 20c1.4 0 1.4 2 2.8 2s1.4-2 2.8-2 1.4 2 2.8 2 1.4-2 2.8-2 1.4 2 2.8 2"/>',
+  muscle:'<path d="M4 17c2-1 3-3 3-6 0-2.5 1.6-4.5 4-5 .3 1.6 1.6 2.6 3 2.6 2.2 0 4 1.8 4 4v2c0 2.8-2.2 5-5 5H8"/><path d="M8 17v3"/><path d="M17 12l3-2"/>',
+  malaise:'<circle cx="12" cy="12" r="8.5"/><path d="M8.5 10.5h.01M15.5 10.5h.01"/><path d="M8.5 16c1.2-1.3 2.4-2 3.5-2s2.3.7 3.5 2"/>',
+  hayfever:'<path d="M9 4c0 4-3 5-3 9a6 6 0 0 0 12 0c0-1.2-.3-2.2-.7-3.1"/><path d="M10 15.5a2 2 0 0 0 4 0"/><path d="M4 8.5h2.2M3.5 12h2.2M18 7l1.6-1.6M19 11h2.2"/>',
+  itching:'<circle cx="12" cy="12" r="2.1"/><path d="M6.5 6.5l2.6 2.6M17.5 6.5l-2.6 2.6M6.5 17.5l2.6-2.6M17.5 17.5l-2.6-2.6"/>',
+  fevercold:'<path d="M12 3a2 2 0 0 1 2 2v8.2a4.3 4.3 0 1 1-4 0V5a2 2 0 0 1 2-2z"/><circle cx="12" cy="17.8" r="2.3"/><path d="M12 7.5h1.6M12 10.3h1.6"/>'
+};
+
+const formatIcons = {
+  tablet:'<circle cx="12" cy="12" r="7.5"/><path d="M12 4.5v15"/>',
+  patch:'<rect x="4" y="4" width="16" height="16" rx="6"/><circle cx="9" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r=".7" fill="currentColor" stroke="none"/>',
+  drink:'<path d="M10 3h4v3l2 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-2z"/><path d="M9 12.5h6"/>',
+  powder:'<path d="M4 8l8-4 8 4v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M4 8l8 5 8-5"/>',
+  cream:'<path d="M9 2.5h6l.7 3H8.3z"/><path d="M8 5.5h8l-.8 14.2a2 2 0 0 1-2 1.8h-2.4a2 2 0 0 1-2-1.8z"/><path d="M9.3 10h5.4"/>',
+  liquid:'<path d="M12 3s6 7.2 6 11.2a6 6 0 0 1-12 0C6 10.2 12 3 12 3z"/><path d="M9.5 14.2a2.5 2.5 0 0 0 2.5 2.5"/>',
+  granule:'<circle cx="7" cy="8.5" r="1.5"/><circle cx="13" cy="6" r="1.3"/><circle cx="17.5" cy="10" r="1.6"/><circle cx="9" cy="14" r="1.4"/><circle cx="15.5" cy="15" r="1.2"/><circle cx="6.5" cy="17" r="1.1"/>'
+};
+const formatLabelKeys = {tablet:"formatTablet", patch:"formatPatch", drink:"formatDrink", powder:"formatPowder", cream:"formatCream", liquid:"formatLiquid", granule:"formatGranule"};
+
+const productFormats = {
+  "EVE A錠":"tablet", "ロキソニンS":"tablet", "タイレノールA":"tablet",
+  "正露丸":"tablet", "ストッパ下痢止めEX":"tablet", "ブスコパンA錠":"tablet",
+  "センパア トラベル1":"tablet", "太田胃散":"powder", "トラベルミン":"tablet",
+  "サロンパス":"patch", "バンテリンコーワパップS":"patch", "ロキソニンSテープ":"patch",
+  "ウコンの力":"drink", "大正漢方胃腸薬":"powder", "パンシロン01プラス":"granule",
+  "アレグラFX":"tablet", "アレジオン20":"tablet", "新コンタック600プラス":"tablet",
+  "ムヒS":"liquid", "ウナコーワクール":"liquid", "レスタミンコーワクリーム":"cream",
+  "パブロンゴールドA":"tablet", "新ルルAゴールドs":"tablet", "熱さまシート":"patch"
+};
+
+const symptoms = [
+  {
+    id:"headache",
+    title:{ja:"頭痛", en:"Headache", zh:"頭痛", es:"Dolor de cabeza"},
+    desc:{
+      ja:"発熱を伴わない頭痛・緊張型頭痛向け。持病がある方や妊娠中の方は薬剤師にご相談ください。",
+      en:"For tension-type headaches without fever. If you have a medical condition or are pregnant, consult the pharmacist first.",
+      zh:"適用於不伴隨發燒的緊張型頭痛。若有宿疾或懷孕中，請務必先諮詢藥劑師。",
+      es:"Para dolores de cabeza tensionales sin fiebre. Si tiene alguna condición médica o está embarazada, consulte primero con el farmacéutico."
+    },
+    products:[
+      {
+        name:"EVE A錠",
+        ingredient:{ja:"イブプロフェン", en:"Ibuprofen", zh:"布洛芬", es:"Ibuprofeno"},
+        desc:{ja:"素早く効く鎮痛成分配合。", en:"Contains a fast-acting pain-relief ingredient.", zh:"含有快速止痛成分。", es:"Contiene un ingrediente analgésico de acción rápida."},
+        strength:4, drowsy:2,
+        caution:{ja:"アスピリン喘息の既往がある方は使用不可", en:"Not for those with a history of aspirin-induced asthma", zh:"曾有阿斯匹靈氣喘病史者不可使用", es:"No usar si tiene antecedentes de asma inducida por aspirina"},
+        dosage:{ja:"成人1回2錠、1日3回まで、4時間以上あけて", en:"Adults: 2 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次2錠，一日至多3次，間隔4小時以上", es:"Adultos: 2 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
+        buy:"drugstore", photoFront:"eveAsurface.jpg" ,photoBack:"eveAbehind.jpg"  /* ← 撮影後に "images/eve-a.jpg" のように変更 */
+      },
+      {
+        name:"ロキソニンS",
+        ingredient:{ja:"ロキソプロフェンナトリウム", en:"Loxoprofen sodium", zh:"洛索洛芬鈉", es:"Loxoprofeno sódico"},
+        desc:{ja:"日本で処方薬にも使われる成分のOTC版。痛みが強い時の定番。", en:"An over-the-counter version of an ingredient also used in prescription medicine in Japan. A go-to for intense pain.", zh:"為日本處方藥也使用的成分之非處方版本，是劇痛時的常見選擇。", es:"Versión de venta libre de un ingrediente también usado en medicamentos recetados en Japón. Un clásico para el dolor intenso."},
+        strength:5, drowsy:1,
+        caution:{ja:"胃腸が弱い方は注意、15歳未満は使用不可", en:"Use with caution if your stomach is sensitive; not for under 15", zh:"腸胃較弱者慎用，15歲以下不可使用", es:"Precaución si tiene el estómago sensible; no apto para menores de 15 años"},
+        dosage:{ja:"成人1回1錠、1日3回まで、空腹時を避けて", en:"Adults: 1 tablet per dose, up to 3×/day, avoid on empty stomach", zh:"成人一次1錠，一日至多3次，避免空腹服用", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, evitar en ayunas"},
+        buy:"drugstore", photo:null  /* ← 撮影後に "images/loxonin-s.jpg" のように変更 */
+      },
+      {
+        name:"タイレノールA",
+        ingredient:{ja:"アセトアミノフェン", en:"Acetaminophen", zh:"乙醯胺酚（普拿疼成分）", es:"Paracetamol (acetaminofén)"},
+        desc:{ja:"胃への負担が少なく、体力が落ちている時にも選ばれやすい穏やかなタイプ。", en:"Gentle on the stomach; often chosen when feeling run down.", zh:"對腸胃負擔較小，體力較弱時也常被選用的溫和類型。", es:"Suave para el estómago; a menudo elegido cuando el cuerpo está débil."},
+        strength:3, drowsy:1,
+        caution:{ja:"重い肝臓病のある方は使用不可", en:"Not for those with severe liver disease", zh:"嚴重肝臟疾病患者不可使用", es:"No usar si tiene enfermedad hepática grave"},
+        dosage:{ja:"成人1回1錠、1日3回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多3次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
+        buy:"drugstore", photo:null  /* ← 撮影後に "images/tylenol-a.jpg" のように変更 */
+      }
+    ]
+  },
+  {
+    id:"stomach",
+    title:{ja:"腹痛", en:"Stomach ache", zh:"腹痛", es:"Dolor de estómago"},
+    desc:{
+      ja:"お腹の痛み・下痢・食べ過ぎによる不快感向け。血便や高熱を伴う場合はすぐ医療機関へ。",
+      en:"For stomach pain, diarrhea, or discomfort from overeating. If you have bloody stool or a high fever, seek medical care immediately.",
+      zh:"適用於腹痛、腹瀉、或吃太多引起的不適。若出現血便或高燒，請立即就醫。",
+      es:"Para dolor de estómago, diarrea o malestar por comer en exceso. Si presenta sangre en las heces o fiebre alta, busque atención médica de inmediato."
+    },
+    products:[
+      {
+        name:"正露丸",
+        ingredient:{ja:"木クレオソート", en:"Wood creosote", zh:"木餾油（木餾油酚）", es:"Creosota de madera"},
+        desc:{ja:"下痢や軟便に伴う腹痛に。独特のにおいが特徴の伝統的な胃腸薬。", en:"For stomach pain accompanying diarrhea or loose stools. A traditional remedy known for its distinctive smell.", zh:"適用於伴隨腹瀉或軟便的腹痛。氣味獨特，是傳統的腸胃藥。", es:"Para el dolor de estómago que acompaña a la diarrea o las heces blandas. Un remedio tradicional conocido por su olor característico."},
+        strength:3, drowsy:1,
+        caution:{ja:"妊娠中の方は使用前に相談", en:"Consult before use if pregnant", zh:"懷孕中者使用前請先諮詢", es:"Consultar antes de usar si está embarazada"},
+        dosage:{ja:"成人1回3粒、1日3回", en:"Adults: 3 pills per dose, 3×/day", zh:"成人一次3粒，一日3次", es:"Adultos: 3 píldoras por toma, 3 veces/día"},
+        buy:"drugstoreConbini", photo:null  /* ← "images/seirogan.jpg" */
+      },
+      {
+        name:"ストッパ下痢止めEX",
+        ingredient:{ja:"ロートエキス、タンニン酸", en:"Belladonna extract, tannic acid", zh:"顛茄浸膏、鞣酸", es:"Extracto de belladona, ácido tánico"},
+        desc:{ja:"下痢の回数を抑えることに特化。旅行中の急な下痢に。", en:"Specifically reduces the frequency of diarrhea. Useful for sudden diarrhea while traveling.", zh:"專門用於減少腹瀉次數，適合旅行中突發腹瀉時使用。", es:"Reduce específicamente la frecuencia de la diarrea. Útil para diarrea repentina durante el viaje."},
+        strength:5, drowsy:1,
+        caution:{ja:"発熱を伴う下痢、血便がある場合は使用不可", en:"Not for diarrhea with fever or blood in stool", zh:"伴隨發燒或血便的腹瀉不可使用", es:"No usar si la diarrea viene con fiebre o sangre en las heces"},
+        dosage:{ja:"成人1回1錠、1日3回まで", en:"Adults: 1 tablet per dose, up to 3×/day", zh:"成人一次1錠，一日至多3次", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día"},
+        buy:"drugstore", photo:null  /* ← "images/stoppa.jpg" */
+      },
+      {
+        name:"ブスコパンA錠",
+        ingredient:{ja:"ブチルスコポラミン臭化物", en:"Scopolamine butylbromide", zh:"丁基溴化東莨菪鹼", es:"Butilbromuro de escopolamina"},
+        desc:{ja:"胃腸のけいれんによる差し込むような痛みをやわらげる。", en:"Eases sharp, cramping pain caused by intestinal spasms.", zh:"緩解因腸胃痙攣引起的絞痛。", es:"Alivia el dolor tipo cólico causado por espasmos intestinales."},
+        strength:3, drowsy:1,
+        caution:{ja:"緑内障、前立腺肥大のある方は使用不可", en:"Not for those with glaucoma or an enlarged prostate", zh:"青光眼或攝護腺肥大患者不可使用", es:"No usar si tiene glaucoma o próstata agrandada"},
+        dosage:{ja:"成人1回1錠、1日3回まで、4時間以上あけて", en:"Adults: 1 tablet per dose, up to 3×/day, ≥4 hrs apart", zh:"成人一次1錠，一日至多3次，間隔4小時以上", es:"Adultos: 1 comprimido por toma, hasta 3 veces/día, con ≥4 h de diferencia"},
+        buy:"drugstore", photo:null  /* ← "images/buscopan.jpg" */
+      }
+    ]
+  },
+  {
+    id:"nausea",
+    title:{ja:"吐き気", en:"Nausea", zh:"噁心／想吐", es:"Náuseas"},
+    desc:{
+      ja:"乗り物酔いや吐き気に。繰り返す嘔吐や強い腹痛を伴う場合は医療機関へ。",
+      en:"For motion sickness or nausea. If vomiting is repeated or comes with severe abdominal pain, seek medical care.",
+      zh:"適用於暈車暈船或噁心感。若反覆嘔吐或伴隨劇烈腹痛，請就醫。",
+      es:"Para el mareo por movimiento o náuseas. Si el vómito es repetido o viene con dolor abdominal intenso, busque atención médica."
+    },
+    products:[
+      {
+        name:"センパア トラベル1",
+        ingredient:{ja:"抗ヒスタミン成分", en:"Antihistamine", zh:"抗組織胺成分", es:"Antihistamínico"},
+        desc:{ja:"乗り物に乗る30分前に飲む、定番の乗り物酔い止め。", en:"A classic motion sickness remedy taken 30 minutes before travel.", zh:"經典的暈車藥，於搭乘交通工具前30分鐘服用。", es:"Un remedio clásico contra el mareo, se toma 30 minutos antes de viajar."},
+        strength:4, drowsy:4,
+        caution:{ja:"服用後の運転・機械操作は避ける", en:"Avoid driving or operating machinery after taking", zh:"服用後請避免開車或操作機械", es:"Evitar conducir u operar maquinaria después de tomarlo"},
+        dosage:{ja:"成人1回1錠、乗車・乗船の30分前に", en:"Adults: 1 tablet, 30 minutes before traveling by car, bus, or boat", zh:"成人一次1錠，搭乘交通工具前30分鐘服用", es:"Adultos: 1 comprimido, 30 minutos antes de viajar en coche, autobús o barco"},
+        buy:"drugstore", photo:null  /* ← "images/sempaa.jpg" */
+      },
+      {
+        name:"太田胃散",
+        ingredient:{ja:"制酸生薬配合", en:"Antacid herbal blend", zh:"制酸生藥複方", es:"Mezcla antiácida a base de hierbas"},
+        desc:{ja:"食べ過ぎ・飲み過ぎからくる胃のむかつきに。粉末タイプ。", en:"For stomach queasiness from overeating or drinking. A powder-form remedy.", zh:"適用於吃太多或喝太多引起的胃部不適感，為粉末劑型。", es:"Para el malestar estomacal por comer o beber en exceso. Presentación en polvo."},
+        strength:2, drowsy:1,
+        caution:null,
+        dosage:{ja:"成人1回1.3g、1日3回、食後又は食間に", en:"Adults: 1.3g per dose, 3×/day, after or between meals", zh:"成人一次1.3公克，一日3次，飯後或餐間服用", es:"Adultos: 1.3 g por toma, 3 veces/día, después de las comidas o entre comidas"},
+        buy:"drugstoreConbini", photo:null  /* ← "images/ohta-isan.jpg" */
+      },
+      {
+        name:"トラベルミン",
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
+        desc:{ja:"吐き気止めの成分に加え、乗り物酔いに配慮した処方。", en:"Combines an anti-nausea ingredient with a formula designed for motion sickness.", zh:"除了止吐成分外，配方也考量了暈車暈船的狀況。", es:"Combina un ingrediente antinauseoso con una fórmula pensada para el mareo por movimiento."},
+        strength:4, drowsy:5,
+        caution:{ja:"15歳未満は使用不可、服用後の運転は避ける", en:"Not for under 15; avoid driving after taking", zh:"15歲以下不可使用，服用後避免開車", es:"No apto para menores de 15 años; evitar conducir después de tomarlo"},
+        dosage:{ja:"成人1回1錠、乗車船30分前に", en:"Adults: 1 tablet, 30 minutes before traveling by car, bus, or boat", zh:"成人一次1錠，搭乘交通工具前30分鐘服用", es:"Adultos: 1 comprimido, 30 minutos antes de viajar en coche, autobús o barco"},
+        buy:"drugstore", photo:null  /* ← "images/travelmin.jpg" */
+      }
+    ]
+  },
+  {
+    id:"muscle",
+    title:{ja:"筋肉痛", en:"Muscle pain", zh:"肌肉痠痛", es:"Dolor muscular"},
+    desc:{
+      ja:"筋肉痛・肩こり・打撲に。貼るタイプは広い範囲に、飲むタイプは局所の強い痛みに向きます。",
+      en:"For muscle pain, stiff shoulders, and bruises. Patches suit a wide area; oral tablets suit localized, intense pain.",
+      zh:"適用於肌肉痠痛、肩頸僵硬、瘀傷。貼布型可用於大範圍，口服型適合局部劇痛。",
+      es:"Para dolor muscular, rigidez de hombros y moretones. Los parches cubren un área amplia; los comprimidos son ideales para dolor localizado e intenso."
+    },
+    products:[
+      {
+        name:"サロンパス",
+        ingredient:{ja:"サリチル酸メチル他", en:"Methyl salicylate and others", zh:"水楊酸甲酯等成分", es:"Salicilato de metilo y otros"},
+        desc:{ja:"貼るタイプの定番。ひんやり感で広範囲の筋肉痛や肩こりに。", en:"A classic patch with a cooling sensation, good for widespread muscle pain or shoulder stiffness.", zh:"經典貼布，帶有涼感，適合大範圍肌肉痠痛或肩頸僵硬。", es:"Un parche clásico con sensación refrescante, ideal para dolor muscular extendido o rigidez de hombros."},
+        strength:2, drowsy:1,
+        caution:{ja:"サリチル酸にアレルギーのある方は使用不可、貼付部位を日光に当てない", en:"Not for those allergic to salicylates; avoid sun exposure on the applied area", zh:"對水楊酸過敏者不可使用，貼藥部位請避免曬太陽", es:"No usar si es alérgico a los salicilatos; evitar exponer la zona al sol"},
+        dosage:{ja:"1日数回、患部に貼付", en:"Apply to the affected area several times a day", zh:"一日數次，貼於患部", es:"Aplicar en la zona afectada varias veces al día"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"バンテリンコーワパップS",
+        ingredient:{ja:"インドメタシン", en:"Indomethacin", zh:"吲哚美辛（消炎痛）", es:"Indometacina"},
+        desc:{ja:"消炎鎮痛成分を含む湿布タイプ。腫れや熱を持った痛みに向く。", en:"A cooling patch with an anti-inflammatory pain reliever, suited for pain with swelling or heat.", zh:"含消炎鎮痛成分的濕敷貼布，適合伴隨腫脹發熱的疼痛。", es:"Un parche refrescante con un analgésico antiinflamatorio, adecuado para dolor con hinchazón o calor."},
+        strength:3, drowsy:1,
+        caution:{ja:"喘息のある方は使用前に相談", en:"Consult before use if you have asthma", zh:"有氣喘者使用前請先諮詢", es:"Consultar antes de usar si tiene asma"},
+        dosage:{ja:"1日1〜2回、患部に貼付", en:"Apply to the affected area 1–2 times a day", zh:"一日1〜2次，貼於患部", es:"Aplicar en la zona afectada 1–2 veces al día"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"ロキソニンSテープ",
+        ingredient:{ja:"ロキソプロフェンナトリウム", en:"Loxoprofen sodium", zh:"洛索洛芬鈉", es:"Loxoprofeno sódico"},
+        desc:{ja:"飲み薬と同じ成分を貼るタイプに。ピンポイントの強い痛みに。", en:"Same active ingredient as the oral tablet, in patch form — for strong, localized pain.", zh:"與口服藥相同成分的貼布型，適合單點劇痛。", es:"Mismo ingrediente activo que el comprimido oral, en forma de parche, para dolor intenso y localizado."},
+        strength:4, drowsy:1,
+        caution:{ja:"喘息の既往がある方は使用不可", en:"Not for those with a history of asthma", zh:"曾有氣喘病史者不可使用", es:"No usar si tiene antecedentes de asma"},
+        dosage:{ja:"1日1回、患部に貼付", en:"Apply to the affected area once a day", zh:"一日1次，貼於患部", es:"Aplicar en la zona afectada una vez al día"},
+        buy:"drugstore", photo:null
+      }
+    ]
+  },
+  {
+    id:"malaise",
+    title:{ja:"気持ち悪い", en:"Feeling unwell", zh:"不舒服／脹氣", es:"Malestar general"},
+    desc:{
+      ja:"飲みすぎ・食べすぎによる胃もたれや、なんとなくの不快感に。",
+      en:"For stomach heaviness after eating or drinking too much, or a general sense of discomfort.",
+      zh:"適用於吃太多、喝太多引起的胃脹不適，或說不出原因的不適感。",
+      es:"Para pesadez estomacal por comer o beber en exceso, o una sensación general de malestar."
+    },
+    products:[
+      {
+        name:"ウコンの力",
+        ingredient:{ja:"ウコンエキス", en:"Turmeric extract", zh:"薑黃萃取物", es:"Extracto de cúrcuma"},
+        desc:{ja:"飲酒前後に飲むドリンクタイプ。翌日の胃の不快感対策として人気。", en:"A drink taken before or after alcohol; popular for easing next-day stomach discomfort.", zh:"於飲酒前後飲用的飲品型，是應對隔天胃部不適的熱門選擇。", es:"Una bebida que se toma antes o después de consumir alcohol, popular para aliviar el malestar estomacal del día siguiente."},
+        strength:2, drowsy:1,
+        caution:null,
+        dosage:{ja:"1回1本を目安に飲用", en:"Drink about 1 bottle per serving", zh:"每次飲用約1瓶", es:"Beber aproximadamente 1 botella por toma"},
+        buy:"drugstoreConbini", photo:null
+      },
+      {
+        name:"大正漢方胃腸薬",
+        ingredient:{ja:"生薬（安中散、芍薬甘草湯）", en:"Herbal formula (Anchusan, Shakuyakukanzoto)", zh:"漢方生藥（安中散、芍藥甘草湯）", es:"Fórmula herbal (Anchusan, Shakuyakukanzoto)"},
+        desc:{ja:"漢方処方で、胃の不快感や胃もたれにじんわり効く。", en:"A traditional herbal formula that gently eases stomach discomfort and heaviness.", zh:"漢方配方，能溫和舒緩胃部不適與胃脹感。", es:"Una fórmula herbal tradicional que alivia suavemente el malestar y la pesadez estomacal."},
+        strength:2, drowsy:1,
+        caution:null,
+        dosage:{ja:"成人1回1包、1日3回まで、食前又は食間に", en:"Adults: 1 packet per dose, up to 3×/day, before or between meals", zh:"成人一次1包，一日至多3次，飯前或餐間服用", es:"Adultos: 1 sobre por toma, hasta 3 veces/día, antes de las comidas o entre comidas"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"パンシロン01プラス",
+        ingredient:{ja:"漢方成分、制酸剤", en:"Herbal ingredients and an antacid", zh:"漢方成分、制酸劑", es:"Ingredientes herbales y un antiácido"},
+        desc:{ja:"食べ過ぎ・飲み過ぎによる胃もたれ・胸やけに、消化を助けるタイプ。", en:"Helps digestion for stomach heaviness or heartburn from overeating or drinking.", zh:"針對吃太多、喝太多引起的胃脹、胸口灼熱，幫助消化的類型。", es:"Ayuda a la digestión para la pesadez estomacal o acidez por comer o beber en exceso."},
+        strength:2, drowsy:1,
+        caution:null,
+        dosage:{ja:"成人1回1包、1日3回、食前又は食間、就寝前", en:"Adults: 1 packet per dose, 3×/day, before or between meals, or before bed", zh:"成人一次1包，一日3次，飯前、餐間或睡前服用", es:"Adultos: 1 sobre por toma, 3 veces/día, antes de las comidas, entre comidas o antes de dormir"},
+        buy:"drugstore", photo:null
+      }
+    ]
+  },
+  {
+    id:"hayfever",
+    title:{ja:"花粉症・鼻炎", en:"Hay fever & rhinitis", zh:"花粉症・鼻炎", es:"Fiebre del heno y rinitis"},
+    desc:{
+      ja:"花粉症や鼻炎による鼻水・くしゃみ・目のかゆみに。高熱を伴う場合は風邪や感染症の可能性もあるため医療機関へ。",
+      en:"For runny nose, sneezing, and itchy eyes from hay fever or allergic rhinitis. If you also have a high fever, it may be a cold or infection — seek medical care.",
+      zh:"適用於花粉症或鼻炎引起的流鼻水、打噴嚏、眼睛癢。若伴隨高燒，可能是感冒或感染，請就醫。",
+      es:"Para la rinorrea, los estornudos y la picazón de ojos causados por la fiebre del heno o la rinitis alérgica. Si también tiene fiebre alta, podría tratarse de un resfriado o una infección — busque atención médica."
+    },
+    products:[
+      {
+        name:"アレグラFX",
+        ingredient:{ja:"フェキソフェナジン塩酸塩", en:"Fexofenadine hydrochloride", zh:"鹽酸非索非那定", es:"Clorhidrato de fexofenadina"},
+        desc:{ja:"比較的眠くなりにくいとされる成分。花粉症シーズンの定番。", en:"An ingredient known for being relatively less likely to cause drowsiness. A go-to during hay fever season.", zh:"屬於較不易造成嗜睡的成分，是花粉症季節的常見選擇。", es:"Un ingrediente conocido por tener relativamente poca probabilidad de causar somnolencia. Un clásico durante la temporada de alergias."},
+        strength:3, drowsy:1,
+        caution:{ja:"15歳未満は使用不可", en:"Not for under 15", zh:"15歲以下不可使用", es:"No apto para menores de 15 años"},
+        dosage:{ja:"成人1回1錠、1日2回　朝夕", en:"Adults: 1 tablet per dose, 2×/day, morning and evening", zh:"成人一次1錠，一日2次，早晚服用", es:"Adultos: 1 comprimido por toma, 2 veces/día, mañana y noche"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"アレジオン20",
+        ingredient:{ja:"エピナスチン塩酸塩", en:"Epinastine hydrochloride", zh:"鹽酸依匹斯汀", es:"Clorhidrato de epinastina"},
+        desc:{ja:"1日1回タイプ。鼻の症状だけでなく、目のかゆみにも配慮した処方。", en:"A once-daily option that also addresses itchy eyes, not just nasal symptoms.", zh:"一日一次的類型，除了鼻部症狀外，也顧及眼睛癢的問題。", es:"Una opción de una vez al día que también aborda la picazón de ojos, no solo los síntomas nasales."},
+        strength:4, drowsy:2,
+        caution:{ja:"妊娠中の方は使用前に相談", en:"Consult before use if pregnant", zh:"懷孕中者使用前請先諮詢", es:"Consultar antes de usar si está embarazada"},
+        dosage:{ja:"成人1回1錠、1日1回、就寝前", en:"Adults: 1 tablet once a day, before bed", zh:"成人一次1錠，一日1次，睡前服用", es:"Adultos: 1 comprimido una vez al día, antes de dormir"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"新コンタック600プラス",
+        ingredient:{ja:"プソイドエフェドリン+クロルフェニラミン", en:"Pseudoephedrine + chlorpheniramine", zh:"偽麻黃鹼＋氯苯那敏", es:"Pseudoefedrina + clorfeniramina"},
+        desc:{ja:"鼻づまりにしっかり効く成分を配合。効果は長く続くが、やや眠くなりやすい。", en:"Contains an ingredient that works well specifically on nasal congestion. Long-lasting, but more likely to cause drowsiness.", zh:"配方中含有對鼻塞特別有效的成分，藥效持久，但較容易嗜睡。", es:"Contiene un ingrediente eficaz específicamente contra la congestión nasal. De efecto duradero, pero con más probabilidad de causar somnolencia."},
+        strength:4, drowsy:4,
+        caution:{ja:"高血圧・心疾患・緑内障のある方は使用不可", en:"Not for those with high blood pressure, heart disease, or glaucoma", zh:"高血壓、心臟疾病或青光眼患者不可使用", es:"No usar si tiene presión arterial alta, enfermedad cardíaca o glaucoma"},
+        dosage:{ja:"成人1回2カプセル、1日2回　朝夕", en:"Adults: 2 capsules per dose, 2×/day, morning and evening", zh:"成人一次2粒，一日2次，早晚服用", es:"Adultos: 2 cápsulas por toma, 2 veces/día, mañana y noche"},
+        buy:"drugstore", photo:null
+      }
+    ]
+  },
+  {
+    id:"itching",
+    title:{ja:"かゆみ・虫刺され", en:"Itching & insect bites", zh:"皮膚癢・蟲咬", es:"Picazón y picaduras de insectos"},
+    desc:{
+      ja:"虫刺されや軽いじんましんによる皮膚のかゆみに。広範囲に広がる、水ぶくれがひどい場合は医療機関へ。",
+      en:"For itching from insect bites or mild hives. If the rash spreads widely or blisters severely, seek medical care.",
+      zh:"適用於蟲咬或輕微蕁麻疹引起的皮膚癢。若大範圍擴散或水泡嚴重，請就醫。",
+      es:"Para la picazón por picaduras de insectos o urticaria leve. Si la erupción se extiende ampliamente o hay ampollas graves, busque atención médica."
+    },
+    products:[
+      {
+        name:"ムヒS",
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
+        desc:{ja:"虫刺されや蕁麻疹のかゆみに。塗るとすっとする、日本で昔から定番の液体タイプ。", en:"For itching from insect bites or hives. A cooling liquid that's been a classic in Japan for decades.", zh:"適用於蟲咬或蕁麻疹的癢感，塗抹後有清涼感，是日本長年暢銷的液狀產品。", es:"Para la picazón por picaduras de insectos o urticaria. Un líquido refrescante que ha sido un clásico en Japón durante décadas."},
+        strength:2, drowsy:1,
+        caution:{ja:"目や粘膜、傷口には使用不可", en:"Do not apply to eyes, mucous membranes, or open wounds", zh:"請勿用於眼睛、黏膜或傷口", es:"No aplicar en ojos, mucosas o heridas abiertas"},
+        dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
+        buy:"drugstoreConbini", photo:null
+      },
+      {
+        name:"ウナコーワクール",
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
+        desc:{ja:"清涼感がより強めのタイプ。かゆみと一緒にほてりも感じる時に。", en:"A stronger cooling sensation than most. Good when the area feels hot as well as itchy.", zh:"清涼感更為明顯的類型，適合癢感中還伴隨灼熱感時使用。", es:"Una sensación refrescante más intensa que la mayoría. Ideal cuando la zona también se siente caliente además de picar."},
+        strength:2, drowsy:1,
+        caution:{ja:"目や粘膜、傷口には使用不可", en:"Do not apply to eyes, mucous membranes, or open wounds", zh:"請勿用於眼睛、黏膜或傷口", es:"No aplicar en ojos, mucosas o heridas abiertas"},
+        dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"レスタミンコーワクリーム",
+        ingredient:{ja:"ジフェンヒドラミン", en:"Diphenhydramine", zh:"苯海拉明", es:"Difenhidramina"},
+        desc:{ja:"ステロイドを含まないクリームタイプ。顔など皮膚が薄い部分にも使いやすい。", en:"A steroid-free cream, gentle enough for thinner skin such as the face.", zh:"不含類固醇的乳膏類型，臉部等皮膚較薄的部位也適合使用。", es:"Una crema sin esteroides, lo bastante suave para pieles más delicadas como la del rostro."},
+        strength:2, drowsy:1,
+        caution:{ja:"広範囲・長期間の使用は避ける", en:"Avoid using over a large area or for a long period", zh:"避免大範圍或長期使用", es:"Evitar usar en un área extensa o durante un período prolongado"},
+        dosage:{ja:"1日数回、患部に塗布", en:"Apply to the affected area several times a day", zh:"一日數次，塗抹於患部", es:"Aplicar en la zona afectada varias veces al día"},
+        buy:"drugstore", photo:null
+      }
+    ]
+  },
+  {
+    id:"fevercold",
+    title:{ja:"発熱・かぜ", en:"Fever & cold", zh:"發燒・感冒", es:"Fiebre y resfriado"},
+    desc:{
+      ja:"熱っぽさ、のどの痛み、せきなど、かぜの諸症状に。高熱が2〜3日以上続く場合や、強い倦怠感がある場合は医療機関へ。",
+      en:"For fever, sore throat, coughing, and other general cold symptoms. If a high fever lasts more than 2–3 days, or you feel severely unwell, seek medical care.",
+      zh:"適用於發燒、喉嚨痛、咳嗽等感冒各種症狀。若高燒持續2〜3天以上，或有強烈倦怠感，請就醫。",
+      es:"Para la fiebre, el dolor de garganta, la tos y otros síntomas generales del resfriado. Si la fiebre alta dura más de 2–3 días, o se siente muy mal, busque atención médica."
+    },
+    products:[
+      {
+        name:"パブロンゴールドA",
+        ingredient:{ja:"アセトアミノフェン他 複合成分", en:"Acetaminophen and a combination of other ingredients", zh:"乙醯胺酚等複方成分", es:"Paracetamol y una combinación de otros ingredientes"},
+        desc:{ja:"熱・のどの痛み・せき・鼻水など、かぜの諸症状に幅広く対応する総合感冒薬。", en:"A multi-symptom cold medicine covering fever, sore throat, cough, and runny nose.", zh:"針對發燒、喉嚨痛、咳嗽、流鼻水等感冒各種症狀的綜合感冒藥。", es:"Un medicamento multisíntoma para el resfriado que cubre fiebre, dolor de garganta, tos y rinorrea."},
+        strength:3, drowsy:3,
+        caution:{ja:"服用後の運転・機械操作は避ける", en:"Avoid driving or operating machinery after taking", zh:"服用後請避免開車或操作機械", es:"Evitar conducir u operar maquinaria después de tomarlo"},
+        dosage:{ja:"成人1回3錠、1日3回、食後に", en:"Adults: 3 tablets per dose, 3×/day, after meals", zh:"成人一次3錠，一日3次，飯後服用", es:"Adultos: 3 comprimidos por toma, 3 veces/día, después de las comidas"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"新ルルAゴールドs",
+        ingredient:{ja:"アセトアミノフェン他 複合成分", en:"Acetaminophen and a combination of other ingredients", zh:"乙醯胺酚等複方成分", es:"Paracetamol y una combinación de otros ingredientes"},
+        desc:{ja:"熱とのどの痛みにやや重点を置いた総合感冒薬。", en:"A multi-symptom cold medicine with a bit more focus on fever and sore throat.", zh:"較著重於發燒與喉嚨痛的綜合感冒藥。", es:"Un medicamento multisíntoma para el resfriado con más enfoque en la fiebre y el dolor de garganta."},
+        strength:3, drowsy:3,
+        caution:{ja:"15歳未満は使用不可", en:"Not for under 15", zh:"15歲以下不可使用", es:"No apto para menores de 15 años"},
+        dosage:{ja:"成人1回3錠、1日3回、食後に", en:"Adults: 3 tablets per dose, 3×/day, after meals", zh:"成人一次3錠，一日3次，飯後服用", es:"Adultos: 3 comprimidos por toma, 3 veces/día, después de las comidas"},
+        buy:"drugstore", photo:null
+      },
+      {
+        name:"熱さまシート",
+        ingredient:{ja:"冷却ジェルシート（薬効成分なし）", en:"Cooling gel sheet (no active drug ingredient)", zh:"冷卻凝膠貼片（不含藥效成分）", es:"Lámina de gel refrescante (sin ingrediente farmacológico activo)"},
+        desc:{ja:"貼るだけで額をひんやり冷やすシート。薬を使いたくない時や、他の薬と一緒に使いたい時に。", en:"A sheet that cools the forehead just by sticking it on. Good when you'd rather not take medicine, or want to combine it with one.", zh:"貼上就能讓額頭涼爽的貼片。不想吃藥，或想與其他藥物併用時適合使用。", es:"Una lámina que enfría la frente con solo pegarla. Ideal cuando prefiere no tomar medicamentos, o quiere combinarla con uno."},
+        strength:1, drowsy:1,
+        caution:null,
+        dosage:{ja:"気になる部分に貼付し、乾いたら交換", en:"Apply to the area of concern; replace once it dries out", zh:"貼於在意的部位，乾了之後更換", es:"Aplicar en la zona deseada; reemplazar cuando se seque"},
+        buy:"drugstoreConbini", photo:null
+      }
+    ]
+  }
+];
+
+const editorsPicks = [
+  { symptomId:"headache", productName:"ロキソニンS", photo:null,  /* ← "images/loxonin-s.jpg" */
+    comment:{ja:"旅行者の方に一番よく聞かれる頭痛薬です。迷ったらまずこれ。", en:"The headache medicine we get asked about most by visitors. When in doubt, start here.", zh:"是旅客最常詢問的頭痛藥。猶豫的話先選這個就對了。", es:"El medicamento para el dolor de cabeza que más nos preguntan los visitantes. Si dudas, empieza por aquí."} },
+  { symptomId:"stomach", productName:"ブスコパンA錠", photo:null,  /* ← "images/buscopan.jpg" */
+    comment:{ja:"食あたりっぽい差し込む痛みには、下痢止めよりこちらが向くことが多いです。", en:"For a sharp, cramping stomach pain, this often works better than a diarrhea remedy.", zh:"對於像食物中毒那種絞痛，這個往往比止瀉藥更合適。", es:"Para un dolor de estómago agudo tipo cólico, esta opción suele funcionar mejor que un antidiarreico."} },
+  { symptomId:"nausea", productName:"センパア トラベル1", photo:null,  /* ← "images/sempaa.jpg" */
+    comment:{ja:"新幹線やバスでの長距離移動が多い方に、一番おすすめしています。", en:"Our top pick for anyone doing long trips by shinkansen or bus.", zh:"最推薦給常搭新幹線或巴士長途移動的旅客。", es:"Nuestra recomendación principal para quienes hacen viajes largos en shinkansen o autobús."} },
+  { symptomId:"muscle", productName:"バンテリンコーワパップS", photo:null,  /* ← "images/vantelin.jpg" */
+    comment:{ja:"歩き疲れによる足や肩の痛みに、貼るだけで手軽に使えます。", en:"Easy relief for tired legs or shoulders from a long day of walking — just apply and go.", zh:"針對走太多路導致的腳部或肩膀痠痛，貼上就很方便。", es:"Alivio fácil para piernas u hombros cansados tras un día de caminata — solo hay que aplicarlo."} },
+  { symptomId:"malaise", productName:"ウコンの力", photo:null,  /* ← "images/ukon.jpg" */
+    comment:{ja:"居酒屋巡りの予定がある日は、飲む前に1本どうぞ。", en:"Planning a night of izakaya-hopping? Have one before you start drinking.", zh:"如果當天要跑很多居酒屋，開喝前先喝一瓶吧。", es:"¿Planeas una noche de bares izakaya? Toma una antes de empezar a beber."} },
+  { symptomId:"hayfever", productName:"アレグラFX", photo:null,  /* ← "images/allegra-fx.jpg" */
+    comment:{ja:"春に日本を訪れる方から一番多く聞かれます。眠くなりにくいので観光中でも安心です。", en:"The one we're asked about most by spring visitors. Low drowsiness, so it's safe to take while sightseeing.", zh:"是春天訪日旅客最常詢問的商品，較不易嗜睡，觀光時也能安心服用。", es:"El que más nos preguntan los visitantes en primavera. Poca somnolencia, así que es seguro tomarlo mientras se hace turismo."} },
+  { symptomId:"itching", productName:"ムヒS", photo:null,  /* ← "images/muhi-s.jpg" */
+    comment:{ja:"夏場の蚊刺されには、まずこれを勧めています。荷物にも入れやすい小さめサイズ。", en:"Our first suggestion for mosquito bites in summer. Compact enough to toss in a bag.", zh:"夏天被蚊子咬時，我們都先推薦這個，尺寸小巧也方便放進包包。", es:"Nuestra primera sugerencia para picaduras de mosquito en verano. Lo bastante compacto para llevarlo en el bolso."} },
+  { symptomId:"fevercold", productName:"パブロンゴールドA", photo:null,  /* ← "images/pabron-gold-a.jpg" */
+    comment:{ja:"旅行中に体調を崩した時、症状が複数あるならまずこれで様子を見る方が多いです。", en:"When several cold symptoms hit at once during a trip, this is what most people reach for first.", zh:"旅途中身體不適、症狀又不只一種時，大部分人會先選這個觀察狀況。", es:"Cuando aparecen varios síntomas de resfriado a la vez durante un viaje, la mayoría de la gente recurre primero a este."} }
+];
+
+/* ---------- State ---------- */
+let currentLang = "ja";
+try{ const saved = localStorage.getItem("kn_lang"); if(saved && translations[saved]) currentLang = saved; }catch(e){}
+let currentSymptom = symptoms[0].id;
+let quizState = { step:0, symptomId:null, avoidDrowsy:null, wantStrong:null };
+
+function t(key){ return translations[currentLang][key]; }
+
+/* ---------- Renderers ---------- */
+function renderGauge(level, lowLabel, highLabel, title){
+  let segs = "";
+  for(let i=1;i<=5;i++){
+    segs += `<div class="seg${i<=level?" filled":""}"></div>`;
+  }
+  return `
+    <div class="gauge-block">
+      <p class="gauge-label">${title}</p>
+      <div class="gauge-row">
+        <span class="gauge-end">${lowLabel}</span>
+        <div class="gauge-bar">${segs}</div>
+        <span class="gauge-end right">${highLabel}</span>
+      </div>
+    </div>`;
+}
+
+function productCard(p){
+  const cautionHtml = `
+    <div class="caution">
+      <svg viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+      <span>${t("cautionGeneral")}</span>
+    </div>`;
+  const fmt = productFormats[p.name] || "tablet";
+  const formatHtml = `<span class="prod-format"><svg viewBox="0 0 24 24">${formatIcons[fmt]}</svg>${t(formatLabelKeys[fmt])}</span>`;
+  const photoLabels = {
+    ja:{front:"表", back:"裏"}, en:{front:"Front", back:"Back"},
+    zh:{front:"正面", back:"背面"}, es:{front:"Frente", back:"Reverso"}
+  };
+  const photoSlot = (src, side) => {
+    const label = photoLabels[currentLang][side];
+    return src
+      ? `<div class="prod-photo"><img src="${src}" alt="${p.name} (${label})" loading="lazy"><span class="prod-photo-label">${label}</span></div>`
+      : `<div class="prod-photo"><div class="prod-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>${label}</span></div></div>`;
+  };
+  const photoHtml = `<div class="prod-photo-row">${photoSlot(p.photoFront || p.photo, "front")}${photoSlot(p.photoBack, "back")}</div>`;
+  return `
+    <div class="card">
+      ${photoHtml}
+      ${formatHtml}
+      <p class="prod-name">${p.name}</p>
+      <p class="prod-ingredient">${t("ingredientLabel")}：${p.ingredient[currentLang]}</p>
+      <p class="prod-desc">${p.desc[currentLang]}</p>
+      ${renderGauge(p.strength, t("weakEnd"), t("strongEnd"), t("strengthLabel"))}
+      ${renderGauge(p.drowsy, t("drowsyLessEnd"), t("drowsyMoreEnd"), t("drowsyLabel"))}
+      ${cautionHtml}
+      <div class="prod-meta">
+        <div class="meta-row"><span class="k">${t("dosageLabel")}</span><span class="v">${p.dosage[currentLang]}</span></div>
+        <div class="meta-row buy"><span class="k">${t("buyLabel")}</span><span class="v">${buyLabels[p.buy][currentLang]}</span></div>
+      </div>
+    </div>`;
+}
+
+function renderTabs(){
+  const row = document.getElementById("tabRow");
+  row.innerHTML = symptoms.map(s => `
+    <button class="tab-btn${s.id===currentSymptom?" active":""}" data-id="${s.id}">
+      <svg viewBox="0 0 24 24">${icons[s.id]}</svg>
+      ${s.title[currentLang]}
+    </button>`).join("");
+  row.querySelectorAll(".tab-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.id === currentSymptom) return;
+      currentSymptom = btn.dataset.id;
+      renderTabs();
+      renderPanel(true);
+    });
+  });
+}
+
+function renderPanel(animate){
+  const panel = document.getElementById("panel");
+  const s = symptoms.find(x=>x.id===currentSymptom);
+  const html = `
+    <h2 class="symptom-title">${s.title[currentLang]}</h2>
+    <p class="symptom-desc">${s.desc[currentLang]}</p>
+    <div class="grid">${s.products.map(productCard).join("")}</div>`;
+  if(animate){
+    panel.classList.add("fade");
+    setTimeout(()=>{
+      panel.innerHTML = html;
+      panel.classList.remove("fade");
+    }, 140);
+  } else {
+    panel.innerHTML = html;
+  }
+}
+
+function renderSummary(){
+  const body = document.getElementById("summaryBody");
+  let rows = "";
+  symptoms.forEach(s=>{
+    s.products.forEach(p=>{
+      rows += `<tr><td class="sym-cell">${s.title[currentLang]}</td><td>${p.name}</td><td>${buyLabels[p.buy][currentLang]}</td></tr>`;
+    });
+  });
+  body.innerHTML = rows;
+}
+
+function computeRecommendation(symptomId, avoidDrowsy, wantStrong){
+  const s = symptoms.find(x=>x.id===symptomId);
+  let candidates = s.products.slice();
+  const lowDrowsy = candidates.filter(p=>p.drowsy<=2);
+  if(avoidDrowsy && lowDrowsy.length) candidates = lowDrowsy;
+  candidates.sort((a,b)=> wantStrong ? b.strength-a.strength : a.strength-b.strength);
+  return candidates[0];
+}
+
+function quizOption(label, iconPath, onClickAttr){
+  return `<button class="quiz-opt" ${onClickAttr}><svg viewBox="0 0 24 24">${iconPath}</svg>${label}</button>`;
+}
+
+function renderQuiz(){
+  const body = document.getElementById("quizBody");
+  document.getElementById("quizTitle").textContent = t("quizTitle");
+  document.getElementById("quizSubtitle").textContent = t("quizSubtitle");
+
+  if(quizState.step === 0){
+    body.innerHTML = `
+      <p class="quiz-step-label">${t("quizStep1")}</p>
+      <div class="quiz-options">
+        ${symptoms.map(s=>`<button class="quiz-opt" data-sym="${s.id}"><svg viewBox="0 0 24 24">${icons[s.id]}</svg>${s.title[currentLang]}</button>`).join("")}
+      </div>`;
+    body.querySelectorAll("[data-sym]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.symptomId = btn.dataset.sym;
+        quizState.step = 1;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 1){
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <p class="quiz-step-label">${t("quizStep2")}</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" data-val="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 10h.01M15.5 10h.01M8 15c1.3-1 2.7-1.5 4-1.5s2.7.5 4 1.5"/></svg>${t("quizAvoidDrowsy")}</button>
+        <button class="quiz-opt" data-val="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 10h.01M15.5 10h.01M8 14c1.3 1 2.7 1.5 4 1.5s2.7-.5 4-1.5"/></svg>${t("quizOkDrowsy")}</button>
+      </div>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 0; renderQuiz(); });
+    body.querySelectorAll("[data-val]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.avoidDrowsy = btn.dataset.val === "true";
+        quizState.step = 2;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 2){
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <p class="quiz-step-label">${t("quizStep3")}</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" data-val="false"><svg viewBox="0 0 24 24"><path d="M8 3h8v4l3 4v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8l3-4z"/><path d="M9 13c1 1.3 2 2 3 2s2-.7 3-2"/></svg>${t("quizGentle")}</button>
+        <button class="quiz-opt" data-val="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>${t("quizStrong")}</button>
+      </div>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 1; renderQuiz(); });
+    body.querySelectorAll("[data-val]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        quizState.wantStrong = btn.dataset.val === "true";
+        quizState.step = 3;
+        renderQuiz();
+      });
+    });
+  } else if(quizState.step === 3){
+    const rec = computeRecommendation(quizState.symptomId, quizState.avoidDrowsy, quizState.wantStrong);
+    const reasonKey = (quizState.avoidDrowsy ? "reasonAvoid" : "reasonOk") + (quizState.wantStrong ? "Strong" : "Gentle");
+    body.innerHTML = `
+      <button class="quiz-back" id="quizBackBtn">${t("quizBack")}</button>
+      <span class="quiz-result-badge">${t("quizResultBadge")}</span>
+      <p class="quiz-reason">${t(reasonKey)}</p>
+      <div class="grid">${productCard(rec)}</div>
+      <button class="quiz-restart" id="quizRestartBtn">${t("quizRestart")}</button>`;
+    document.getElementById("quizBackBtn").addEventListener("click", ()=>{ quizState.step = 2; renderQuiz(); });
+    document.getElementById("quizRestartBtn").addEventListener("click", ()=>{
+      quizState = { step:0, symptomId:null, avoidDrowsy:null, wantStrong:null };
+      renderQuiz();
+    });
+  }
+}
+
+function renderPicks(){
+  document.getElementById("picksTitle").textContent = t("picksTitle");
+  document.getElementById("picksIntro").textContent = t("picksIntro");
+  const row = document.getElementById("picksRow");
+  row.innerHTML = editorsPicks.map(pick=>{
+    const s = symptoms.find(x=>x.id===pick.symptomId);
+    const photoHtml = pick.photo
+      ? `<div class="pick-photo"><img src="${pick.photo}" alt="${pick.productName}" loading="lazy"></div>`
+      : `<div class="pick-photo"><div class="pick-photo-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div>`;
+    return `
+      <div class="pick-card">
+        ${photoHtml}
+        <p class="pick-badge">★ Pick</p>
+        <p class="pick-symptom">${s.title[currentLang]}</p>
+        <p class="pick-name">${pick.productName}</p>
+        <p class="pick-comment">${pick.comment[currentLang]}</p>
+      </div>`;
+  }).join("");
+}
+
+function renderLangSwitch(){
+  const el = document.getElementById("langSwitch");
+  el.innerHTML = Object.keys(langNames).map(l=>`
+    <button class="lang-btn${l===currentLang?" active":""}" data-lang="${l}">${langNames[l]}</button>
+  `).join("");
+  el.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.lang === currentLang) return;
+      currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
+      renderAll();
+    });
+  });
+}
+
+function renderAll(){
+  document.documentElement.lang = currentLang;
+  document.getElementById("siteName").textContent = t("siteName");
+  document.getElementById("tagline").textContent = t("tagline");
+  document.getElementById("pharmacistNote").textContent = t("pharmacistNote");
+  document.getElementById("heroLead").textContent = t("heroLead");
+  document.getElementById("tabsLabel").textContent = t("tabsLabel");
+  document.getElementById("adSlot1").textContent = t("adPlaceholder");
+  document.getElementById("adSlot2").textContent = t("adPlaceholder");
+  document.getElementById("disclaimerTitle").textContent = t("disclaimerTitle");
+  document.getElementById("disclaimerBody").textContent = t("disclaimerBody");
+  document.getElementById("summaryTitle").textContent = t("summaryTitle");
+  document.getElementById("summaryIntro").textContent = t("summaryIntro");
+  document.getElementById("thSymptom").textContent = t("tableSymptom");
+  document.getElementById("thProduct").textContent = t("tableProduct");
+  document.getElementById("thBuy").textContent = t("tableBuy");
+  document.getElementById("footerCredit").textContent = t("footerCredit");
+  document.getElementById("navAbout").textContent = t("navAbout");
+  document.getElementById("navArticles").textContent = t("navArticles");
+  document.getElementById("navPrivacy").textContent = t("navPrivacy");
+  document.getElementById("navContact").textContent = t("navContact");
+
+  renderLangSwitch();
+  renderTabs();
+  renderPanel(false);
+  renderSummary();
+  renderQuiz();
+  renderPicks();
+}
+
+renderAll();
