@@ -1,4 +1,3 @@
-
     cautionGeneral:"If you have a condition under treatment, are taking other medication, have a history of allergies or side effects, or are a child or pregnant, please consult the pharmacist or registered seller at the store.",
     dosageLabel:"Typical dosage",
     buyLabel:"Where to buy",
