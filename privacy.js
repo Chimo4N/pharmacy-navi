@@ -1,5 +1,4 @@
-
-  :root{
+　:root{
     --bg:#F4F7F3; --bg-card:#FFFFFF; --bg-tab:#E4ECE4; --ink:#22303A; --ink-soft:#5B6B70;
     --accent:#2A6F77; --accent-soft:#DCEBEA; --warn-soft:#F7E4DC; --line:#D8E1D6; --radius:14px;
   }
