@@ -1,1 +1,111 @@
+const translations = {
+  ja:{
+    siteName:"ふぁらまーnavi", backLink:"← トップページに戻る",
+    pageTitle:"このサイトについて", updated:"最終更新日：2026年9月30日",
+    intro1:"「ふぁらまーnavi TOKYO」は、日本を訪れる外国人旅行者の方が、言葉の壁があっても自分に合った市販薬（OTC医薬品）を選べるように作られた情報サイトです。",
+    intro2:"処方箋なしで購入できる薬局・ドラッグストアの商品を、頭痛・腹痛・吐き気・筋肉痛・気持ち悪いといった症状別に紹介し、眠気の出やすさやアレルギーに関する注意点も、写真ではなく分かりやすい図で表示しています。",
+    h2Concept:"コンセプト",
+    pConcept:"Pharama-naviという名前に関して、薬局という英語がpharmacyであることや、薬剤師という英語がpharmacistである語源は、古代ギリシャのpharmakon（薬や毒）という意味にあるそうです。\nそんな中で日本での薬探しを多数の言語で多数の国の人達に知ってもらおうと思い、日本語ですが、他の国の人にも親しみのありそうな言葉であるarama-という言葉と合わせてみました。",
+    h2Mission:"サイトの目的",
+    pMission:"日本の薬局では、成分名や注意事項がほとんど日本語でしか書かれておらず、外国人旅行者にとって自分に合う薬を選ぶのは簡単ではありません。当サイトは、実際に薬局で働く薬剤師の知見をもとに、必要な情報を英語・繁體中文・スペイン語でも分かりやすく届けることを目指しています。",
+    h2Accuracy:"情報の正確性について",
+    pAccuracy:"掲載内容は登録薬剤師が監修していますが、あくまで一般的な情報提供を目的としたものであり、個別の診断や治療の代わりになるものではありません。",
+    noteAccuracy:"持病がある方、妊娠・授乳中の方、他の薬を服用中の方は、購入前に必ず薬局のスタッフにご相談ください。",
+    h2Operator:"運営者情報",
+    kName:"運営者", kSupervisor:"監修薬剤師", kAddress:"所在地", kLicense:"資格情報", kEmail:"連絡先",
+    contactPrompt:"サイトの内容についてご質問がある場合は、お問い合わせページからご連絡ください。",
+    footerCredit:"企画：yuto.h／監修：石鍋卓望", navHome:"トップページ", navArticles:"お役立ち記事", navPrivacy:"プライバシーポリシー", navContact:"お問い合わせ"
+  },
+  en:{
+    siteName:"Pharama-Navi", backLink:"← Back to home",
+    pageTitle:"About Us", updated:"Last updated: Sep 30, 2026",
+    intro1:"Pharama-Navi TOKYO is an information site built to help foreign visitors to Japan choose the right over-the-counter (OTC) medicine, even across a language barrier.",
+    intro2:"We introduce prescription-free products available at pharmacies and drugstores, organized by symptom — headache, stomach ache, nausea, muscle pain, and general malaise — with clear diagrams (instead of photos) showing drowsiness risk and allergy notes.",
+    h2Concept:"Concept",
+    pConcept:"The word pharmacy comes from the ancient Greek pharmakon, representing the deep knowledge and power of medicine. We combined pharma with arama—a friendly Japanese expression of pleasant surprise (\"Arama! / Oh, look!\").\n\nNavigating medicines in a foreign country can often feel overwhelming. Pharma-Navi was created to bridge this gap for international visitors and residents in Japan. By transforming complex pharmaceutical information into clear, welcoming guidance, we help you discover the right health solutions with ease and confidence.",
+    h2Mission:"Our mission",
+    pMission:"In Japanese pharmacies, ingredient names and precautions are almost always written only in Japanese, making it hard for visitors to choose the right medicine. This site draws on the knowledge of pharmacists working in real pharmacies to make that information accessible in English, Traditional Chinese, and Spanish as well.",
+    h2Accuracy:"About the accuracy of this information",
+    pAccuracy:"The content here is reviewed by a registered pharmacist, but it is intended for general informational purposes only and is not a substitute for individual diagnosis or treatment.",
+    noteAccuracy:"If you have a medical condition, are pregnant or breastfeeding, or are taking other medication, please consult pharmacy staff before purchasing.",
+    h2Operator:"Operator information",
+    kName:"Operated by", kSupervisor:"Supervising pharmacist", kAddress:"Address", kLicense:"License", kEmail:"Contact",
+    contactPrompt:"If you have any questions about this site, please reach out via the contact page.",
+    footerCredit:"Planning: yuto.h / Supervision: Takami Ishinabe", navHome:"Home", navArticles:"Articles", navPrivacy:"Privacy Policy", navContact:"Contact"
+  },
+  zh:{
+    siteName:"Pharama-Navi", backLink:"← 返回首頁",
+    pageTitle:"關於本站", updated:"最後更新日：2026年9月30日",
+    intro1:"「Pharama-Navi TOKYO」是為了讓訪日外國旅客即使有語言隔閡，也能選擇適合自己的成藥（OTC醫藥品）而製作的資訊網站。",
+    intro2:"我們依症狀（頭痛、腹痛、噁心、肌肉痠痛、不舒服）分類介紹無需處方箋即可購買的藥局・藥妝店商品，並以清楚易懂的圖表（而非照片）標示嗜睡傾向與過敏注意事項。",
+    h2Concept:"理念",
+    pConcept:"「Pharmacy（藥局）」一詞源自古代希臘語的 pharmakon，代表著醫藥的專業與力量。我們將象徵專業藥學的 pharma，結合了日文中表示驚喜與發現的親切用語 arama（「啊啦嘛！原來是這樣！」）。\n\n在異國尋找合適的藥品往往令人感到不安。Pharma-Navi 的誕生，就是為了讓身在日本的各國旅人與居民，能夠跨越語言與文化的藩籬。我們將複雜的日本藥品資訊，轉化為清晰且易於理解的導覽，讓您在輕鬆與安心中，找到最適合自己的健康選擇。",
+    h2Mission:"網站宗旨",
+    pMission:"在日本的藥局，成分名稱與注意事項幾乎都只以日文標示，外國旅客要選到適合自己的藥品並不容易。本網站以實際在藥局工作的藥劑師知識為基礎，致力於以英文、繁體中文、西班牙文也能清楚理解的方式傳達必要資訊。",
+    h2Accuracy:"關於資訊的正確性",
+    pAccuracy:"網站內容雖經登錄藥劑師監修，但僅供一般資訊參考之用，並非個別診斷或治療的替代方案。",
+    noteAccuracy:"若有宿疾、懷孕、哺乳中或正在服用其他藥物，購買前請務必諮詢藥局工作人員。",
+    h2Operator:"營運者資訊",
+    kName:"營運者", kSupervisor:"監修藥劑師", kAddress:"所在地", kLicense:"資格資訊", kEmail:"聯絡方式",
+    contactPrompt:"若對網站內容有任何疑問，請透過聯絡我們頁面與我們聯繫。",
+    footerCredit:"企劃：yuto.h／監修：石鍋卓望", navHome:"首頁", navArticles:"實用文章", navPrivacy:"隱私權政策", navContact:"聯絡我們"
+  },
+  es:{
+    siteName:"Pharama-Navi", backLink:"← Volver al inicio",
+    pageTitle:"Sobre nosotros", updated:"Última actualización: 30 de septiembre de 2026",
+    intro1:"Pharama-Navi TOKYO es un sitio informativo creado para ayudar a los visitantes extranjeros en Japón a elegir el medicamento de venta libre (OTC) adecuado, incluso con la barrera del idioma.",
+    intro2:"Presentamos productos disponibles sin receta en farmacias y droguerías, organizados por síntoma — dolor de cabeza, dolor de estómago, náuseas, dolor muscular y malestar general — con diagramas claros (en lugar de fotos) que muestran el riesgo de somnolencia y las precauciones por alergias.",
+    h2Concept:"Concepto",
+    pConcept:"La palabra farmacia proviene del griego antiguo pharmakon, que representa el conocimiento y el poder de la medicina. Hemos combinado pharma con arama, una simpática expresión japonesa de sorpresa y descubrimiento (\"¡Arama! / ¡Aha, qué bien!\").\n\nBuscar medicamentos en un país diferente puede resultar confuso y estresante. Pharma-Navi nace para ayudar a viajeros y residentes de todo el mundo en Japón. Transformamos la información farmacéutica compleja en una guía clara y accesible, para que pueda encontrar la opción adecuada para su salud con total tranquilidad.",
+    h2Mission:"Nuestra misión",
+    pMission:"En las farmacias japonesas, los nombres de los ingredientes y las precauciones casi siempre están escritos solo en japonés, lo que dificulta que los visitantes elijan el medicamento adecuado. Este sitio se basa en el conocimiento de farmacéuticos que trabajan en farmacias reales para hacer esa información accesible también en inglés, chino tradicional y español.",
+    h2Accuracy:"Sobre la precisión de esta información",
+    pAccuracy:"El contenido aquí presentado es revisado por un farmacéutico registrado, pero tiene fines meramente informativos generales y no sustituye un diagnóstico o tratamiento individual.",
+    noteAccuracy:"Si tiene alguna condición médica, está embarazada o en periodo de lactancia, o toma otros medicamentos, consulte con el personal de la farmacia antes de comprar.",
+    h2Operator:"Información del operador",
+    kName:"Operado por", kSupervisor:"Farmacéutico supervisor", kAddress:"Dirección", kLicense:"Licencia", kEmail:"Contacto",
+    contactPrompt:"Si tiene alguna pregunta sobre este sitio, contáctenos a través de la página de contacto.",
+    footerCredit:"Planificación: yuto.h / Supervisión: Takami Ishinabe", navHome:"Inicio", navArticles:"Artículos", navPrivacy:"Política de privacidad", navContact:"Contacto"
+  }
+};
 
+const langNames = {ja:"日本語", en:"English", zh:"繁體中文", es:"Español"};
+let currentLang = "ja";
+
+try{ 
+  const saved = localStorage.getItem("kn_lang"); 
+  if(saved && translations[saved]) currentLang = saved; 
+}catch(e){}
+
+function t(key){ return translations[currentLang][key] || ""; }
+
+function renderLangSwitch(){
+  const el = document.getElementById("langSwitch");
+  if(!el) return;
+  el.innerHTML = Object.keys(langNames).map(l=>`<button class="lang-btn${l===currentLang?" active":""}" data-lang="${l}">${langNames[l]}</button>`).join("");
+  el.querySelectorAll(".lang-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(btn.dataset.lang === currentLang) return;
+      currentLang = btn.dataset.lang;
+      try{ localStorage.setItem("kn_lang", currentLang); }catch(e){}
+      renderAll();
+    });
+  });
+}
+
+function renderAll(){
+  document.documentElement.lang = currentLang;
+  document.title = t("pageTitle") + " | " + t("siteName");
+  [
+    "siteName","backLink","pageTitle","updated","intro1","intro2",
+    "h2Concept","pConcept","h2Mission","pMission","h2Accuracy","pAccuracy","noteAccuracy",
+    "h2Operator","kName","kSupervisor","kAddress","kLicense","kEmail","contactPrompt",
+    "footerCredit","navHome","navArticles","navPrivacy","navContact"
+  ].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = t(id);
+  });
+  renderLangSwitch();
+}
+
+renderAll();
