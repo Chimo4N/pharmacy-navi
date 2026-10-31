@@ -7,7 +7,7 @@
 const articles = [
   {
     id:"pharmacy-basics",
-    date:"2026-9-15",
+    date:"2026-09-15",
     title:{
       ja:"はじめての日本の薬局：基本の使い方ガイド",
       en:"First Time at a Japanese Pharmacy: A Basic Guide",
@@ -51,8 +51,8 @@ const articles = [
       ]
     }
   },
-   {
-      id: "hay-fever",
+  {
+    id: "hay-fever",
     date: "2026-10-31",
     title: {
       ja: "日本に来てくしゃみ・鼻水が止まらない？ 外国人のための花粉症ガイド｜原因・市販薬・病院の選び方",
