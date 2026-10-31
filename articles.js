@@ -98,48 +98,52 @@ const articles = [
     }
   },
    {
-    id:"receiving-medicine",
-    date:"2026-03-01",
-    title:{
-      ja:"日本での薬の受け取り方｜ドラッグストアと病院・薬局の違いをやさしく解説",
-      en:"How to Receive Medicine in Japan: A Guide to Drugstores vs. Hospitals & Pharmacies",
-      zh:"在日本如何領藥：藥妝店與醫院・藥局的區別淺顯易懂指南",
-      es:"Cómo recibir medicamentos en Japón: guía sobre farmacias y hospitales"
+    id: "receiving-medicine",
+    date: "2026-10-01",
+    title: {
+      ja: "日本での薬の受け取り方｜ドラッグストアと病院・薬局の違いをやさしく解説",
+      en: "How to Receive Medicine in Japan: A Guide to Drugstores vs. Hospitals & Pharmacies",
+      zh: "在日本如何領藥：藥妝店與醫院・藥局的區別淺顯易懂指南",
+      es: "Cómo recibir medicamentos en Japón: guía sobre farmacias y hospitales"
     },
-    excerpt:{
-      ja:"ドラッグストアで買える市販薬と、病院の処方薬の違いや買い方の基本をわかりやすく解説します。",
-      en:"An easy-to-understand guide on the differences between OTC medicines and prescription drugs, and how to get them in Japan.",
-      zh:"淺顯易懂地解說可在藥妝店購買的成藥與醫院處方箋藥品的區別及基本購買方式。",
-      es:"Una guía clara sobre las diferencias entre los medicamentos de venta libre y los recetados en Japón."
+    excerpt: {
+      ja: "ドラッグストアで買える市販薬と、病院の処方薬の違いや買い方の基本をわかりやすく解説します。",
+      en: "An easy-to-understand guide on the differences between OTC medicines and prescription drugs, and how to get them in Japan.",
+      zh: "淺顯易懂地解說可在藥妝店購買的成藥與醫院處方箋藥品的區別及基本購買方式。",
+      es: "Una guía clara sobre las diferencias entre los medicamentos de venta libre y los recetados en Japón."
     },
-    body:{
-      ja:[
-        "日本に着いて「頭が痛い」「お腹の調子が悪い」と思ったとき、ドラッグストアで買える市販薬（OTC）と、病院で診察を受けてから薬局で受け取る処方薬の2つのルートがあります。",
-        "軽い症状ならドラッグストアが便利ですが、高熱が続く場合や3〜5日たっても良くならないときは、無理をせず医療機関を受診しましょう。",
-        "日本の市販薬には副作用などのリスクに応じた区分があり、第1類医薬品などは薬剤師からの説明を受けて購入します。",
-        "海外の医師の処方箋は日本では使えないため、処方薬が必要な場合は日本の医療機関を受診してください。",
-        "困ったときは薬剤師に相談し、パッケージの用法・用量をしっかり確認して安全に服用しましょう。"
+    body: {
+      ja: [
+        "日本に着いて「頭が痛い」「お腹の調子が悪い」「いつもの薬が切れた」と思ったとき、ドラッグストアで買える市販薬（OTC）と、病院・クリニックで診てもらってから薬局で受け取る処方薬の2つのルートがあります。",
+        "軽い症状ならドラッグストアが便利ですが、高熱が続く場合や強い痛み、呼吸が苦しい、症状が3〜5日たっても良くならないときは無理をせず医療機関を受診しましょう。",
+        "1. ドラッグストアで市販薬を買う：日本の市販薬はリスク区分（要指導医薬品、第1類〜第3類）で買い方が異なります。特に「第1類」は薬剤師のいるカウンターで購入する必要があり、薬剤師が不在の時間帯は購入できないため営業時間の事前確認が安心です。また、乱用防止のため購入数が1人1個に制限される医薬品もあります。",
+        "2. 買い物のコツと使えるフレーズ：症状や持病、アレルギー、妊娠の有無などを薬剤師に伝えましょう。母国で使い慣れた「成分名」（アセトアミノフェン、イブプロフェン、フェキソフェナジンなど）で探すと失敗しにくいですが、日本の市販薬は1回の用量が海外と異なる場合があるため、パッケージの用法・用量を必ず守ってください。",
+        "3. 病院・クリニックで処方薬を受け取る：海外の処方箋は日本の薬局では使えません。日本の医療機関を受診して処方箋（有効期限は発行日含め4日間）をもらう必要があります。旅行者は保険適用外で全額自己負担になることが多いため、海外旅行保険の確認と領収書・明細書の保管をおすすめします。",
+        "4. ネット購入と個人輸入の注意：国内の正規ドラッグストア通販サイトで市販薬は購入できますが、海外サイトからの個人輸入は品質・安全性が保証されずリスクがあるため厚生労働省も注意を呼びかけています。個人輸入した薬の転売や譲渡は認められていません。"
       ],
-      en:[
-        "When you feel unwell in Japan, you have two main routes for getting medicine: over-the-counter (OTC) medicines at drugstores, or prescription medicines after seeing a doctor.",
-        "Drugstores are convenient for mild symptoms, but if you have a high fever or symptoms last more than 3-5 days without improvement, please visit a medical institution.",
-        "Japanese OTC medicines are categorized by risk, and some products like Category 1 drugs require an explanation from a pharmacist before purchase.",
-        "Foreign prescriptions cannot be used in Japan, so if you need prescription medicine, you must visit a Japanese medical institution.",
-        "When in doubt, consult a pharmacist, check the dosage instructions on the package carefully, and take medications safely."
+      en: [
+        "When you feel unwell or run out of medicine in Japan, you have two main routes: buying over-the-counter (OTC) medicine at a drugstore, or visiting a clinic to receive prescription medicine at a pharmacy.",
+        "Drugstores are convenient for mild symptoms, but please visit a medical institution if you have high fever, severe pain, breathing difficulty, or symptoms lasting over 3-5 days.",
+        "1. Buying OTC Drugs at Drugstores: Japanese OTC drugs are classified by risk levels. Category 1 drugs require a pharmacist to be present, so check store hours beforehand. Note that some medicines have purchase limits (e.g., 1 per person) to prevent misuse.",
+        "2. Shopping Tips: Inform the pharmacist about your symptoms, medical conditions, allergies, or pregnancy. Searching by active ingredient names (e.g., Acetaminophen, Ibuprofen, Fexofenadine) helps find suitable options, but always strictly follow Japanese dosage instructions as concentrations may differ from foreign medications.",
+        "3. Prescription Drugs at Hospitals/Pharmacies: Foreign prescriptions cannot be used in Japanese pharmacies; you must see a doctor in Japan to get a Japanese prescription (valid for 4 days). Tourists usually pay 100% out-of-pocket, so keep all receipts for insurance claims.",
+        "4. Online Purchases & Imports: While official domestic drugstore websites sell OTC drugs, importing medications from overseas sites carries safety risks and lacks approval. Reselling or transferring imported drugs is strictly prohibited."
       ],
-      zh:[
-        "在日本感到身體不適時，主要有兩個管道：在藥妝店購買成藥（OTC），或是到醫院就診後在藥局領取處方藥。",
-        "症狀輕微時去藥妝店很方便，但若持續高燒或3至5天未見好轉，請務必就醫。",
-        "日本的成藥依風險分級，第1類等藥品需要聽取藥劑師說明後才能購買。",
-        "國外的處方箋在日本無法使用，若需要處方藥請至日本醫療機構就診。",
-        "有疑問時請諮詢藥劑師，並仔細確認包裝上的用法與用量，以確保安全用藥。"
+      zh: [
+        "在日本感到頭痛、腸胃不適或習慣用藥用完時，主要有兩個管道：在藥妝店購買成藥（OTC），或是到診所就診後在調劑藥局領取處方藥。",
+        "症狀輕微時去藥妝店很方便，但若持續高燒、劇痛、呼吸困難或3至5天未見好轉，請務必就醫。",
+        "1. 在藥妝店購買成藥：日本成藥依風險等級分類，特別是「第1類」需要有藥劑師在場才能購買，建議事先確認藥劑師值班時間。部分感冒藥等為防止濫用，每人限購1盒。",
+        "2. 選購技巧：請向藥劑師說明症狀、宿疾、過敏及是否懷孕。依「成分名稱」（如 Acetaminophen、Ibuprofen、Fexofenadine 等）尋找較不容易買錯，但請務必遵守日本包裝上的用法用量，勿直接照母國劑量服用。",
+        "3. 醫療機構與處方藥：國外處方箋在日本無法使用，必須在日本就診並取得處方箋（有效期包含發行日共4天）。外國旅客通常需全額自費，請留存收據向海外旅行保險申請理賠。",
+        "4. 網路購買與個人輸入：僅限日本國內正規藥妝店網站購買成藥。從國外網站個人輸入藥物缺乏安全保障，且禁止轉售或轉讓他人。"
       ],
-      es:[
-        "Cuando no se siente bien en Japón, tiene dos rutas principales para obtener medicamentos: los de venta libre en farmacias o los recetados tras consultar a un médico.",
-        "Las farmacias son convenientes para síntomas leves, pero si tiene fiebre alta o los síntomas duran más de 3 a 5 días, acuda a un centro médico.",
-        "Los medicamentos de venta libre en Japón están clasificados por riesgo, y algunos requieren la explicación de un farmacéutico antes de comprarlos.",
-        "Las recetas extranjeras no se pueden usar en Japón, por lo que debe visitar una institución médica japonesa si necesita medicamentos con receta.",
-        "Si tiene dudas, consulte a un farmacéutico, lea atentamente las instrucciones de dosificación y tome los medicamentos de forma segura."
+      es: [
+        "Cuando se siente mal o se le acaban sus medicamentos en Japón, existen dos rutas: comprar medicamentos de venta libre (OTC) en una farmacia, o acudir a una clínica para obtener una receta.",
+        "Las farmacias son convenientes para síntomas leves, pero consulte a un médico si tiene fiebre alta, dolor intenso, dificultad respiratoria o síntomas que duren más de 3 a 5 días.",
+        "1. Comprar medicamentos de venta libre: Los medicamentos OTC están clasificados por riesgo. Los de Categoría 1 requieren la presencia de un farmacéutico. Algunos productos tienen límites de compra (1 unidad por persona) para prevenir abusos.",
+        "2. Consejos de compra: Informe al farmacéutico sobre sus síntomas, alergias, condiciones médicas o embarazo. Buscar por el nombre del ingrediente activo (como paracetamol o ibuprofeno) facilita la elección, pero siga siempre las instrucciones de dosificación japonesas.",
+        "3. Medicamentos con receta: Las recetas extranjeras no son válidas en Japón; debe consultar a un médico local para obtener una receta japonesa (válida por 4 días). Los turistas suelen pagar el 100% de los costos, por lo que se recomienda guardar todos los recibos.",
+        "4. Compras en línea e importación: Compre solo en sitios de farmacias japonesas reguladas. Importar medicamentos por su cuenta desde sitios web extranjeros conlleva riesgos de seguridad y está prohibida su reventa."
       ]
     }
   },
