@@ -202,7 +202,6 @@ const articles = [
         "4. Medicamentos de venta libre e impuestos: Puede comprar medicamentos para el resfriado, hierbas medicinales y parches en las farmacias[cite: 10]. Evite duplicar ingredientes activos para prevenir sobredosis[cite: 10]. Si cumple las condiciones y gasta más de 12,000 yenes al año en medicamentos OTC elegibles, podría calificar para deducciones fiscales por automedicación[cite: 10].",
         "5. Efectos secundarios y precauciones: Tenga en cuenta las reglas sobre anticonceptivos, suplementos y los riesgos de la importación personal desde el extranjero[cite: 11]. Si se presentan efectos secundarios graves como sarpullido o dificultad para respirar, suspenda el medicamento de inmediato, busque atención médica y consulte a la PMDA si es necesario[cite: 11]."
       ]
-    }
   }
   /* ↓ 新しい記事を追加する時は、ここに同じ形でオブジェクトを追加してください
   ,{
