@@ -97,6 +97,98 @@ const articles = [
       ]
     }
   }
+   {
+    id:"receiving-medicine",
+    date:"2026-03-01",
+    title:{
+      ja:"日本での薬の受け取り方｜ドラッグストアと病院・薬局の違いをやさしく解説",
+      en:"How to Receive Medicine in Japan: A Guide to Drugstores vs. Hospitals & Pharmacies",
+      zh:"在日本如何領藥：藥妝店與醫院・藥局的區別淺顯易懂指南",
+      es:"Cómo recibir medicamentos en Japón: guía sobre farmacias y hospitales"
+    },
+    excerpt:{
+      ja:"ドラッグストアで買える市販薬と、病院の処方薬の違いや買い方の基本をわかりやすく解説します。",
+      en:"An easy-to-understand guide on the differences between OTC medicines and prescription drugs, and how to get them in Japan.",
+      zh:"淺顯易懂地解說可在藥妝店購買的成藥與醫院處方箋藥品的區別及基本購買方式。",
+      es:"Una guía clara sobre las diferencias entre los medicamentos de venta libre y los recetados en Japón."
+    },
+    body:{
+      ja:[
+        "日本に着いて「頭が痛い」「お腹の調子が悪い」と思ったとき、ドラッグストアで買える市販薬（OTC）と、病院で診察を受けてから薬局で受け取る処方薬の2つのルートがあります。",
+        "軽い症状ならドラッグストアが便利ですが、高熱が続く場合や3〜5日たっても良くならないときは、無理をせず医療機関を受診しましょう。",
+        "日本の市販薬には副作用などのリスクに応じた区分があり、第1類医薬品などは薬剤師からの説明を受けて購入します。",
+        "海外の医師の処方箋は日本では使えないため、処方薬が必要な場合は日本の医療機関を受診してください。",
+        "困ったときは薬剤師に相談し、パッケージの用法・用量をしっかり確認して安全に服用しましょう。"
+      ],
+      en:[
+        "When you feel unwell in Japan, you have two main routes for getting medicine: over-the-counter (OTC) medicines at drugstores, or prescription medicines after seeing a doctor.",
+        "Drugstores are convenient for mild symptoms, but if you have a high fever or symptoms last more than 3-5 days without improvement, please visit a medical institution.",
+        "Japanese OTC medicines are categorized by risk, and some products like Category 1 drugs require an explanation from a pharmacist before purchase.",
+        "Foreign prescriptions cannot be used in Japan, so if you need prescription medicine, you must visit a Japanese medical institution.",
+        "When in doubt, consult a pharmacist, check the dosage instructions on the package carefully, and take medications safely."
+      ],
+      zh:[
+        "在日本感到身體不適時，主要有兩個管道：在藥妝店購買成藥（OTC），或是到醫院就診後在藥局領取處方藥。",
+        "症狀輕微時去藥妝店很方便，但若持續高燒或3至5天未見好轉，請務必就醫。",
+        "日本的成藥依風險分級，第1類等藥品需要聽取藥劑師說明後才能購買。",
+        "國外的處方箋在日本無法使用，若需要處方藥請至日本醫療機構就診。",
+        "有疑問時請諮詢藥劑師，並仔細確認包裝上的用法與用量，以確保安全用藥。"
+      ],
+      es:[
+        "Cuando no se siente bien en Japón, tiene dos rutas principales para obtener medicamentos: los de venta libre en farmacias o los recetados tras consultar a un médico.",
+        "Las farmacias son convenientes para síntomas leves, pero si tiene fiebre alta o los síntomas duran más de 3 a 5 días, acuda a un centro médico.",
+        "Los medicamentos de venta libre en Japón están clasificados por riesgo, y algunos requieren la explicación de un farmacéutico antes de comprarlos.",
+        "Las recetas extranjeras no se pueden usar en Japón, por lo que debe visitar una institución médica japonesa si necesita medicamentos con receta.",
+        "Si tiene dudas, consulte a un farmacéutico, lea atentamente las instrucciones de dosificación y tome los medicamentos de forma segura."
+      ]
+    }
+  },
+  {
+    id:"long-stay",
+    date:"2026-03-15",
+    title:{
+      ja:"長期で日本に来る人の「薬」ガイド｜持ち込み・保険・薬局・薬剤情報提供書（薬情）の読み方",
+      en:"Medicine Guide for Long-Term Visitors to Japan: Bringing, Insurance & Pharmacies",
+      zh:"長期滯留日本者的「用藥」指南：攜帶限制、保險、藥局與藥情解讀",
+      es:"Guía de medicamentos para estancias prolongadas en Japón: importación y seguros"
+    },
+    excerpt:{
+      ja:"留学や仕事で日本に長く滞在する方向けに、薬の持ち込みルール、健康保険、薬局の利用法をまとめました。",
+      en:"A guide for those staying long-term in Japan, covering medicine import rules, health insurance, and pharmacy use.",
+      zh:"為長期滯留日本的留學或工作人員整理了藥品攜帶規定、健康保險與藥局使用方法。",
+      es:"Una guía para quienes se quedan a largo plazo en Japón sobre reglas de importación y seguros."
+    },
+    body:{
+      ja:[
+        "留学や仕事などで日本に3か月以上滞在する場合、母国からの薬の持ち込み制限や日本の健康保険への加入など、知っておくべきポイントが多くあります。",
+        "市販薬は原則2か月分、処方薬は1か月分まで手続きなしで持ち込めますが、覚醒剤原料や一部のADHD治療薬など、日本で持ち込み禁止・制限されている成分があるため注意が必要です。",
+        "日本に到着したら住民登録を行い、公的医療保険に加入することで医療費や薬代の自己負担を原則3割に抑えられます。",
+        "日本の調剤薬局では、薬の効能や副作用が書かれた「薬剤情報提供書（薬情）」が渡されます。内容をよく確認し、お薬手帳を活用しましょう。",
+        "持病がある方は、薬が切れる前に日本の医療機関を受診し、安全に治療を継続してください。"
+      ],
+      en:[
+        "If you are staying in Japan for more than 3 months for study or work, there are many important points to know, such as medicine import limits and health insurance.",
+        "You can generally bring up to 2 months' supply of OTC medicines and 1 month's supply of prescription drugs without procedures, but some ingredients like stimulants or certain ADHD drugs are prohibited or restricted in Japan.",
+        "After arriving, register your residence and join the public health insurance to reduce out-of-pocket medical and pharmacy costs to generally 30%.",
+        "At Japanese dispensing pharmacies, you will receive a Drug Information Sheet (Yakujō) detailing effects and side effects. Review it carefully and use a medication notebook.",
+        "If you have a chronic condition, visit a Japanese medical institution before your current supply runs out to continue your treatment safely."
+      ],
+      zh:[
+        "若因留學或工作在日本滯留超過3個月，有許多需要注意的事項，例如藥品攜帶限制與加入日本健康保險。",
+        "原則上可攜帶2個月內的成藥與1個月內的處方藥免手續費，但像興奮劑原料或部分ADHD治療藥等成分在日本禁止或受限制，請特別注意。",
+        "抵達後請辦理居住登記並加入公用醫療機構保險，可將醫療與藥費自付額降至原則上3成。",
+        "在日本調剤藥局領藥時，會拿到記載藥效與副作用的「藥劑情報提供書（藥情）」。請務必仔細確認並善用藥帳本。",
+        "有慢性病的民眾，請在藥品用完前至日本醫療機構就診，以安全持續治療。"
+      ],
+      es:[
+        "Si se queda en Japón por más de 3 meses por estudios o trabajo, hay puntos clave como las reglas de importación de medicamentos y el seguro de salud.",
+        "Generalmente puede traer hasta 2 meses de medicamentos de venta libre y 1 mes de medicamentos recetados sin trámites, pero sustancias como estimulantes o ciertos medicamentos para el TDAH están prohibidos o restringidos.",
+        "Tras llegar, regístrese e inscríbase en el seguro de salud público para reducir sus costos médicos y de farmacia al 30%.",
+        "En las farmacias de dispensación japonesas recibirá una Hoja de Información de Medicamentos (Yakujō). Revísela detenidamente y use una libreta de medicamentos.",
+        "Si tiene una condición médica crónica, visite una institución médica japonesa antes de que se le acaben los medicamentos actuales."
+      ]
+    }
+  }
   /* ↓ 新しい記事を追加する時は、ここに同じ形でオブジェクトを追加してください
   ,{
     id:"unique-id-here",
