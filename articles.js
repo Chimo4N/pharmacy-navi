@@ -7,7 +7,7 @@
 const articles = [
   {
     id:"pharmacy-basics",
-    date:"2026-01-15",
+    date:"2026-9-15",
     title:{
       ja:"はじめての日本の薬局：基本の使い方ガイド",
       en:"First Time at a Japanese Pharmacy: A Basic Guide",
@@ -51,55 +51,62 @@ const articles = [
       ]
     }
   },
-  {
-    id:"hayfever-season",
-    date:"2026-02-01",
-    title:{
-      ja:"春の花粉症シーズンを日本で乗り切る方法",
-      en:"Getting Through Hay Fever Season in Japan",
-      zh:"如何在日本度過春季花粉症季節",
-      es:"Cómo sobrellevar la temporada de alergias en Japón"
+ id: "hay-fever",
+    date: "2026-10-31",
+    title: {
+      ja: "日本に来てくしゃみ・鼻水が止まらない？ 外国人のための花粉症ガイド｜原因・市販薬・病院の選び方",
+      en: "Sneezing and Runny Nose in Japan? Hay Fever Guide for Foreigners: Causes, OTC Medicines & Hospital Care",
+      zh: "來到日本後打噴嚏流鼻水不止？外國人花粉症指南｜原因・成藥・醫院選擇",
+      es: "¿Estornudos y secreción nasal en Japón? Guía de alergia al polen para extranjeros"
     },
-    excerpt:{
-      ja:"2〜4月は花粉症のピークシーズン。旅行者が知っておきたい対策と、薬の選び方をまとめました。",
-      en:"February to April is peak hay fever season in Japan. Here's what visitors should know, and how to choose a medicine.",
-      zh:"2月至4月是花粉症的高峰季節，整理了旅客應該知道的因應方式與選藥要點。",
-      es:"De febrero a abril es la temporada alta de alergias en Japón. Esto es lo que los visitantes deben saber, y cómo elegir un medicamento."
+    excerpt: {
+      ja: "日本で風邪でもないのにくしゃみや鼻水が止まらない方向けに、花粉の時期、市販薬の選び方、病院に行く目安を解説します。",
+      en: "A guide for visitors experiencing hay fever symptoms in Japan, covering pollen seasons, OTC medicine choices, and when to see a doctor.",
+      zh: "為在日本非感冒卻打噴嚏、流鼻水不止的人士解說花粉季節、成藥挑選與就醫基準。",
+      es: "Una guía sobre la fiebre del heno en Japón, que cubre las temporadas de polen, medicamentos de venta libre y cuándo ir al médico."
     },
-    body:{
-      ja:[
-        "日本では2月〜4月ごろにスギ花粉、その後ヒノキ花粉が飛散し、多くの人が鼻水やくしゃみ、目のかゆみに悩まされます。この時期に日本を訪れる方は、思ったより症状がつらく感じることも少なくありません。",
-        "花粉症用の薬は、大きく分けて「眠くなりにくいタイプ」と「効果は強いが眠くなりやすいタイプ」があります。観光やお仕事の予定がある日は、眠くなりにくいタイプを選ぶのがおすすめです。",
-        "目のかゆみが強い場合は、鼻炎薬に加えて、点眼薬を併用する人も多いです。マスクやメガネ（サングラス）も、花粉を物理的に防ぐ手段として広く使われています。",
-        "このサイトの「花粉症・鼻炎」のページでは、成分の違いや眠気の強さを比較できます。症状が重い場合は、我慢せず薬局のスタッフに相談してください。",
-        "花粉情報はテレビの天気予報やスマートフォンアプリでも毎日発表されているので、飛散量が多い日は外出を控えめにするのも一つの方法です。"
+    body: {
+      ja: [
+        "「日本に来てから、風邪でもないのにくしゃみと鼻水が止まらない」「目がかゆくて涙が出る」――そんな経験はありませんか。それは花粉症（hay fever）かもしれません[cite: 12]。日本は花粉症の人が非常に多い国で、母国では何もなかった人が日本で初めて症状を感じることもあります[cite: 12]。10月のいまも、秋の花粉（ブタクサ・ヨモギなど）で症状が出る人がいます[cite: 12]。",
+        "1. それ、風邪ではなく「花粉症」かも：花粉症はアレルギー疾患で、透明で水っぽい鼻水、連続するクシャミ、目のかゆみなどが特徴です[cite: 12, 13]。熱はことさら出ず、花粉が飛ぶ間数週間以上続きます[cite: 13]。発熱や強いだるさがあるときは風邪やインフルエンザ、新型コロナなどの可能性があるため受診してください[cite: 13]。",
+        "2. 日本の花粉カレンダー：12月・1月の冬を除くとほぼ一年中いずれかの花粉が飛んでおり[cite: 13]、スギ（2〜4月）、ヒノキ（3〜5月）、イネ科（初夏〜夏）、ブタクサ・ヨモギ（8〜10月頃まで）、シラカンバ（北海道など北の地域で春〜初夏）などがあります[cite: 13, 14]。毎日の情報は環境省の「はなこさん」や天気予報アプリで確認できます[cite: 14]。",
+        "3. ドラッグストアで買える市販薬（OTC）：第2世代抗ヒスタミン薬、鼻炎薬・総合タイプ、ステロイド点鼻薬や血管収縮薬入りの点鼻薬、抗アレルギー点眼薬があります[cite: 14]。眠気、他の薬との重複、持病・妊娠などに注意し、車を運転する人は「眠くならない薬」を薬剤師に相談しましょう[cite: 14, 15]。売り場での日本語フレーズも活用できます[cite: 15]。",
+        "4. 薬以外のセルフケア：マスク・メガネの着用、帰宅時の服払い・手洗い・うがい、室内干し、空気清浄機やこまめな拭き掃除が効果的です[cite: 15]。",
+        "5. 病院に行くべきサインと治療：鼻水・鼻づまりは耳鼻咽喉科、目のかゆみは眼科、総合的な相談はアレルギー科を受診します[cite: 15]。高熱、強いだるさ、黄色い鼻水、顔や目の周りの痛み、ゼーゼーする咳が続く場合はすぐに受診してください[cite: 15, 16]。長期滞在者は舌下免疫療法などの選択肢もあり、日本の公的医療保険に加入していれば自己負担は原則3割です[cite: 16]。",
+        "6. 母国から薬を持ち込むときの注意：Sudafed（プソイドエフェドリン入り）やVicksインハラーなどは、日本で持ち込み禁止・制限の対象になる場合があります[cite: 16]。必ず成分を確認し、不安なときは地方厚生局へ問い合わせましょう[cite: 16]。"
       ],
-      en:[
-        "In Japan, cedar pollen spreads roughly from February to April, followed by cypress pollen, leaving many people with a runny nose, sneezing, and itchy eyes. If you're visiting during this season, the symptoms can catch you off guard.",
-        "Hay fever medicines broadly fall into two types: ones less likely to cause drowsiness, and stronger ones that are more likely to make you sleepy. On days with sightseeing plans or work, a low-drowsiness option is usually the better choice.",
-        "For strong eye itching, many people combine a nasal allergy medicine with eye drops. Masks and glasses (or sunglasses) are also widely used as a physical barrier against pollen.",
-        "On this site's \"Hay Fever & Rhinitis\" page, you can compare ingredients and drowsiness levels. If your symptoms are severe, don't tough it out — ask the pharmacy staff for advice.",
-        "Daily pollen forecasts are broadcast on TV weather reports and available through smartphone apps, so limiting time outdoors on high-pollen days is another option worth considering."
+      en: [
+        "If you experience sneezing or runny nose without a cold after coming to Japan, it might be hay fever[cite: 12]. Visitors who had no symptoms in their home country can develop them in Japan[cite: 12], and autumn pollen (such as ragweed and mugwort) can also trigger symptoms[cite: 12].",
+        "1. Is it Hay Fever?: Unlike a common cold, hay fever features clear, watery mucus, consecutive sneezing, and itchy eyes, usually without fever[cite: 12, 13]. Symptoms last for weeks while pollen is airborne[cite: 13]. If you have a fever or severe fatigue, consult a doctor[cite: 13].",
+        "2. Pollen Calendar in Japan: Pollen flies almost year-round in Japan except for December and January[cite: 13]. Major types include cedar (Feb-Apr), cypress (Mar-May), grasses (early summer), ragweed/mugwort (until Aug-Oct), and birch in northern regions[cite: 13, 14]. Daily forecasts are available via weather apps or official monitoring systems[cite: 14].",
+        "3. OTC Medicines at Drugstores: Options include 2nd-generation antihistamines, combination rhinitis drugs, nasal sprays, and anti-allergy eye drops[cite: 14]. Pay attention to drowsiness, drug duplication, and consult a pharmacist if you drive[cite: 14, 15].",
+        "4. Self-Care Tips: Wear masks and glasses, brush off clothes and wash up after returning home, dry laundry indoors, and use air purifiers[cite: 15].",
+        "5. When to See a Doctor: Visit an ENT for nasal symptoms, eye clinics for eye itching, or allergists[cite: 15]. Seek immediate medical care if you have a high fever, discolored mucus, facial pain, wheezing, or if OTC drugs do not help[cite: 15, 16]. Sublingual immunotherapy is an option for long-term residents, and public health insurance covers 70% (patient pays 30%)[cite: 16].",
+        "6. Bringing Medicine from Overseas: Be careful when bringing medicines from home, as items like Sudafed (containing pseudoephedrine) or Vicks inhalers may be restricted or prohibited in Japan[cite: 16]."
       ],
-      zh:[
-        "在日本，杉樹花粉大約於2月至4月飄散，接著是檜木花粉，讓許多人飽受流鼻水、打噴嚏、眼睛癢之苦。若在這段期間訪日，症狀有時會比預期更難受。",
-        "花粉症用藥大致分為「較不易嗜睡的類型」與「藥效強但較容易嗜睡的類型」。若當天有觀光或工作行程，建議選擇較不易嗜睡的類型。",
-        "若眼睛癢感嚴重，不少人會併用鼻炎藥與點眼藥。口罩與眼鏡（太陽眼鏡）也是廣泛使用的物理性花粉防護方式。",
-        "本網站的「花粉症・鼻炎」頁面可比較成分差異與嗜睡程度。若症狀嚴重，請不要忍耐，可洽詢藥局工作人員。",
-        "花粉資訊每天都會透過電視氣象預報或手機應用程式公布，飛散量高的日子減少外出，也是一種應對方式。"
+      zh: [
+        "來到日本後若出現打噴嚏、流鼻水且非感冒所引起，可能是花粉症[cite: 12]。在母國沒有症狀的人也可能在日本首次發作[cite: 12]，10月的秋季花粉（豚草、艾草等）也可能引起症狀[cite: 12]。",
+        "1. 這可能是「花粉症」而非感冒：花粉症常見症狀為透明水狀鼻涕、連續打噴嚏、眼睛癢且通常不發燒[cite: 12, 13]。症狀會持續數週以上[cite: 13]。若有發燒或嚴重倦怠感，請就醫診治[cite: 13]。",
+        "2. 日本花粉日曆：除12月與1月外，日本幾乎全年都有花粉飄散[cite: 13]。主要包括杉樹（2~4月）、檜木（3~5月）、禾本科（初夏~夏）、豚草/艾草（8~10月左右）、白樺（北海道等北方地區）[cite: 13, 14]。每日花粉資訊可透過氣象App確認[cite: 14]。",
+        "3. 藥妝店販售的成藥（OTC）：包含第2代抗組織胺藥、綜合鼻炎藥、鼻噴劑與抗過敏眼藥水[cite: 14]。選購時需注意嗜睡性、藥物重複、懷孕或慢性病，開車者請諮詢藥劑師[cite: 14, 15]。",
+        "4. 藥物以外的自我照護：佩戴口罩與眼鏡、返家後拍落衣物並洗臉漱口、室內晾衣及使用空氣清淨機[cite: 15]。",
+        "5. 應就醫徵兆與治療：鼻部症狀看耳鼻喉科，眼睛症狀看眼科，綜合諮詢看過敏科[cite: 15]。若有高燒、嚴重倦怠、黃鼻涕、臉部疼痛、喘鳴或成藥無效等請立即就醫[cite: 15, 16]。長期居住者可考慮舌下免疫療法，加入健康保險後自付額原則上為3成[cite: 16]。",
+        "6. 從母國攜帶藥物的注意事項：含有偽麻黃鹼的 Sudafed 或 Vicks 鼻吸劑可能在日本屬於禁止或受限攜帶品項[cite: 16]。務必確認成分，如有疑慮請向地方厚生局洽詢[cite: 16]。"
       ],
-      es:[
-        "En Japón, el polen de cedro se dispersa aproximadamente de febrero a abril, seguido del polen de ciprés, dejando a muchas personas con rinorrea, estornudos y picazón de ojos. Si visita el país durante esta temporada, los síntomas pueden sorprenderle.",
-        "Los medicamentos para la fiebre del heno se dividen en general en dos tipos: los que tienen menos probabilidad de causar somnolencia y los más fuertes, con mayor probabilidad de dar sueño. En días con planes de turismo o trabajo, suele ser mejor elegir una opción de baja somnolencia.",
-        "Para una picazón de ojos intensa, muchas personas combinan un medicamento nasal con gotas oculares. Las mascarillas y las gafas (o gafas de sol) también se usan ampliamente como barrera física contra el polen.",
-        "En la página \"Fiebre del heno y rinitis\" de este sitio puede comparar ingredientes y niveles de somnolencia. Si sus síntomas son intensos, no los aguante — pida consejo al personal de la farmacia.",
-        "Los pronósticos diarios de polen se transmiten en el informe del clima de la televisión y están disponibles en aplicaciones para smartphone, así que limitar el tiempo al aire libre en los días de alta dispersión es otra opción a considerar."
+      es: [
+        "Si experimenta estornudos o secreción nasal sin estar resfriado tras llegar a Japón, podría ser fiebre del heno[cite: 12]. Es común desarrollar síntomas por primera vez en Japón[cite: 12], y el polen de otoño también puede desencadenar síntomas[cite: 12].",
+        "1. ¿Es fiebre del heno?: A diferencia del resfriado, la fiebre del heno causa moco claro y acuoso, estornudos consecutivos y picazón en los ojos, por lo general sin fiebre[cite: 12, 13]. Si presenta fiebre alta o fatiga severa, consulte a un médico[cite: 13].",
+        "2. Calendario de polen: El polen vuela casi todo el año en Japón, excepto en diciembre y enero[cite: 13]. Los tipos principales incluyen cedro (feb-abr), ciprés (mar-may), gramíneas, ambrosía/altamisa (hasta ago-oct) y abedul[cite: 13, 14].",
+        "3. Medicamentos de venta libre (OTC): Hay antihistamínicos de 2.ª generación, medicamentos para la rinitis, aerosoles nasales y gotas para los ojos[cite: 14]. Preste atención a la somnolencia y consulte al farmacéutico si conduce[cite: 14, 15].",
+        "4. Cuidados personales: Use mascarilla y gafas, sacuda la ropa al llegar a casa, lávese la cara, seque la ropa en interiores y use purificadores de aire[cite: 15].",
+        "5. Cuándo ir al médico: Acuda al otorrinolaringólogo para síntomas nasales y al oftalmólogo para ojos[cite: 15]. Si tiene fiebre alta, fatiga severa, moco amarillento, sibilancias o si los medicamentos no mejoran los síntomas, busque atención médica[cite: 15, 16].",
+        "6. Traer medicamentos del extranjero: Tenga en cuenta que productos como Sudafed (con pseudoefedrina) pueden estar restringidos o prohibidos en Japón[cite: 16]. Verifique los ingredientes y consulte a la oficina de厚生局 si tiene dudas[cite: 16]."
       ]
     }
   },
    {
     id: "receiving-medicine",
-    date: "2026-10-01",
+    date: "2026-10-31",
     title: {
       ja: "日本での薬の受け取り方｜ドラッグストアと病院・薬局の違いをやさしく解説",
       en: "How to Receive Medicine in Japan: A Guide to Drugstores vs. Hospitals & Pharmacies",
@@ -149,7 +156,7 @@ const articles = [
   },
   {
     id: "long-stay",
-    date: "2026-10-01",
+    date: "2026-10-31",
     title: {
       ja: "長期で日本に来る人の「薬」ガイド｜持ち込み・保険・薬局・薬剤情報提供書（薬情）の読み方",
       en: "Medicine Guide for Long-Term Visitors to Japan: Bringing, Insurance & Pharmacies",
