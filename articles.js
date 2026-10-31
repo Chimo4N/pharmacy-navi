@@ -214,6 +214,7 @@ const translations = {
     listLead: "日本の市販薬や薬局の使い方について、旅行者向けに役立つ情報をまとめています。",
     readMore: "続きを読む →",
     backToList: "← 記事一覧に戻る",
+    disclaimer: "この記事は一般的な情報提供を目的としたもので、医師・薬剤師による診断や助言に代わるものではありません。個別の薬の持ち込み可否は、必ず厚生労働省の地方厚生局にご確認ください。",
     footerCredit: "企画：yuto.h／監修：石鍋卓望",
     navHome: "トップページ",
     navAbout: "このサイトについて",
@@ -227,6 +228,7 @@ const translations = {
     listLead: "Helpful information for visitors about Japanese OTC medicine and how to use pharmacies here.",
     readMore: "Read more →",
     backToList: "← Back to articles",
+    disclaimer: "This article is for general informational purposes only and is not a substitute for diagnosis or advice from a doctor or pharmacist. Please consult the Regional Bureau of Health and Welfare (MHLW) to confirm whether specific medications can be brought into Japan.",
     footerCredit: "Planning: yuto.h / Supervision: 石鍋卓望",
     navHome: "Home",
     navAbout: "About Us",
@@ -240,6 +242,7 @@ const translations = {
     listLead: "整理了關於日本成藥與藥局使用方式，對旅客有幫助的資訊。",
     readMore: "閱讀更多 →",
     backToList: "← 返回文章列表",
+    disclaimer: "本文章僅供一般資訊參考，不可替代醫師或藥劑師之診斷與建議。個別藥品是否可攜帶入境，請務必向日本厚生勞動省地方厚生局確認。",
     footerCredit: "企劃：yuto.h／監修：石鍋卓望",
     navHome: "首頁",
     navAbout: "關於本站",
@@ -253,6 +256,7 @@ const translations = {
     listLead: "Información útil para visitantes sobre los medicamentos de venta libre en Japón y cómo usar las farmacias.",
     readMore: "Leer más →",
     backToList: "← Volver a los artículos",
+    disclaimer: "Este artículo es solo para fines informativos generales y no sustituye el diagnóstico o consejo de un médico o farmacéutico. Consulte a la Oficina Regional de Salud y Bienestar (MHLW) para confirmar si se pueden ingresar medicamentos específicos a Japón.",
     footerCredit: "Planificación: yuto.h / Supervisión: 石鍋卓望",
     navHome: "Inicio",
     navAbout: "Sobre nosotros",
@@ -328,6 +332,9 @@ function renderDetail(id) {
     <p class="detail-date">${formatDate(a.date)}</p>
     <h1 class="detail-title">${a.title[currentLang]}</h1>
     <div class="detail-body">${a.body[currentLang].map(p => `<p>${p}</p>`).join("")}</div>
+    <div class="article-disclaimer" style="margin: 24px 0; padding: 16px; background-color: #f8f9fa; border-left: 4px solid #6c757d; font-size: 0.9em; color: #495057; line-height: 1.6;">
+      <p style="margin: 0;">${t("disclaimer")}</p>
+    </div>
     <button class="detail-back detail-back-bottom" id="backBtn2">${t("backToList")}</button>`;
   const goBack = () => {
     location.hash = "";
