@@ -96,7 +96,7 @@ const articles = [
         "Los pronósticos diarios de polen se transmiten en el informe del clima de la televisión y están disponibles en aplicaciones para smartphone, así que limitar el tiempo al aire libre en los días de alta dispersión es otra opción a considerar."
       ]
     }
-  }
+  },
    {
     id:"receiving-medicine",
     date:"2026-03-01",
