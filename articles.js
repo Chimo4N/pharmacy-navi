@@ -148,48 +148,52 @@ const articles = [
     }
   },
   {
-    id:"long-stay",
-    date:"2026-03-15",
-    title:{
-      ja:"長期で日本に来る人の「薬」ガイド｜持ち込み・保険・薬局・薬剤情報提供書（薬情）の読み方",
-      en:"Medicine Guide for Long-Term Visitors to Japan: Bringing, Insurance & Pharmacies",
-      zh:"長期滯留日本者的「用藥」指南：攜帶限制、保險、藥局與藥情解讀",
-      es:"Guía de medicamentos para estancias prolongadas en Japón: importación y seguros"
+    id: "long-stay",
+    date: "2026-10-01",
+    title: {
+      ja: "長期で日本に来る人の「薬」ガイド｜持ち込み・保険・薬局・薬剤情報提供書（薬情）の読み方",
+      en: "Medicine Guide for Long-Term Visitors to Japan: Bringing, Insurance & Pharmacies",
+      zh: "長期滯留日本者的「用藥」指南：攜帶限制、保險、藥局與藥情解讀",
+      es: "Guía de medicamentos para estancias prolongadas en Japón: importación y seguros"
     },
-    excerpt:{
-      ja:"留学や仕事で日本に長く滞在する方向けに、薬の持ち込みルール、健康保険、薬局の利用法をまとめました。",
-      en:"A guide for those staying long-term in Japan, covering medicine import rules, health insurance, and pharmacy use.",
-      zh:"為長期滯留日本的留學或工作人員整理了藥品攜帶規定、健康保險與藥局使用方法。",
-      es:"Una guía para quienes se quedan a largo plazo en Japón sobre reglas de importación y seguros."
+    excerpt: {
+      ja: "留学や仕事で日本に長く滞在する方向けに、薬の持ち込みルール、健康保険、薬局の利用法をまとめました。",
+      en: "A guide for those staying long-term in Japan, covering medicine import rules, health insurance, and pharmacy use.",
+      zh: "為長期滯留日本的留學或工作人員整理了藥品攜帶規定、健康保險與藥局使用方法。",
+      es: "Una guía para quienes se quedan a largo plazo en Japón sobre reglas de importación y seguros."
     },
-    body:{
-      ja:[
-        "留学や仕事などで日本に3か月以上滞在する場合、母国からの薬の持ち込み制限や日本の健康保険への加入など、知っておくべきポイントが多くあります。",
-        "市販薬は原則2か月分、処方薬は1か月分まで手続きなしで持ち込めますが、覚醒剤原料や一部のADHD治療薬など、日本で持ち込み禁止・制限されている成分があるため注意が必要です。",
-        "日本に到着したら住民登録を行い、公的医療保険に加入することで医療費や薬代の自己負担を原則3割に抑えられます。",
-        "日本の調剤薬局では、薬の効能や副作用が書かれた「薬剤情報提供書（薬情）」が渡されます。内容をよく確認し、お薬手帳を活用しましょう。",
-        "持病がある方は、薬が切れる前に日本の医療機関を受診し、安全に治療を継続してください。"
+    body: {
+      ja: [
+        "留学、仕事、家族帯同などで日本に長く住む場合、薬の問題は一度で終わりません。この記事では、日本に3か月以上滞在する方に向けて、出発前の準備から到着後の医療・薬局の使い方、薬の説明書を読むコツまでをまとめました[cite: 6]。",
+        "1. 薬の持ち込みルールと禁止薬：自己使用目的の場合、外用剤は1品目につき24個以内、毒薬・劇薬・処方薬は1か月分以内、その他の医薬品は2か月分以内であれば手続きなしで持ち込めますが、これを超える場合は事前に地方厚生局で「輸入確認証」の取得が必要です[cite: 6, 7]。また、プソイドエフェドリンを含む薬（Sudafedなど）やアンフェタミン系のADHD治療薬など、日本で持ち込みが禁止・制限されている薬があるため十分に注意してください[cite: 7]。",
+        "2. 日本の健康保険と医療機関：日本に3か月以上滞在する外国人は原則として社会保険や国民健康保険に加入し、医療費や処方薬の自己負担を原則3割に抑えられます[cite: 9]。受診時は近所のクリニック（開業医）を基本とし、紹介状なしで大病院を受診すると選定療養費がかかるため注意が必要です[cite: 9]。また、到着直後の数週間は海外旅行保険を活用するのも有効です[cite: 9]。",
+        "3. 薬情（薬剤情報提供書）とお薬手帳：日本の調剤薬局では、薬の効能、飲み方、注意点、副作用が記載された「薬剤情報提供書（薬情）」が渡されます[cite: 8, 9]。また「お薬手帳」を利用することで、複数の病院や薬局を利用する際も、薬剤師が重複薬や飲み合わせをチェックできるため安全性が高まります[cite: 10]。",
+        "4. 市販薬とセルフメディケーション税制：総合感冒薬、漢方薬、湿布などが薬局で買えます[cite: 10]。成分の重複による過剰服用の防止に注意しましょう[cite: 10]。条件を満たした対象の市販薬を年間12,000円超購入した場合は、セルフメディケーション税制による所得控除の対象になる可能性があります[cite: 10]。",
+        "5. 副作用と注意点：ピルやサプリメントの扱い、海外サイトからの個人輸入のリスクに注意してください[cite: 11]。医薬品を適正に使用しても重い副作用がまれに起こることがあり、発疹や呼吸困難などが出た場合はすぐに服用を中止して医療機関を受診し、必要に応じて医薬品副作用被害救済制度（PMDA）を確認してください[cite: 11]。"
       ],
-      en:[
-        "If you are staying in Japan for more than 3 months for study or work, there are many important points to know, such as medicine import limits and health insurance.",
-        "You can generally bring up to 2 months' supply of OTC medicines and 1 month's supply of prescription drugs without procedures, but some ingredients like stimulants or certain ADHD drugs are prohibited or restricted in Japan.",
-        "After arriving, register your residence and join the public health insurance to reduce out-of-pocket medical and pharmacy costs to generally 30%.",
-        "At Japanese dispensing pharmacies, you will receive a Drug Information Sheet (Yakujō) detailing effects and side effects. Review it carefully and use a medication notebook.",
-        "If you have a chronic condition, visit a Japanese medical institution before your current supply runs out to continue your treatment safely."
+      en: [
+        "If you are staying in Japan long-term for study, work, or family, medicine issues require careful attention. This guide covers pre-departure preparation, post-arrival medical and pharmacy use, and reading medication instructions for those staying over 3 months[cite: 6].",
+        "1. Import Rules & Prohibited Drugs: For personal use, you can bring up to 24 topical items, 1 month's supply of prescription drugs, and 2 months' supply of others without procedures; quantities exceeding this require an Import Certificate[cite: 6, 7]. Note that certain drugs like those containing pseudoephedrine (e.g., Sudafed) or amphetamine-type ADHD medications are prohibited or restricted in Japan[cite: 7].",
+        "2. Health Insurance & Medical Care: Foreigners staying over 3 months generally enroll in public health insurance, reducing out-of-pocket costs to 30%[cite: 9]. It is standard to visit local clinics first, as visiting large hospitals without a referral incurs extra non-insurance fees[cite: 9]. Utilizing travel insurance for the first few weeks is also an option[cite: 9].",
+        "3. Yakujō & Medication Notebooks: Dispensing pharmacies provide a Drug Information Sheet ('Yakujō') detailing effects, dosage, and side effects[cite: 8, 9]. Using a medication notebook helps pharmacists check for drug interactions and duplication across multiple hospitals and pharmacies[cite: 10].",
+        "4. OTC Drugs & Tax Deductions: You can buy cold medicines, herbal medicines, and patches at pharmacies[cite: 10]. Avoid duplicating active ingredients to prevent overdose[cite: 10]. If you meet the conditions, purchasing over 12,000 yen annually of eligible OTC drugs may qualify you for the self-medication tax system[cite: 10].",
+        "5. Side Effects & Precautions: Be aware of rules regarding pills, supplements, and the risks of personal import from overseas sites[cite: 11]. If severe side effects like rashes or breathing difficulties occur, stop taking the medication immediately, seek medical attention, and consult PMDA if necessary[cite: 11]."
       ],
-      zh:[
-        "若因留學或工作在日本滯留超過3個月，有許多需要注意的事項，例如藥品攜帶限制與加入日本健康保險。",
-        "原則上可攜帶2個月內的成藥與1個月內的處方藥免手續費，但像興奮劑原料或部分ADHD治療藥等成分在日本禁止或受限制，請特別注意。",
-        "抵達後請辦理居住登記並加入公用醫療機構保險，可將醫療與藥費自付額降至原則上3成。",
-        "在日本調剤藥局領藥時，會拿到記載藥效與副作用的「藥劑情報提供書（藥情）」。請務必仔細確認並善用藥帳本。",
-        "有慢性病的民眾，請在藥品用完前至日本醫療機構就診，以安全持續治療。"
+      zh: [
+        "若因留學、工作或攜眷長期居留日本，用藥問題不容忽視。本指南為預計停留超過3個月的人士，整理了行前準備、抵達後的醫療與藥局使用方式以及藥品說明書的閱讀技巧[cite: 6]。",
+        "1. 藥品攜帶規定與違禁藥：個人自用情況下，外用藥最多24個、處方藥最多1個月分、其他藥品最多2個月分可免手續費攜帶，超過者需事先申請「進口確認證」[cite: 6, 7]。請注意，含有偽麻黃鹼（如Sudafed）或苯丙胺類ADHD治療藥在日本屬於禁止或受限藥品，切勿違規[cite: 7]。",
+        "2. 健康保險與醫療機構：居留超過3個月的外國人原則上應加入公營醫療保險，將醫療與藥費自付額降至3成[cite: 9]。就醫時以鄰近診所為基本，未持介紹信前往大醫院將被收取額外選定療養費[cite: 9]。抵達初期也可善用海外旅行保險[cite: 9]。",
+        "3. 藥情（藥劑情報提供書）與用藥手冊：調劑藥局發放的「藥情」載有療效、用法及副作用[cite: 8, 9]。善用用藥手冊可讓藥劑師在您使用多家醫院時，協助檢查重複用藥與交互作用，確保安全[cite: 10]。",
+        "4. 成藥與自我醫療稅制：藥局可購買綜合感冒藥、中藥及貼布[cite: 10]。應避免重複服用相同成分以防過量[cite: 10]。若年度購買指定成藥超過12,000日圓，符合條件者可能適用自我醫療稅制扣除額[cite: 10]。",
+        "5. 副作用與注意事項：留意事後避孕藥、保健食品及海外個人輸入之風險[cite: 11]。若出現皮疹、呼吸困難等嚴重副作用，應立即停藥並就醫，必要時可洽詢醫藥品副作用被害救濟制度（PMDA）[cite: 11]。"
       ],
-      es:[
-        "Si se queda en Japón por más de 3 meses por estudios o trabajo, hay puntos clave como las reglas de importación de medicamentos y el seguro de salud.",
-        "Generalmente puede traer hasta 2 meses de medicamentos de venta libre y 1 mes de medicamentos recetados sin trámites, pero sustancias como estimulantes o ciertos medicamentos para el TDAH están prohibidos o restringidos.",
-        "Tras llegar, regístrese e inscríbase en el seguro de salud público para reducir sus costos médicos y de farmacia al 30%.",
-        "En las farmacias de dispensación japonesas recibirá una Hoja de Información de Medicamentos (Yakujō). Revísela detenidamente y use una libreta de medicamentos.",
-        "Si tiene una condición médica crónica, visite una institución médica japonesa antes de que se le acaben los medicamentos actuales."
+      es: [
+        "Si se queda en Japón a largo plazo por estudios, trabajo o familia, este artículo cubre desde la preparación previa hasta el uso de servicios médicos y farmacias para estancias superiores a 3 meses[cite: 6].",
+        "1. Reglas de importación y medicamentos prohibidos: Para uso personal, puede traer hasta 24 tópicos, 1 mes de recetados y 2 meses de otros sin trámites; cantidades mayores requieren un Certificado de Importación[cite: 6, 7]. Tenga en cuenta que ciertos medicamentos, como los que contienen pseudoefedrina (ej. Sudafed) o anfetaminas para el TDAH, están prohibidos o restringidos en Japón[cite: 7].",
+        "2. Seguro médico y atención médica: Los extranjeros con estancias superiores a 3 meses generalmente se inscriben en el seguro de salud público, reduciendo los costos al 30%[cite: 9]. Es recomendable acudir primero a clínicas locales, ya que ir a hospitales grandes sin derivación genera tarifas adicionales[cite: 9]. El uso de un seguro de viaje al principio también es una opción[cite: 9].",
+        "3. Yakujō y Libreta de Medicamentos: Las farmacias de dispensación proporcionan una Hoja de Información de Medicamentos ('Yakujō') que detalla efectos, dosis y efectos secundarios[cite: 8, 9]. El uso de una libreta de medicamentos ayuda a los farmacéuticos a verificar interacciones y duplicaciones entre múltiples hospitales[cite: 10].",
+        "4. Medicamentos de venta libre e impuestos: Puede comprar medicamentos para el resfriado, hierbas medicinales y parches en las farmacias[cite: 10]. Evite duplicar ingredientes activos para prevenir sobredosis[cite: 10]. Si cumple las condiciones y gasta más de 12,000 yenes al año en medicamentos OTC elegibles, podría calificar para deducciones fiscales por automedicación[cite: 10].",
+        "5. Efectos secundarios y precauciones: Tenga en cuenta las reglas sobre anticonceptivos, suplementos y los riesgos de la importación personal desde el extranjero[cite: 11]. Si se presentan efectos secundarios graves como sarpullido o dificultad para respirar, suspenda el medicamento de inmediato, busque atención médica y consulte a la PMDA si es necesario[cite: 11]."
       ]
     }
   }
